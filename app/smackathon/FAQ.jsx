@@ -1,4 +1,4 @@
-import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/components/ui/SmackathonAccordion"
 
 export const metadata = {
     title: 'FAQs',
@@ -84,7 +84,7 @@ export default function FAQ() {
     return (
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)} {/* Generate 100 stars */}
-            <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ's</p>
+            <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ&apos;s</p>
             <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 bg-opacity-[0.85] relative z-10">
                 {
                     faq.map((val, index) => {

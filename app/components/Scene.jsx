@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Canvas} from '@react-three/fiber';
-import { Stats, Environment } from '@react-three/drei';
-import Controller from './controller';
+import { Environment } from '@react-three/drei';
+import Controller from './Controller';
 import AnimatedCamera from './AnimatedCamera';
 
 export default function MainScene() {
@@ -21,7 +21,6 @@ export default function MainScene() {
             <directionalLight position={[0, 5, 10]} intensity={10} />
             <Environment preset="city" background />
             <Controller onClick={handleControllerClick} />
-            <Stats />
             <AnimatedCamera zoomed={zoomed} />
         </Canvas>
     );

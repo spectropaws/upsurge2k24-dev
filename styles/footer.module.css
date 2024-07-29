@@ -1,15 +1,13 @@
-* {
+.parentfooter {
   padding: 0;
-  border: none;
   margin: 0;
-  text-decoration: none;
+  border: none;
 }
-
 .Smackathon_footer {
   background-color: rgb(136, 112, 0);
 }
 .Footer {
-  background: url("/assests/background_01.png");
+  background: url("../components/footer/assets/background_01.png");
   width: 100%;
   height: 600px;
   background-size: cover;
@@ -29,23 +27,49 @@
   mix-blend-mode: multiply;
   filter: contrast(1.5);
   position: relative;
-  left: 1rem;
-  top: 24.45rem;
+  top: 23.4rem;
 }
 
-.footer-contents {
+.footerContents {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 
-.footer-right,
-.footer-center,
-.footer-left {
+.footerRight,
+.footerCenter {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
+  flex-direction: row;
   gap: 2rem;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos_All {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.acm {
+  padding: 1px;
 }
 
 .copyright {
@@ -55,32 +79,32 @@
   justify-content: center;
 }
 
-.copyright .copyright-para {
+.copyright .copyrightPara {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-a {
+.a {
   color: white;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .Footer {
-    background-image: url("./assests/background.png");
+    background-image: url("../components/footer/assets/background.png");
     object-fit: contain;
-    height: 950px;
+    height: 1260px;
   }
 
   .dog {
-    top: 37.7rem;
+    top: 51rem;
   }
 
-  .footer-contents {
+  .footerContents {
     display: flex;
     flex-direction: column;
     gap: 35px;
   }
-  .footer-copyright {
+  .footerCopyright {
     text-align: center;
   }
 }

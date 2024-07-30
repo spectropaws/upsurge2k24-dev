@@ -1,4 +1,6 @@
-import React, { useRef, useEffect } from "react";
+"use client";
+
+import React, { useRef, useState, useEffect } from "react";
 import { useThree, useFrame } from '@react-three/fiber';
 import { gsap } from 'gsap';
 import { Vector3 } from 'three';
@@ -7,6 +9,7 @@ export default function AnimatedCamera({ zoomed }) {
     const groupRef = useRef();
     const invisibleObjectRef = useRef();
     const { camera } = useThree();
+    const [prevRotationY, setPrevRotationY] = useState(0);
 
     const tl = useRef(gsap.timeline({ repeat: -1, yoyo: true }));
 
@@ -22,18 +25,17 @@ export default function AnimatedCamera({ zoomed }) {
     }, []);
 
     useEffect(() => {
-        if (!groupRef.current && !invisibleObjectRef.current) return;      
-        const prevPosition = groupRef.current.position.clone();
+        if (!groupRef.current && !invisibleObjectRef.current) return;
+
         if (zoomed) {
+            setPrevRotationY(groupRef.current.rotation.y);
             tl.current.pause();
             gsap.to(groupRef.current.rotation, { y: 0, duration: 1, ease: 'power2.out' });
             gsap.to(invisibleObjectRef.current.position, { x: 0, y: 0, z: 19, duration: 1, ease: 'power2.out' });
         } else {
-            gsap.to(groupRef.current.rotation, { y: prevPosition.y, duration: 1, ease: 'power2.out' });
-
-            tl.current.play();
-
+            gsap.to(groupRef.current.rotation, { y: prevRotationY, duration: 1, ease: 'power2.out' });
             gsap.to(invisibleObjectRef.current.position, { x: 0, y: 50, z: 100, duration: 3, ease: 'power2.out' });
+            setTimeout(() => tl.current.play(), 3000);
         }
     }, [zoomed]);
 
@@ -59,6 +61,3 @@ export default function AnimatedCamera({ zoomed }) {
         </group>
     );
 }
-
-// TODO fix animation jitter after missing pointer.
-// TODO fix bug where clicking gets disabled when  clicked controller just as the page loads.

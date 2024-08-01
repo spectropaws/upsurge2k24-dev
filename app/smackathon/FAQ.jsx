@@ -1,10 +1,5 @@
 import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/components/ui/SmackathonAccordion"
 
-export const metadata = {
-    title: 'FAQs',
-    description: 'Get the answers to all the FAQs here',
-}
-
 export default function FAQ() {
 
     const faq = [
@@ -41,7 +36,7 @@ export default function FAQ() {
     const starrySkyStyle = {
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(to bottom right, #0D131E, #243B55)',
+        backgroundColor: '#0D131E',
         zIndex: 0,
     };
     
@@ -83,7 +78,7 @@ export default function FAQ() {
 
     return (
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
-            {generateStars(100)} {/* Generate 100 stars */}
+            {generateStars(100)}
             <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ&apos;s</p>
             <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 bg-opacity-[0.85] relative z-10">
                 {

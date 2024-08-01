@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useThree, useFrame } from '@react-three/fiber';
 import { gsap } from 'gsap';
+import { useGSAP } from "@gsap/react";
 import { Vector3 } from 'three';
 
 export default function AnimatedCamera({ zoomed }) {
@@ -13,31 +14,61 @@ export default function AnimatedCamera({ zoomed }) {
 
     const tl = useRef(gsap.timeline({ repeat: -1, yoyo: true }));
 
-    useEffect(() => {
-        const timeline = tl.current;
+    useGSAP((context, contextSafe) => {
+        const oscillate = contextSafe(() => {
+            const timeline = tl.current;
 
-        if (groupRef.current) {
-            timeline.to(groupRef.current.rotation, { y: Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-            timeline.to(groupRef.current.rotation, { y: -Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-        }
+            if (groupRef.current) {
+                timeline.to(groupRef.current.rotation, { y: Math.PI / 4, duration: 20, ease: 'power2.inOut' });
+                timeline.to(groupRef.current.rotation, { y: -Math.PI / 4, duration: 20, ease: 'power2.inOut' });
+            }
 
-        return () => timeline.kill();
-    }, []);
+            return () => timeline.kill();
+        });
+        if (groupRef.current) oscillate();
+    }, { scope: groupRef });
 
-    useEffect(() => {
+    useGSAP((context, contextSafe) => {
         if (!groupRef.current && !invisibleObjectRef.current) return;
 
-        if (zoomed) {
+        const isClicked = contextSafe(() => {
             setPrevRotationY(groupRef.current.rotation.y);
-            tl.current.pause();
             gsap.to(groupRef.current.rotation, { y: 0, duration: 1, ease: 'power2.out' });
             gsap.to(invisibleObjectRef.current.position, { x: 0, y: 0, z: 19, duration: 1, ease: 'power2.out' });
-        } else {
+
+        });
+
+        const isUnclicked = contextSafe(() => {
             gsap.to(groupRef.current.rotation, { y: prevRotationY, duration: 1, ease: 'power2.out' });
-            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 50, z: 100, duration: 3, ease: 'power2.out' });
-            setTimeout(() => tl.current.play(), 3000);
+            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 30, z: 70, duration: 3, ease: 'power2.out' });
+        });
+
+        if (zoomed) {
+            isClicked();
+        } else {
+            isUnclicked();
         }
-    }, [zoomed]);
+
+        console.log(zoomed);
+    }, { dependencies: [zoomed], scope: groupRef });
+
+    useGSAP((context, contextSafe) => {
+        
+        const resume = contextSafe(() => {
+            tl.current.resume();
+        });
+
+        const pause = contextSafe(() => {
+            tl.current.pause();
+        });
+        
+        if (zoomed) {
+            pause();
+        }
+        else {
+            resume();
+        }
+    }, { dependencies: [zoomed], scope: groupRef });
 
     useFrame(() => {
         if (invisibleObjectRef.current) {

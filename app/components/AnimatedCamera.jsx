@@ -1,41 +1,74 @@
-import React, { useRef, useEffect } from "react";
+"use client";
+
+import React, { useRef, useState, useEffect } from "react";
 import { useThree, useFrame } from '@react-three/fiber';
 import { gsap } from 'gsap';
+import { useGSAP } from "@gsap/react";
 import { Vector3 } from 'three';
 
 export default function AnimatedCamera({ zoomed }) {
     const groupRef = useRef();
     const invisibleObjectRef = useRef();
     const { camera } = useThree();
+    const [prevRotationY, setPrevRotationY] = useState(0);
 
     const tl = useRef(gsap.timeline({ repeat: -1, yoyo: true }));
 
-    useEffect(() => {
-        const timeline = tl.current;
+    useGSAP((context, contextSafe) => {
+        const oscillate = contextSafe(() => {
+            const timeline = tl.current;
 
-        if (groupRef.current) {
-            timeline.to(groupRef.current.rotation, { y: Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-            timeline.to(groupRef.current.rotation, { y: -Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-        }
+            if (groupRef.current) {
+                timeline.to(groupRef.current.rotation, { y: Math.PI / 4, duration: 20, ease: 'power2.inOut' });
+                timeline.to(groupRef.current.rotation, { y: -Math.PI / 4, duration: 20, ease: 'power2.inOut' });
+            }
 
-        return () => timeline.kill();
-    }, []);
+            return () => timeline.kill();
+        });
+        if (groupRef.current) oscillate();
+    }, { scope: groupRef });
 
-    useEffect(() => {
-        if (!groupRef.current && !invisibleObjectRef.current) return;      
-        const prevPosition = groupRef.current.position.clone();
-        if (zoomed) {
-            tl.current.pause();
+    useGSAP((context, contextSafe) => {
+        if (!groupRef.current && !invisibleObjectRef.current) return;
+
+        const isClicked = contextSafe(() => {
+            setPrevRotationY(groupRef.current.rotation.y);
             gsap.to(groupRef.current.rotation, { y: 0, duration: 1, ease: 'power2.out' });
             gsap.to(invisibleObjectRef.current.position, { x: 0, y: 0, z: 19, duration: 1, ease: 'power2.out' });
+
+        });
+
+        const isUnclicked = contextSafe(() => {
+            gsap.to(groupRef.current.rotation, { y: prevRotationY, duration: 1, ease: 'power2.out' });
+            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 30, z: 70, duration: 3, ease: 'power2.out' });
+        });
+
+        if (zoomed) {
+            isClicked();
         } else {
-            gsap.to(groupRef.current.rotation, { y: prevPosition.y, duration: 1, ease: 'power2.out' });
-
-            tl.current.play();
-
-            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 50, z: 100, duration: 3, ease: 'power2.out' });
+            isUnclicked();
         }
-    }, [zoomed]);
+
+        console.log(zoomed);
+    }, { dependencies: [zoomed], scope: groupRef });
+
+    useGSAP((context, contextSafe) => {
+        
+        const resume = contextSafe(() => {
+            tl.current.resume();
+        });
+
+        const pause = contextSafe(() => {
+            tl.current.pause();
+        });
+        
+        if (zoomed) {
+            pause();
+        }
+        else {
+            resume();
+        }
+    }, { dependencies: [zoomed], scope: groupRef });
 
     useFrame(() => {
         if (invisibleObjectRef.current) {
@@ -59,6 +92,3 @@ export default function AnimatedCamera({ zoomed }) {
         </group>
     );
 }
-
-// TODO fix animation jitter after missing pointer.
-// TODO fix bug where clicking gets disabled when  clicked controller just as the page loads.

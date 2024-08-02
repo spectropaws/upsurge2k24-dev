@@ -1,5 +1,28 @@
+import HeroSection from "./hero";
+import PrizeSection from "./PrizeSection";
+import Goodies from "./Goodies";
+import Tracks from "./Tracks";
+import Timeline from "./Timeline";
+import TimelineMobile from "./TimelineMobile";
+import FAQ from "./FAQ";
+import Footer from "./Footer";
+
+
 export default function Smackathon() {
-  return <div className="text-xl flex justify-center items-center h-screen text-5xl">
-      <h1>Smackathon</h1>
-  </div>;
+  return (
+        <>
+            <HeroSection />
+            <PrizeSection />
+            <Goodies />
+            <Tracks />
+            <div className="w-full hidden md:block">
+                <Timeline />
+            </div>
+            <div className="w-full block md:hidden">
+                <TimelineMobile />
+            </div>
+            <FAQ />
+            <Footer />
+        </>
+    );
 }

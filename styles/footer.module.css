@@ -92,12 +92,12 @@
 .logo {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .upsurge_logo {
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .footerCenter {
@@ -267,9 +267,8 @@
   }
 
   .logos_All {
-    margin-top: 0;
+    margin-left: 2rem;
     margin-bottom: 0;
-    margin-left: 1rem;
   }
 
   .link_team {

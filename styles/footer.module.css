@@ -28,7 +28,7 @@
   overflow-x: hidden;
 }
 .Footer {
-  background: url("../app/smackathon/components/footer/assets/background_01.png");
+  background: url("../public/images/footer/background_01.png");
   width: 100%;
   /* height: 500px; */
   background-size: cover;
@@ -238,7 +238,7 @@
   }
 
   .Footer {
-    background-image: url("../app/smackathon/components/footer/assets/image.png");
+    background-image: url("../public/images/footer/image.png");
     object-fit: contain;
     height: 1300px;
     margin-bottom: 8rem;

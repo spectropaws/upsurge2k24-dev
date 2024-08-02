@@ -23,7 +23,7 @@ export default function footer() {
             <div className={styles.footerLeft}>
               <div className={styles.logos_All}>
                 <Image
-                  src="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/smackathon/Upsurge_Logo.png"
+                  src="/images/footer/Upsurge_Logo.png"
                   alt="upsurge"
                   width={200}
                   height={100}
@@ -31,14 +31,14 @@ export default function footer() {
                 />
                 <div className={styles.logo}>
                   <Image
-                    src="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/images/ACM_final.png"
+                    src="/images/footer/ACM_final.png"
                     alt="acm"
                     width={150}
                     height={90}
                     className={styles.acm}
                   />
                   <Image
-                    src="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/images/cosmos+new+logo.png"
+                    src="/images/footer/cosmosLogo.png"
                     alt="cosmos"
                     width={120}
                     height={100}
@@ -70,7 +70,7 @@ export default function footer() {
                 <div className={styles.social_logo}>
                   <a href="#">
                     <Image
-                      src="/instagram.svg"
+                      src="/svgs/footer//instagram.svg"
                       alt="instagram"
                       width={50}
                       height={50}
@@ -78,7 +78,7 @@ export default function footer() {
                   </a>
                   <a href="#">
                     <Image
-                      src="/linkedin.svg"
+                      src="/svgs/footer//linkedin.svg"
                       alt="linkedin"
                       width={50}
                       height={50}
@@ -86,7 +86,7 @@ export default function footer() {
                   </a>
                   <a href="#">
                     <Image
-                      src="/discord.svg"
+                      src="/svgs/footer/discord.svg"
                       alt="discord"
                       width={50}
                       height={50}
@@ -94,7 +94,7 @@ export default function footer() {
                   </a>
                   <a href="#">
                     <Image
-                      src="twitter.svg"
+                      src="/svgs/footer/twitter.svg"
                       alt="twitter"
                       width={50}
                       height={50}

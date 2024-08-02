@@ -1,4 +1,4 @@
-import Footer from "../../components/footer/footer";
+import Footer from "../smackathon/components/footer/footer.js";
 
 export default function Smackathon() {
   return (

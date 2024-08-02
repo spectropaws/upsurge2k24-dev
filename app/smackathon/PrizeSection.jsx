@@ -33,11 +33,7 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image
-                  src="/images/prize/Prize_2.png"
-                  width={338}
-                  height={397}
-                />
+                <Image src="/images/prize/Prize_2.png" width={338} height={397} />
               </motion.div>
             </div>
             <span className="font-medium text-white text-xl">5000</span>
@@ -57,11 +53,7 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image
-                  src="/images/prize/Prize_1.png"
-                  width={430}
-                  height={442}
-                />
+                <Image src="/images/prize/Prize_1.png" width={430} height={442} />
               </motion.div>
             </div>
 
@@ -83,11 +75,7 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image
-                  src="/images/prize/Prize_3.png"
-                  width={338}
-                  height={397}
-                />
+                <Image src="/images/prize/Prize_3.png" width={338} height={397} />
               </motion.div>
             </div>
 
@@ -95,12 +83,7 @@ export default function Prize() {
           </div>
         </div>
       </div>
-      <Image
-        src="/images/prize/transition-nether-new.png"
-        width={1440}
-        height={348}
-        className="w-full bg-cover h-44 lg:h-auto"
-      />
+      <Image src="/images/prize/transition-nether-new.png" width={1440} height={348} className="w-full bg-cover h-44 lg:h-auto" />
     </>
   );
 }

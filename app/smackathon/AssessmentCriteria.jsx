@@ -1,26 +1,26 @@
 "use client";
-import React, { useState } from "react";
-import styles2 from "./Pacman.module.css";
-import downwall from '../images/pacman/downwalls.svg';
+import React, { useEffect, useState } from "react";
+import styles2 from "./components/AssessmentCriteria.module.css";
+// import downwall from '../images/pacman/downwalls.svg';
 
 const assessmentCriteria = [
   {
-    src: "https://static.vecteezy.com/system/resources/previews/006/800/303/original/quality-work-abstract-concept-illustration-quality-in-a-workplace-employee-performance-experienced-worker-speed-of-production-improvement-effective-management-abstract-metaphor-vector.jpg",
+    src: "/images/pacman/quality.png",
     alt: "Quality of work submitted",
     text: "Quality of work submitted",
   },
   {
-    src: "https://img.freepik.com/free-vector/time-management-concept-talk-chart_23-2148831728.jpg",
+    src: "/images/pacman/timeManagement.png",
     alt: "Timeliness of submissions",
     text: "Timeliness of submissions",
   },
   {
-    src: "https://img.freepik.com/free-vector/meeting-concept-illustration_114360-717.jpg?w=2000",
+    src: "/images/pacman/participation.png",
     alt: "Participation in discussions",
     text: "Participation in discussions",
   },
   {
-    src: "https://img.freepik.com/free-vector/flat-creativity-concept-illustration_52683-64279.jpg?w=2000",
+    src: "/images/pacman/innovation.png",
     alt: "Innovation through imagination",
     text: "Innovation through imagination",
   },
@@ -28,10 +28,38 @@ const assessmentCriteria = [
 
 const Pacman = () => {
   const [toggled, setToggled] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(true);
+  const [welcomeText, setWelcomeText] = useState("Welcome Back to the Pacman Era");
 
   const handleToggle = () => {
     setToggled(!toggled);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcome(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!toggled) {
+      setShowWelcome(true);
+      const welcomeTimer = setTimeout(() => {
+        setShowWelcome(false);
+      }, 4500);
+
+      const textChangeTimer = setTimeout(() => {
+        setWelcomeText("Now it's my turn");
+      }, 3000);
+
+      return () => {
+        clearTimeout(welcomeTimer);
+        clearTimeout(textChangeTimer);
+      };
+    }
+  }, [toggled]);
 
   return (
     <div className="bg-black flex items-center justify-center min-h-screen overflow-hidden">
@@ -85,6 +113,9 @@ const Pacman = () => {
               </div>
             </div>
           </div>
+          {showWelcome && (
+            <h4 className="welcome justify-center items-center text-white mt-14 text-xl">{welcomeText}</h4>
+          )}
           <div className="w-full flex flex-col items-center mt-[120px] mx-4">
             {assessmentCriteria.reduce((acc, criteria, index) => {
               if (index % 2 === 0) {
@@ -131,11 +162,11 @@ const Pacman = () => {
             <label htmlFor="joy" className={`${styles2.checkStick}`}></label>
           </div>
         </div>
-
-        <img src={downwall} alt="Downwall Logo" className={`${styles2.imageSize}`} /> 
+        <img src='/images/pacman/downwalls.svg'  alt="Upwall Logo" className={`${styles2.imageSize}`} />
       </div>
     </div>
   );
 };
 
 export default Pacman;
+

@@ -32,7 +32,7 @@ export default function Timeline() {
     };
 
     return (
-        <div className="timeline bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300 w-full min-h-full relative">
+        <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 w-full min-h-full relative">
             <motion.div 
                 className="relative flex items-center justify-center text-5xl text-white h-[250px]" 
                 {...blinkingAnimation}
@@ -234,6 +234,8 @@ export default function Timeline() {
                     <Image src="/svgs/timeline/largeGround.svg"  width={400} height={400} className="w-full h-full" />
                 </div>
             </div>
+
+
         </div>
     );
 }

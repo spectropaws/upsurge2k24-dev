@@ -55,8 +55,8 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 100 }} // Initial state: invisible and moved down
-        animate={{ opacity: 1, y: 0 }} // Animate based on `inView`
-        transition={{ duration: 0.8, delay:1, ease: "easeOut" }} // Duration and easing for smooth transition
+        animate={ inView && { opacity: 1, y: 0 }} // Animate based on `inView`
+        transition={ inView && { duration: 0.8, delay:0.2, ease: "easeOut" }} // Duration and easing for smooth transition
         className="absolute flex flex-col w-80 h-80 pb-16 z-10 bg-slate-200 shadow-lg shadow-indigo-900 bg-opacity-[0.35] rounded-lg"
         style={customShadow}
       >

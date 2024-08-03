@@ -39,7 +39,7 @@ export default function FAQ() {
         backgroundColor: '#0D131E',
         zIndex: 0,
     };
-    
+
     const starStyle = {
         position: 'absolute',
         backgroundColor: '#fff',
@@ -54,9 +54,9 @@ export default function FAQ() {
             const top = Math.random() * 100 + '%';
             const left = Math.random() * 100 + '%';
             const animationDelay = Math.random() * 10 + 's';
-            const size = Math.random() * 3.5 + 'px'; 
+            const size = Math.random() * 3.5 + 'px';
             const opacity = Math.random() * 0.5 + 0.5;
-            
+
             stars.push(
                 <div
                     key={i}
@@ -77,25 +77,28 @@ export default function FAQ() {
     };
 
     return (
-        <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
-            {generateStars(100)}
-            <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ&apos;s</p>
-            <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 bg-opacity-[0.85] relative z-10">
-                {
-                    faq.map((val, index) => {
-                        return (
-                            <div className="mb-2 bg-blue-800 rounded-sm border-2 px-5" key={index}>
-                                <AccordionItem value={`item-${index}`}>
-                                    <AccordionTrigger className="flex">{val.question}</AccordionTrigger>
-                                    <AccordionContent>
-                                        {val.answer}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </div>
-                        )
-                    })
-                }
-            </Accordion>
-        </div>
+        <>
+        <div className="bg-gradient-to-t from-[#0D131E] h-40 via-slate-950 to-black "></div>
+            <div style={starrySkyStyle} className="pt-16 flex flex-col items-center">
+                {generateStars(100)}
+                <p className="text-4xl text-white py-8 z-10">FAQ&apos;s</p>
+                <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 h-[55rem] md:h-[49rem] lg:[40rem] bg-opacity-[0.85] relative z-10">
+                    {
+                        faq.map((val, index) => {
+                            return (
+                                <div className="mb-2 bg-blue-800 rounded-sm border-2 px-5" key={index}>
+                                    <AccordionItem value={`item-${index}`}>
+                                        <AccordionTrigger className="flex">{val.question}</AccordionTrigger>
+                                        <AccordionContent>
+                                            {val.answer}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </div>
+                            )
+                        })
+                    }
+                </Accordion>
+            </div>
+        </>
     )
 }

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import styles2 from "./Pacman.module.css";
-import downwall from '../images/pacman/downwalls.svg';
+import Image from "next/image";
+import styles2 from "./components/AssessmentCriteria.module.css";
 
 const assessmentCriteria = [
   {
@@ -132,7 +132,7 @@ const Pacman = () => {
           </div>
         </div>
 
-        <img src={downwall} alt="Downwall Logo" className={`${styles2.imageSize}`} /> 
+        <Image src="/images/pacman/downwalls.svg" width={500} height={500}  alt="Downwall Logo" className={`${styles2.imageSize}`} /> 
       </div>
     </div>
   );

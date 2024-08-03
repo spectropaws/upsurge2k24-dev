@@ -78,7 +78,7 @@
   .imageSize {
     height: 90%;
     width: 100%;
-    background-image: url("src/assets/images/downwalls.svg");
+    background-image: url("/images/pacman/downwalls.svg");
     background-position: center;
     background-size: cover;
     position: relative;

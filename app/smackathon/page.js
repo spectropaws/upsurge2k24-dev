@@ -10,8 +10,6 @@ import TimelineMobile from "./TimelineMobile";
 import RulesandGuidelines from "./RulesandGuidelines";
 import AssessmentCriteria from "./AssessmentCriteria";
 import Footer from "./Footer";
-import RulesandGuidelines from "./RulesandGuidelines";
-import AssessmentCriteria from "./AssessmentCriteria";
 
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
 const LocateUs = dynamic(() => import('./LocateUs'), { ssr: false });

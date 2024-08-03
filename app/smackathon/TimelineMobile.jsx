@@ -1,7 +1,7 @@
 
 
 "use client";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
@@ -13,7 +13,24 @@ export default function TimelineMobile() {
   });
 
   // Set the y value for Mario and the flag
-  const y = useTransform(scrollYProgress, [0, 1], [0, 1640]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 1620]);
+
+  const [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolling(true);
+            clearTimeout(window.scrollTimeout);
+            window.scrollTimeout = setTimeout(() => {
+                setIsScrolling(false);
+            }, 100);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
   // Blinking animation for TIMELINE text
   const blinkingAnimation = {
@@ -59,17 +76,18 @@ export default function TimelineMobile() {
           {/* Mario and Flag */}
           <motion.div
             style={{ y }}
-            className="absolute top-[-1px] w-[3rem] right-0"
+            className="absolute top-[-1px] w-[3.1rem] right-0"
           >
-            <Image height={48} width={48} src="/images/timeline/flag.png" className="h-[3rem] w-[3rem]" />
+            <Image height={48} width={48} src="/images/timeline/flag.png" className="h-[3.1rem] w-[3.1rem]" />
           </motion.div>
+
 
           
           <motion.div
             style={{ y }}
-            className="absolute top-2 h-[7rem] w-[4rem] right-[-19px] z-10"
+            className="absolute top-[-2rem] h-[9rem] w-[13rem] right-[-95px] z-10"
           >
-            <Image height={70} width={70} src="/images/timeline/mario.png" className=" h-[5rem] w-[6rem]" />
+            <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/marioStatic.png"} height={70} width={70} className=" h-[10rem] w-[12rem]" />
           </motion.div>
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-6 w-6">
                     <Image height={32} width={32} src="/images/timeline/singleblock.png" className="w-8" />
@@ -77,9 +95,9 @@ export default function TimelineMobile() {
           
         </div>
         
-        <div className="flex flex-col items-end sm: pr-0">
+        <div className="flex flex-col w-[270px] items-end sm: pr-0">
           <motion.div
-            className="w-[270px] h-[200px] mt-[70px]"
+            className="w-full h-[200px] mt-[70px]"
             {...boxAnimation}
           >
             <p>
@@ -90,7 +108,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className="font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -102,7 +120,7 @@ export default function TimelineMobile() {
           </motion.div>
 
 
-          <motion.div className="w-[270px] h-[200px] " {...boxAnimation}>
+          <motion.div className="w-full h-[200px] " {...boxAnimation}>
           <p>
                             {`DAY 1<br/>10:00 AM: Problem Statements will be Released<br/>11:30 AM: Teams to Lock and Submit Their Problem Statements`
                                 .split("<br/>")
@@ -110,8 +128,8 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="//images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
+                                                <span className="font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -121,7 +139,7 @@ export default function TimelineMobile() {
                         <img src="/svgs/timeline/brick 4.svg" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-[270px] h-[200px] mt-[60px]"
+            className="w-full h-[200px] mt-[60px]"
             {...boxAnimation}
           >
             <p>
@@ -132,7 +150,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className="font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -143,7 +161,7 @@ export default function TimelineMobile() {
           </motion.div>
 
           <motion.div
-            className="w-[270px] h-[200px] mt-[70px]"
+            className="w-full h-[200px] mt-[70px]"
             {...boxAnimation}
           >
             <p>
@@ -154,7 +172,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className="font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -164,7 +182,7 @@ export default function TimelineMobile() {
                         <img src="/svgs/timeline/brick 1.svg" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-[270px] h-[200px] mt-[50px]"
+            className="w-full h-[200px] mt-[50px]"
             {...boxAnimation}
           >
             <p>
@@ -175,7 +193,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"/>
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className=" font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -184,7 +202,7 @@ export default function TimelineMobile() {
                         </p>
                         <img src="/svgs/timeline/brick 5.svg" className="w-[300px] mt-2" />
           </motion.div>
-          <motion.div className="w-[270px] h-[200px] " {...boxAnimation}>
+          <motion.div className="w-full h-[200px] " {...boxAnimation}>
           <p>
                             {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
                                 .split("<br/>")
@@ -193,7 +211,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className="font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}
@@ -203,7 +221,7 @@ export default function TimelineMobile() {
                         <img src="/svgs/timeline/brick 2.svg" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-[270px] h-[200px] mt-[70px]"
+            className="w-full h-[200px] mt-[70px]"
             {...boxAnimation}
           >
             <p>
@@ -214,7 +232,7 @@ export default function TimelineMobile() {
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="w-full font-medium">{text}</span>
+                                                <span className=" font-medium">{text}</span>
                                             </>
                                         )}
                                         {index === 0 && text}

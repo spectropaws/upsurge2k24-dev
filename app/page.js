@@ -1,14 +1,14 @@
-import Link from "next/link";
 import React from "react";
 import Scene from "./components/Scene";
 
 export default function Home() {
     return (
-        <>
-            { //<Link href="/smackathon" className="text-blue-800 underline text-2xl">Smackathon page</Link> 
-            }
-            <div style={{ height: '100vh', width: '100vw', position: 'relative' }}>
+        <> 
+            <div className="w-screen h-screen relative hidden md:block">
                 <Scene />
+            </div>
+            <div className="w-screen h-screen md:hidden">
+                <iframe src="/smackathon" className="w-full h-full border-0" />
             </div>
         </>
     );

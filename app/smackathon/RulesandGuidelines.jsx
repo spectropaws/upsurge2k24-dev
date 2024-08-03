@@ -2,7 +2,7 @@ import React from 'react';
 import styles1 from './Demo2.module.css';
 import upwall from '../images/pacman/downwalls.svg'; 
 
-const Demo2 = () => {
+const RulesandGuidelines = () => {
   return (
     <div className='main bg-black'>
         <img src={upwall} alt="Upwall Logo"  className={`mx-auto mb-20 -4 ${styles1.imageSize}`} /> 
@@ -33,4 +33,4 @@ const Demo2 = () => {
   );
 };
 
-export default Demo2;
+export default RulesandGuidelines;

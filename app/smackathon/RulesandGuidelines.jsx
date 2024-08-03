@@ -27,7 +27,6 @@ const Demo2 = () => {
           <div className={styles1.pacman}>
             <div className={styles1.mouth}></div>
           </div>
-        </div>
       </div>
     </div>
   );

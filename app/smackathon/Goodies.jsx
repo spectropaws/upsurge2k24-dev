@@ -13,7 +13,7 @@ export default function Goodies() {
           src="/images/goodies/goodies.png"
           width={378}
           height={403}
-          className="bg-[radial-gradient(circle,_rgba(255,_215,_0,_0.7),_rgba(255,_215,_0,_0)_70%)] p-6  rounded-lg shadow-lg ml-0 lg:ml-32"
+          className="bg-[radial-gradient(circle,_rgba(255,_215,_0,_0.7),_rgba(255,_215,_0,_0)_70%)] p-6 rounded-lg shadow-lg ml-0 lg:ml-32"
         />
         <div className="flex flex-col gap-8 lg:m-10">
           <div className="flex items-center ">

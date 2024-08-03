@@ -162,6 +162,7 @@ const Pacman = () => {
             <label htmlFor="joy" className={`${styles2.checkStick}`}></label>
           </div>
         </div>
+
         <Image src="/images/pacman/downwalls.svg" width={500} height={500}  alt="Downwall Logo" className={`${styles2.imageSize}`} /> 
       </div>
     </div>

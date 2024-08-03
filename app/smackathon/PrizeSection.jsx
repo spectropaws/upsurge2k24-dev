@@ -16,11 +16,11 @@ export default function Prize() {
         <h2 className="text-5xl mt-16 text-center text-white font-bold">
           Cash Prizes
         </h2>
-        <div className="flex flex-col gap-20 lg:flex-row px-24 py-32">
+        <div className="flex flex-col gap-20 px-12 lg:flex-row lg:px-24 py-32 md:px-24">
           <div className="flex flex-col items-center gap-10 order-1 md:order-0">
             <span className="font-semibold text-white text-xl">Prize 2</span>
 
-            <div className="bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)] p-14">
+            <div className="p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -33,7 +33,11 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image src="/images/prize/Prize_2.png" width={338} height={397} />
+                <Image
+                  src="/images/prize/Prize_2.png"
+                  width={338}
+                  height={397}
+                />
               </motion.div>
             </div>
             <span className="font-medium text-white text-xl">5000</span>
@@ -53,7 +57,11 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image src="/images/prize/Prize_1.png" width={430} height={442} />
+                <Image
+                  src="/images/prize/Prize_1.png"
+                  width={430}
+                  height={442}
+                />
               </motion.div>
             </div>
 
@@ -62,7 +70,7 @@ export default function Prize() {
           <div className="flex flex-col items-center gap-10 order-1">
             <span className="font-semibold text-white text-xl">Prize 3</span>
 
-            <div className="bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)] p-16">
+            <div className="p-16 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)] ">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -75,7 +83,11 @@ export default function Prize() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Image src="/images/prize/Prize_3.png" width={338} height={397} />
+                <Image
+                  src="/images/prize/Prize_3.png"
+                  width={338}
+                  height={397}
+                />
               </motion.div>
             </div>
 
@@ -83,9 +95,12 @@ export default function Prize() {
           </div>
         </div>
       </div>
-      <Image src="/images/prize/transition-nether-new.png" width={1440} height={348} className="w-full bg-cover h-44 lg:h-auto" />
+      <Image
+        src="/images/prize/transition-nether-new.png"
+        width={1440}
+        height={348}
+        className="w-full bg-cover h-44 lg:h-auto"
+      />
     </>
   );
 }
-
-

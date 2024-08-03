@@ -70,7 +70,7 @@ export default function Prize() {
           <div className="flex flex-col items-center gap-10 order-1">
             <span className="font-semibold text-white text-xl">Prize 3</span>
 
-            <div className="p-16 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)] ">
+            <div className="p-16 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],

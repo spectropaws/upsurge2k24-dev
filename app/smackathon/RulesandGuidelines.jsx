@@ -29,6 +29,7 @@ const Demo2 = () => {
           </div>
       </div>
     </div>
+    </div>
   );
 };
 

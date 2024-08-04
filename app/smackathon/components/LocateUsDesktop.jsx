@@ -6,8 +6,8 @@ import { gsap } from 'gsap';
 import dynamic from 'next/dynamic';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import generateStars, { starrySkyStyle } from './components/generateStars';
-const GoogleMaps = dynamic(() => import('./components/GoogleMaps'), { ssr: false });
+import generateStars, { starrySkyStyle } from './generateStars';
+const GoogleMaps = dynamic(() => import('./GoogleMaps'), { ssr: false });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,21 +23,22 @@ const LocateUs = () => {
                 end: 'bottom center',
                 onEnter: () => {
                     gsap.to(earthRef.current, {
-                        duration: 2,
+                        duration: 1,
                         rotation: 360,
-                        width: "24rem",
-                        height: "24rem",
-                        opacity: 0,
+                        x: '-20vw',
                         ease: 'power1.inOut',
                     });
-                    gsap.set(circularDivRef.current, { display: 'block', autoAlpha: 0 });
+                    gsap.set(circularDivRef.current, { display: 'block' });
                     gsap.to(circularDivRef.current, {
-                        duration: 2,
-                        width: "24rem",
-                        height: "24rem",
-                        autoAlpha: 1,
+                        duration: 1,
+                        x: '20vw',
+                        top: 0,
+                        scale: 1,
+                        opacity: 1,
+                        transitionDuration: '0.4s',
+                        transition: '0.4s ease-in-out',
                         ease: 'power1.inOut',
-                    });
+                    }, 0);
                 },
             },
         });
@@ -58,12 +59,12 @@ const LocateUs = () => {
                     ref={earthRef}
                     src="/images/locateus/pixel-earth-cropped.png"
                     alt="Earth"
-                    className="w-24 h-24 transform origin-center"
+                    className="w-96 h-96 transform origin-center"
                 />
                 <div
                     ref={circularDivRef}
-                    className="w-16 h-16 rounded-full absolute opacity-0 overflow-hidden transition-transform duration-500 ease-in-out transform hover:md:scale-150 hover:rounded-2xl"
-                    style={{ display: 'none' }}
+                    className="-top-1/4 w-96 h-96 rounded-full absolute opacity-0 overflow-hidden transform-gpu transition-all duration:1000 ease-in-out hover:scale-150 hover:rounded-2xl"
+                    style={{ display: 'none', transform: "scale(0.1)", transition: '0.8s ease-in-out' }}
                 >
                     {/* Here you can later integrate Google Maps */}
                     <GoogleMaps />

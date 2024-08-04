@@ -26,7 +26,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
         >
             <div className="flex-1 text-left">{children}</div>
             <Image
-                src={"/images/sprites/plane.svg"}
+                src={"/images/trackIcons/plane.svg"}
                 width={30}
                 height={30}
                 alt="plane"

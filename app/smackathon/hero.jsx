@@ -10,7 +10,7 @@ export default function HeroSection() {
           alt="hero character 1"
           width={800}
           height={500}
-          className="hidden opacity-60 absolute top-72 -right-40 md:block opacity-100 "
+          className="hidden opacity-60 absolute top-72 -right-40 md:block md:opacity-100 "
         />
         <Image
           src="/images/hero/hero-chars.png"
@@ -26,7 +26,7 @@ export default function HeroSection() {
             muted
             className="object-cover h-screen w-screen"
           >
-            <source alt="hero video" src="/videos/hero/bggg.mp4" />
+            <source alt="hero video" src="/videos/hero/bgg.mp4" />
           </video>
           {/* <img src="/images/bg.webp" className="object-cover h-screen w-screen" /> */}
         </div>

@@ -4,12 +4,12 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import scrollFunction from './components/scrollFunction';
+import useScrollFunction from './components/scrollFunction';
 
 
 export default function Timeline() {
 
-    const isScrolling = scrollFunction();
+    const isScrolling = useScrollFunction();
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -136,7 +136,7 @@ export default function Timeline() {
                         style={{ y }}
                         className="absolute top-[-25px] w-[13rem] right-[-88px]  z-20"
                     >
-                        <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/mario.png"}  height={96} width={96} className="h-[13rem] w-[13rem] pr-0 z-20" />
+                        <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/mario.png"}  height={96} width={96} className="h-[13rem] w-[13rem] pr-0 z-20" unoptimized/>
                     </motion.div>
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-8 w-8">
                         <Image src="/images/timeline/singleblock.png" height={32} width={32} className="w-8" />
@@ -201,44 +201,44 @@ export default function Timeline() {
                 </div>
 
                 <div className="absolute top-[-6rem] left-1/4 transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32} className="w-[90px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32} className="w-[90px] h-auto" />
                 </div>
                 <div className="absolute top-10 right-[15rem] transform -translate-x-1/2 -translate-y-1/2 z-0 ">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[-1rem] left-36 transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div> 
                 <div className="absolute top-[-5rem] right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/lgClouds.png" width={150} height={32}  className="w-[150px] h-auto" />
+                    <Image src="/images/timeline/lgClouds.png" alt="cloud" width={150} height={32}  className="w-[150px] h-auto" />
                 </div>
                 <div className="absolute top-[18rem] left-[10rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png"width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[57rem] left-[8rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[38rem] left-[5rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                
                 <div className="absolute top-[30rem] right-[5rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[10rem] right-[5rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[68rem] right-[3rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                 <div className="absolute top-[50rem] right-[10rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
-                    <Image src="/images/timeline/smClouds.png" width={90} height={32}  className="w-[80px] h-auto" />
+                    <Image src="/images/timeline/smClouds.png" alt="cloud" width={90} height={32}  className="w-[80px] h-auto" />
                 </div>
                
             </div>
             <div className="w-full flex flex-col items-center">
                 <div className="bg-black">
-                    <Image src="/svgs/timeline/largeGround.svg"  width={400} height={400} className="w-full h-full" />
+                    <Image src="/svgs/timeline/largeGround.svg" alt="large ground"  width={400} height={400} className="w-full h-full" />
                 </div>
             </div>
         </div>

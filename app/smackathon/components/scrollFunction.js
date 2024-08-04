@@ -1,7 +1,6 @@
-// useScroll.js
 import { useState, useEffect, useRef } from "react";
 
-export default function scrollFunction() {
+export default function useScrollFunction() {
     const [isScrolling, setIsScrolling] = useState(false);
     const scrollTimeoutRef = useRef(null);
 

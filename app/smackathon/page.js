@@ -9,12 +9,10 @@ import Timeline from "./Timeline";
 import TimelineMobile from "./TimelineMobile";
 import RulesandGuidelines from "./RulesandGuidelines";
 import AssessmentCriteria from "./AssessmentCriteria";
+import LocateUs from './LocateUs';
 import Footer from "./Footer";
 
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
-const LocateUs = dynamic(() => import('./LocateUs'), { ssr: false });
-const LocateUsMobile = dynamic(() => import('./LocateUsMobile'), { ssr: false });
-
 
 export default function Smackathon() {
   return (
@@ -32,12 +30,7 @@ export default function Smackathon() {
             <RulesandGuidelines />
             <AssessmentCriteria />
             <FAQ />
-            <div className="w-full hidden md:block">
-                <LocateUs />
-            </div>
-            <div className="w-full block md:hidden">
-                <LocateUsMobile />
-            </div>
+            <LocateUs />
             <Footer />
         </>
     );

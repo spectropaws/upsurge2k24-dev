@@ -39,8 +39,8 @@ export default function FAQ() {
         <div className="bg-gradient-to-t from-[#0D131E] h-40 via-slate-950 to-black "></div>
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)}
-            <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ&apos;s</p>
-            <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 bg-opacity-[0.85] relative z-10">
+            <p className="text-5xl text-white py-5 z-10">FAQ&apos;s</p>
+            <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 h-[55rem] sm:h-[47rem] border-2  bg-opacity-[0.85] relative z-10">
                 {
                     faq.map((val, index) => {
                         return (

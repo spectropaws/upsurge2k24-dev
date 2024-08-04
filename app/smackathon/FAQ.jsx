@@ -34,8 +34,9 @@ export default function FAQ() {
         },
     ]
 
-    
     return (
+        <>
+        <div className="bg-gradient-to-t from-[#0D131E] h-40 via-slate-950 to-black "></div>
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)}
             <p className="text-3xl text-red-600 font-bold py-5 z-10">FAQ&apos;s</p>
@@ -56,5 +57,6 @@ export default function FAQ() {
                 }
             </Accordion>
         </div>
+        </>
     )
 }

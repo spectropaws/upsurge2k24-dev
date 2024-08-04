@@ -1,11 +1,11 @@
 import React from 'react';
-import styles1 from './Demo2.module.css';
-import upwall from '../images/pacman/downwalls.svg'; 
+import Image from 'next/image';
+import styles1 from './components/RulesandGuidelines.module.css';
 
 const RulesandGuidelines = () => {
   return (
     <div className='main bg-black'>
-        <img src={upwall} alt="Upwall Logo"  className={`mx-auto mb-20 -4 ${styles1.imageSize}`} /> 
+        <Image width={500} height={500} src="/images/pacman/downwalls.svg" alt="Upwall Logo"  className={`mx-auto mb-20 -4 ${styles1.imageSize}`} /> 
         <h1 className={styles1.heading}>Rules and Guidelines for Smackathon 2024</h1>
     <div className={styles1.container}>
       

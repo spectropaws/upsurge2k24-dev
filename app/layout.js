@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden no-scrollbar`}>{children}</body>
+    <html lang="en" className="no-scrollbar">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

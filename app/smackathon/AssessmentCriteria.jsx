@@ -1,7 +1,8 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
-import styles2 from "./AssessmentCriteria.module.css";
-import downwall from '../images/pacman/downwalls.svg';
+import Image from "next/image";
+import styles2 from "./components/AssessmentCriteria.module.css";
 
 const assessmentCriteria = [
   {
@@ -176,7 +177,8 @@ const AssessmentCriteria = () => {
             <label htmlFor="joy" className={`${styles2.checkStick}`}></label>
           </div>
         </div>
-        <img src={downwall} alt="Upwall Logo" className={`${styles2.imageSize}`} />
+
+        <Image src="/images/pacman/downwalls.svg" width={500} height={500}  alt="Downwall Logo" className={`${styles2.imageSize}`} /> 
       </div>
     </div>
   );

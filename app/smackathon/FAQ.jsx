@@ -40,11 +40,11 @@ export default function FAQ() {
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)}
             <p className="text-5xl text-white py-5 z-10">FAQ&apos;s</p>
-            <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 h-[55rem] sm:h-[47rem] border-2  bg-opacity-[0.85] relative z-10">
+            <Accordion type="single" collapsible className="md:w-[60vw] text-white rounded-md m-auto px-5 pb-5 h-[55rem] sm:h-[47rem] bg-opacity-[0.85] relative z-10">
                 {
                     faq.map((val, index) => {
                         return (
-                            <div className="mb-2 bg-blue-800 rounded-sm px-5" key={index}>
+                            <div className="mb-2 bg-blue-800 rounded-sm border-2 px-5" key={index}>
                                 <AccordionItem value={`item-${index}`}>
                                     <AccordionTrigger className="flex">{val.question}</AccordionTrigger>
                                     <AccordionContent>

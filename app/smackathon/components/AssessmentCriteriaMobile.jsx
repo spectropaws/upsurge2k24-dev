@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import styles3 from "./components/MobileAssesmentCriteria.module.css";
+import styles3 from "./MobileAssesmentCriteria.module.css";
 
 const assessmentCriteria = [
   {

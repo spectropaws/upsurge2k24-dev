@@ -1,8 +1,7 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import styles2 from "./components/AssessmentCriteria.module.css";
+import styles2 from "./AssessmentCriteria.module.css";
 
 const assessmentCriteria = [
   {

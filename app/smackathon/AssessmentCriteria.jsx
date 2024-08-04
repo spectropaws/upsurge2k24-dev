@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
-const AssessmentCriteriaMobile = dynamic(() => import('./AssesmentCriteriaMobile'), {ssr: false})
-const AssessmentCriteriaDesktop = dynamic(() => import('./AssessmentCriteriaDesktop'), {ssr: false})
+const AssessmentCriteriaMobile = dynamic(() => import('./components/AssessmentCriteriaMobile'), {ssr: false})
+const AssessmentCriteriaDesktop = dynamic(() => import('./components/AssessmentCriteriaDesktop'), {ssr: false})
 
 export default function AssesmentCriteria(){
     return(

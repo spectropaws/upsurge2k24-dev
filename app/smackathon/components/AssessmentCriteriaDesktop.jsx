@@ -5,22 +5,22 @@ import styles2 from "./AssessmentCriteria.module.css";
 
 const assessmentCriteria = [
   {
-    src: "/images/pacman/quality.png",
+    src: "/images/pacman/quality.svg",
     alt: "Quality of work submitted",
     text: "Quality of work submitted",
   },
   {
-    src: "/images/pacman/timeManagement.png",
+    src: "/images/pacman/timeManagement.svg",
     alt: "Timeliness of submissions",
     text: "Timeliness of submissions",
   },
   {
-    src: "/images/pacman/participation.png",
+    src: "/images/pacman/participation.svg",
     alt: "Participation in discussions",
     text: "Participation in discussions",
   },
   {
-    src: "/images/pacman/innovation.png",
+    src: "/images/pacman/innovation.svg",
     alt: "Innovation through imagination",
     text: "Innovation through imagination",
   },
@@ -76,13 +76,13 @@ const AssessmentCriteria = () => {
     };
   }, [toggled, toggleCount]);
   return (
-    <div className="bg-black flex items-center justify-center min-h-screen overflow-hidden">
-      <div className="relative flex flex-col items-center justify-center w-full h-full p-5">
-        <h1 className="text-white font-bold text-2xl mb-10 mt-20 text-center">
+    <div className="bg-black flex items-center justify-center min-h-screen pt-16 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center w-full h-full">
+        <h1 className="text-white text-5xl mb-4 mt-20 text-center">
           Assessment Criteria For Smackathon 2024
         </h1>
         <div
-          className={`relative mx-8 sm:ml-20 md:mx-[6-rem] my-5 flex flex-col items-center pb-20 pt-10 w-4/5 h-4/5 border-8 border-dotted border-yellow-300 box-border`}
+          className={`relative my-5 flex flex-col items-center justify-center pb-10 pt-10 w-4/5 h-4/5 border-8 border-dotted border-yellow-300 box-border`}
         >
           <div className={`${styles2.pacman} ${toggled ? "" : styles2.reverse}`}>
             <div className={styles2.mouth}></div>
@@ -127,15 +127,17 @@ const AssessmentCriteria = () => {
               </div>
             </div>
           </div>
+          <div className="h-10 w-full flex items-center justify-center">
           {showWelcome && (
-            <h4 className="welcome justify-center items-center text-white mt-14">{welcomeText}</h4>
+            <h4 className=" text-white text-sm md:text-lg">{welcomeText}</h4>
           )}
-          <div className="w-full flex flex-col items-center mt-[50px] ml-[20px]">
+          </div>
+          <div className="w-full flex flex-col items-center justify-center">
             {assessmentCriteria.reduce((acc, criteria, index) => {
               if (index % 2 === 0) {
                 acc.push(
                   <div key={index} className="flex flex-col md:flex-row justify-center mb-10 w-full">
-                    <div className="flex flex-row items-center w-full md:w-1/2 mx-4 mb-4 ml-20 md:mb-0">
+                    <div className="flex flex-row items-center w-full md:w-1/2 mx-4 mb-4 md:mb-0">
                       <img
                         src={criteria.src}
                         className="rounded-full h-16 w-16 md:h-24 md:w-24 ml-24 mb-4 md:mb-0"

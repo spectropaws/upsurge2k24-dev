@@ -1,8 +1,8 @@
-import styles from "../smackathon/components/footer.module.css";
+import styles from "./components/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function footer() {
+export default function Footer() {
   return (
     <footer className={styles.parentfooter}>
       <div className={styles.Smackathon_footer}>

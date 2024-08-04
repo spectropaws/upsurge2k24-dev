@@ -51,8 +51,8 @@ const LocateUs = () => {
     return (
         <div style={starrySkyStyle} className="h-screen py-10">
             {generateStars(200)}
-            <h1 className="text-center text-white text-5xl">Locate Us</h1>
-            <div className="relative flex justify-center items-end mx-5 my-32 md:mx-10">
+            <h1 className="text-center text-white text-5xl pt-10">Locate Us</h1>
+            <div className="relative flex justify-center items-end mx-5 my-20 md:mx-10">
                 <Image
                     width={500}
                     height={500}
@@ -69,6 +69,14 @@ const LocateUs = () => {
                     {/* Here you can later integrate Google Maps */}
                     <GoogleMaps />
                 </div>
+            </div>
+
+            <div className="text-center text-white text-2xl pb-10 flex items-center justify-center">
+                <span className="text-wrap">
+                    <svg className="w-6 h-6 text-white mr-2 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                    </svg>
+                    23rd August 2024, Seminar Hall, CSE building, YCCE campus</span>
             </div>
         </div>
     );

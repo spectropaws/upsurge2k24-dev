@@ -223,12 +223,12 @@
   color: white;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 690px) {
   @keyframes moveDuck {
     from {
       top: 30%;
-      left: 0%;
-      transform: translateX(-70%);
+      left: 0;
+      transform: translateX(-200%);
     }
     to {
       top: 0;
@@ -240,13 +240,13 @@
   .Footer {
     background-image: url("../../../public/images/footer/image.png");
     object-fit: contain;
-    height: 1300px;
-    margin-bottom: 8rem;
+    /* height: 1300px; */
+    /* margin-bottom: 8rem; */
   }
 
   .dog {
     /* display: none; */
-    top: 51.5rem;
+    top: 50.5rem;
     right: 5rem;
     position: relative;
     z-index: 0;
@@ -263,7 +263,8 @@
   .footerContents {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    /* gap: 5rem; */
+    margin-top: 0;
   }
 
   .logos_All {
@@ -282,10 +283,16 @@
   .Links_all {
     flex-wrap: nowrap;
     flex-direction: column;
+    margin-bottom: 0;
+    row-gap: 2rem;
   }
 
   .footerRight {
     margin-top: 2rem;
+  }
+  .socials{
+    margin-bottom: 3rem;
+    z-index: 100;
   }
 
   .find_us {
@@ -295,7 +302,7 @@
     margin-top: 0.25rem;
   }
   .copyright {
-    margin-top: 25rem;
+    /* margin-top: 25rem; */
     text-align: center;
   }
 }

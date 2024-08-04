@@ -4,8 +4,10 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import scrollFunction from "./components/scrollFunction";
 
 export default function TimelineMobile() {
+  const isScrolling = scrollFunction();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -13,24 +15,9 @@ export default function TimelineMobile() {
   });
 
   // Set the y value for Mario and the flag
-  const y = useTransform(scrollYProgress, [0, 1], [0, 1620]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 1600]);
 
-  const [isScrolling, setIsScrolling] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolling(true);
-            clearTimeout(window.scrollTimeout);
-            window.scrollTimeout = setTimeout(() => {
-                setIsScrolling(false);
-            }, 100);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
   // Blinking animation for TIMELINE text
   const blinkingAnimation = {
@@ -85,9 +72,9 @@ export default function TimelineMobile() {
           
           <motion.div
             style={{ y }}
-            className="absolute top-[-2rem] h-[9rem] w-[13rem] right-[-95px] z-10"
+            className="absolute top-[-2rem] h-[11rem] w-[13rem] right-[-95px] z-10"
           >
-            <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/marioStatic.png"} height={70} width={70} className=" h-[10rem] w-[12rem]" />
+            <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/newestMario.png"} height={70} width={70} className=" h-[11rem] w-[12rem]" />
           </motion.div>
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-6 w-6">
                     <Image height={32} width={32} src="/images/timeline/singleblock.png" className="w-8" />

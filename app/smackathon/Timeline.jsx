@@ -1,17 +1,15 @@
 
 
-
-
-
-
-
-
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import scrollFunction from './components/scrollFunction';
+
 
 export default function Timeline() {
+
+    const isScrolling = scrollFunction();
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -19,22 +17,7 @@ export default function Timeline() {
     });
 
     const y = useTransform(scrollYProgress, [0, 1], [0, 1030]);
-    const [isScrolling, setIsScrolling] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolling(true);
-            clearTimeout(window.scrollTimeout);
-            window.scrollTimeout = setTimeout(() => {
-                setIsScrolling(false);
-            }, 100);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    
 
 
     const blinkingAnimation = {
@@ -153,7 +136,7 @@ export default function Timeline() {
                         style={{ y }}
                         className="absolute top-[-25px] w-[13rem] right-[-88px]  z-20"
                     >
-                        <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/marioStatic.png"} height={96} width={96} className="h-[13rem] w-[13rem] pr-0 z-20" />
+                        <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/mario.png"}  height={96} width={96} className="h-[13rem] w-[13rem] pr-0 z-20" />
                     </motion.div>
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-8 w-8">
                         <Image src="/images/timeline/singleblock.png" height={32} width={32} className="w-8" />

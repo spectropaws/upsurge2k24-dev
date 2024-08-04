@@ -44,7 +44,7 @@ export default function FAQ() {
                 {
                     faq.map((val, index) => {
                         return (
-                            <div className="mb-2 bg-blue-800 rounded-sm border-2 px-5" key={index}>
+                            <div className="mb-2 bg-blue-800 rounded-sm px-5" key={index}>
                                 <AccordionItem value={`item-${index}`}>
                                     <AccordionTrigger className="flex">{val.question}</AccordionTrigger>
                                     <AccordionContent>

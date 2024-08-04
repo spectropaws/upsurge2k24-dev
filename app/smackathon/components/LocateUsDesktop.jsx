@@ -21,6 +21,7 @@ const LocateUs = () => {
                 trigger: earthRef.current,
                 start: 'top center',
                 end: 'bottom center',
+                scrub: true,
                 onEnter: () => {
                     gsap.to(earthRef.current, {
                         duration: 1,

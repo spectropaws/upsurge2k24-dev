@@ -70,7 +70,7 @@ export default function Tracks() {
 
 
       {/* cards */}
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center lg:mx-32 ">
         <div className="w-full md:w-4/5 flex flex-wrap justify-center gap-4">
           {
             sampleTracks.map((item, idx) => (

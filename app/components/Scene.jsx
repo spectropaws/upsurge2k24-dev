@@ -1,25 +1,19 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Canvas} from '@react-three/fiber';
 import Controller from './Controller';
 import AnimatedCamera from './AnimatedCamera';
 import CustomEnvironment from './CustomEnvironment';
 
 export default function MainScene() {
-    const [zoomed, setZoomed] = useState(false);
-
-    const handleControllerClick = () => {
-        setZoomed((zoomed) => !zoomed);
-    };
-
     return (
-        <Canvas style={{ height: '100vh', width: '100vw' }}>
+        <Canvas style={{ height: '100vh', width: '100vw' }} antialias pixelRatio={window.devicePixelRatio}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[0, 5, 30]} intensity={5} />
             <CustomEnvironment /> 
-            <Controller onClick={handleControllerClick} />
-            <AnimatedCamera zoomed={zoomed} />
+            <Controller/>
+            <AnimatedCamera />
         </Canvas>
     );
 }

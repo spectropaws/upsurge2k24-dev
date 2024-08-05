@@ -15,23 +15,31 @@ import Footer from "./Footer";
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
 
 export default function Smackathon() {
-  return (
+    return (
         <>
-            <HeroSection />
-            <PrizeSection />
-            <Goodies />
-            <Tracks />
-            <div className="w-full hidden md:block">
-                <Timeline />
+            <div className="bg-black">
+                <HeroSection />
+                <PrizeSection />
+                <Goodies />
             </div>
-            <div className="w-full block md:hidden">
-                <TimelineMobile />
+            <div className='bg-blue-500'>
+                <Tracks />
+                <div className="w-full hidden md:block">
+                    <Timeline />
+                </div>
+                <div className="w-full block md:hidden">
+                    <TimelineMobile />
+                </div>
             </div>
-            <RulesandGuidelines />
-            <AssessmentCriteria />
-            <FAQ />
-            <LocateUs />
-            <Footer />
+            <div className="bg-black">
+                <RulesandGuidelines />
+                <AssessmentCriteria />
+                <FAQ />
+            </div>
+            <div className='bg-[#3CBDFD] m-0 p-0 w-full'>
+                <LocateUs />
+                <Footer />
+            </div >
         </>
     );
 }

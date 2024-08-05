@@ -1,74 +1,95 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useThree, useFrame } from '@react-three/fiber';
-import { gsap } from 'gsap';
-import { useGSAP } from "@gsap/react";
 import { Vector3 } from 'three';
+import { motion } from 'framer-motion-3d';
+import { useAnimation } from "framer-motion";
 
-export default function AnimatedCamera({ zoomed }) {
+export default function AnimatedCamera() {
     const groupRef = useRef();
     const invisibleObjectRef = useRef();
     const { camera } = useThree();
-    const [prevRotationY, setPrevRotationY] = useState(0);
+    const [isZoomed, setIsZoomed] = useState(false);
+    const [prevRotationY, setPrevRotationY] = useState(Math.PI / 4);
+    const [transitionComplete, setTransitionComplete] = useState(true);
+    const [hasLerped, setHasLerped] = useState(false);
 
-    const tl = useRef(gsap.timeline({ repeat: -1, yoyo: true }));
+    const groupControls = useAnimation();
+    const objectControls = useAnimation();
 
-    useGSAP((context, contextSafe) => {
-        const oscillate = contextSafe(() => {
-            const timeline = tl.current;
+    // set isZoomed state based on event listener
+    useEffect(() => {
+        const handleControllerClick = () => {
+            setIsZoomed((prevZoomed) => !prevZoomed);
+        };
 
-            if (groupRef.current) {
-                timeline.to(groupRef.current.rotation, { y: Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-                timeline.to(groupRef.current.rotation, { y: -Math.PI / 4, duration: 20, ease: 'power2.inOut' });
-            }
+        window.addEventListener('controllerClick', handleControllerClick);
 
-            return () => timeline.kill();
-        });
-        if (groupRef.current) oscillate();
-    }, { scope: groupRef });
+        return () => {
+            window.removeEventListener('controllerClick', handleControllerClick);
+        };
+    }, []);
 
-    useGSAP((context, contextSafe) => {
-        if (!groupRef.current && !invisibleObjectRef.current) return;
-
-        const isClicked = contextSafe(() => {
+    // Zoom in or out based on state
+    useEffect(() => {
+        if (isZoomed) {
             setPrevRotationY(groupRef.current.rotation.y);
-            gsap.to(groupRef.current.rotation, { y: 0, duration: 1, ease: 'power2.out' });
-            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 0, z: 19, duration: 1, ease: 'power2.out' });
-
-        });
-
-        const isUnclicked = contextSafe(() => {
-            gsap.to(groupRef.current.rotation, { y: prevRotationY, duration: 1, ease: 'power2.out' });
-            gsap.to(invisibleObjectRef.current.position, { x: 0, y: 30, z: 70, duration: 3, ease: 'power2.out' });
-        });
-
-        if (zoomed) {
-            isClicked();
+            groupControls.start({
+                rotateY: 0,
+                transition: { duration: 1, ease: 'easeInOut' }
+            });
+            objectControls.start({
+                x: 0,
+                y: 0,
+                z: 19,
+                transition: { duration: 1, ease: 'easeInOut' }
+            });
+            setTransitionComplete(false);
+            setHasLerped(false);
         } else {
-            isUnclicked();
+            objectControls.start({
+                x: 0,
+                y: 30,
+                z: 70,
+                transition: { duration: 1, ease: 'easeInOut' }
+            });
+            groupControls.start({
+                rotateY: prevRotationY,
+                transition: {
+                    duration: 1,
+                    ease: 'easeInOut',
+                    onComplete: () => setHasLerped(true)
+                }
+            });
         }
+    }, [isZoomed, groupControls, objectControls, prevRotationY]);
 
-        console.log(zoomed);
-    }, { dependencies: [zoomed], scope: groupRef });
-
-    useGSAP((context, contextSafe) => {
-        
-        const resume = contextSafe(() => {
-            tl.current.resume();
-        });
-
-        const pause = contextSafe(() => {
-            tl.current.pause();
-        });
-        
-        if (zoomed) {
-            pause();
+    // Lerp rotation
+    useEffect(() => {
+        if (hasLerped) {
+            const duration = (((Math.PI / 4) - Math.abs(prevRotationY)) * 40) / Math.PI;
+            groupControls.start({
+                rotateY: (Math.abs(prevRotationY) / prevRotationY) * Math.PI / 4,
+                transition: { duration: duration, ease: 'easeInOut', 
+                    onComplete: () => {
+                    setPrevRotationY(groupRef.current.rotation.y);
+                    setTransitionComplete(true);
+                    setHasLerped(false);
+                }},
+            });
         }
-        else {
-            resume();
+    }, [hasLerped, prevRotationY, groupControls]);
+    
+
+    useEffect(() => {
+        if (transitionComplete) {
+            groupControls.start({
+                rotateY: [prevRotationY, -(Math.abs(prevRotationY) / prevRotationY) * Math.PI / 4],
+                transition: { duration: 20, ease: 'easeInOut', yoyo: true, repeat: Infinity, repeatType: 'reverse' }
+            });
         }
-    }, { dependencies: [zoomed], scope: groupRef });
+    }, [transitionComplete, prevRotationY, groupControls]);
 
     useFrame(() => {
         if (invisibleObjectRef.current) {
@@ -80,15 +101,16 @@ export default function AnimatedCamera({ zoomed }) {
     });
 
     return (
-        <group ref={groupRef}>
-            <mesh
+        <motion.group ref={groupRef} animate={groupControls}>
+            <motion.mesh
                 ref={invisibleObjectRef}
                 position={[50, 50, 100]}
                 visible={false}
+                animate={objectControls}
             >
                 <boxGeometry args={[1, 1, 1]} />
                 <meshBasicMaterial transparent opacity={0} />
-            </mesh>
-        </group>
+            </motion.mesh>
+        </motion.group>
     );
 }

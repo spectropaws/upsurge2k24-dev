@@ -17,7 +17,3 @@ export default function MainScene() {
         </Canvas>
     );
 }
-
-// fixed issue: When clicked before the component remounts, the animation misbehaves.
-// NOTE: issue still persists if click is spammed
-// TODO fix this issue

@@ -21,8 +21,8 @@ export default function Controller({ scale, onClick }) {
 
     return (
         <group ref={meshRef} scale={scale} position={[0, 0, 0]} rotation={[0, 0, 0]} onClick={onClick}>
-            <Html position={[0, 0, 0.01]} transform occlude style={{ transition: 'transform 0.5s' }}>
-                <div className='w-[1920px] h-[1080px]'>
+            <Html position={[0, 0, 0.01]} transform occlude style={{ transition: 'transform 0.5s', transformStyle: 'preserve-3d', transform: "scale(1.25)" }}>
+                <div className='w-[1545px] h-[875px]'>
                     <ControllerScreen />
                 </div>
             </Html>

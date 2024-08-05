@@ -1,10 +1,152 @@
 import Image from "next/image";
 import styles from "./components/hero.module.css";
+import { easeIn, easeInOut, motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
     <>
-      <div className="relative">
+      <div className=" relative h-[100vh]">
+        <video
+          autoPlay="autoplay"
+          loop
+          muted
+          className="object-cover h-full w-screen"
+        >
+          <source alt="hero video" src="/videos/hero/bgg.mp4" />
+        </video>
+        <div className="w-[80%] py-10 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+          <div className="flex flex-col items-center gap-12">
+            <div className="flex flex-col items-center">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1, ease: easeIn },
+                }}
+              >
+                <Image
+                  src="/images/hero/Gfg+White.png"
+                  alt="Gfg Logo"
+                  width="258"
+                  height="41"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1, ease: easeIn },
+                }}
+                className="py-4"
+              >
+                <span className="text-lg text-white font-bold ">Presents</span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  y: [100, 0],
+                  scale: [2, 1],
+                  transition: {
+                    type: "string",
+                    bounce: 0.25,
+                    duration: 2,
+                    ease: easeInOut,
+                  },
+                }}
+              >
+                <Image
+                  src="/images/hero/smackathon_logo.png"
+                  alt="smackathon logo"
+                  width="500"
+                  height="191"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1, ease: easeIn },
+                }}
+                className="flex flex-col items-center gap-1"
+              >
+                <span className="text-lg text-white font-bold">On</span>
+                <span className="text-lg text-white font-semibold mb-6">
+                  23rd - 24th August
+                </span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1, ease: easeIn },
+                }}
+              >
+                <div className="flex text-xs justify-center">
+                  <button className={styles.button}>
+                    <span className={styles.box}>R</span>
+                    <span className={styles.box}>E</span>
+                    <span className={styles.box}>G</span>
+                    <span className={styles.box}>I</span>
+                    <span className={styles.box}>S</span>
+                    <span className={styles.box}>T</span>
+                    <span className={styles.box}>E</span>
+                    <span className={styles.box}>R</span>
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 2, duration: 1, ease: easeIn },
+              }}
+            >
+              <div className="flex flex-col items-center gap-8 sm:flex-row md:gap-60">
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-base text-white font-semibold pb-1">
+                    Powered By
+                  </span>
+                  <Image
+                    src="/images/hero/COJAG.png"
+                    alt="COJAG logo"
+                    width="100"
+                    height="50"
+                  />
+                </div>
+
+                <div className="flex flex-col items-center">
+                  <span className="text-base text-white font-semibold pb-1">
+                    Co-powered By
+                  </span>
+                  <Image
+                    src="/images/hero/webgurukul.png"
+                    alt="webgurukul logo"
+                    width="172"
+                    height="50"
+                  />
+                </div>
+              </div>
+            </motion.div>
+            {/* <div className="flex text-xs justify-center py-24"> */}
+            {/* <button className={styles.button}>
+                <span className={styles.box1}>D</span>
+                <span className={styles.box1}>O</span>
+                <span className={styles.box1}>W</span>
+                <span className={styles.box1}>N</span>
+                <span className={styles.box1}>L</span>
+                <span className={styles.box1}>O</span>
+                <span className={styles.box1}>A</span>
+                <span className={styles.box1}>D</span>
+              </button> */}
+            {/* <button className={styles.buttondb}>Download Brochure</button> */}
+            {/* </div> */}
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="relative">
         <Image
           src="/images/hero/hero-char1.png"
           alt="hero character 1"
@@ -28,7 +170,6 @@ export default function HeroSection() {
           >
             <source alt="hero video" src="/videos/hero/bgg.mp4" />
           </video>
-          {/* <img src="/images/bg.webp" className="object-cover h-screen w-screen" /> */}
         </div>
         <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 shadow-lg flex flex-col gap-10 text-center px-12 py-6 rounded-lg w-9/12 ">
           <div className="flex flex-col items-center">
@@ -60,7 +201,7 @@ export default function HeroSection() {
               </button>
             </div>
 
-            {/* <button className={styles.btn}>Register Now!</button> */}
+           
           </div>
           <div className="flex-col flex items-center gap-8 justify-between px-4 md:px-12 md:flex-row ">
             <div className="flex flex-col gap-2">
@@ -90,7 +231,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

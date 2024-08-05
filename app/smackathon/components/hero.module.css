@@ -112,14 +112,15 @@
   transition: all 0.8s;
 }
 
-.box {
+.box,
+.box1 {
   /* width: 35px; */
   /* height: 40px; */
-  padding: 12px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  /* font-size: 8px; */
   font-weight: bold;
   /* color: #1bfd9c; */
   color: #fff;
@@ -183,11 +184,60 @@
   content: " ";
 }
 
+.box1:before {
+  content: "B";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+}
+
+.box1:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: "R";
+}
+
+.box1:nth-child(3)::before {
+  content: "O";
+}
+
+.box1:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: "C";
+}
+
+.box1:nth-child(5)::before {
+  content: "H";
+}
+
+.box1:nth-child(6)::before {
+  transform: translateY(-100%);
+  content: "U";
+}
+.box1:nth-child(7)::before {
+  content: "R";
+}
+.box1:nth-child(8)::before {
+  transform: translateY(-100%);
+  content: "E";
+}
+
 .button:hover {
-  box-shadow: inset 0 0 10px rgba(27, 253, 156), 0 0 9px 5px rgba(27, 253, 156);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.5),
+    0 0 9px 5px rgba(27, 253, 156, 0.5);
 }
 
 .button:hover .box:before {
+  transform: translateY(0);
+}
+
+.button:hover .box1:before {
   transform: translateY(0);
 }
 
@@ -283,17 +333,17 @@
   } */
 
 /* Button Variant 4 */
-/* .btn {
+.buttondb {
   --green: #1bfd9c;
   font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
+  padding: 0.7em 1.4em;
+  /* letter-spacing: 0.06em; */
   position: relative;
   font-family: inherit;
-  border-radius: 0.6em;
+  /* border-radius: 0.6em; */
   overflow: hidden;
   transition: all 0.3s;
-  line-height: 1.4em;
+  /* line-height: 1.4em; */
   border: 2px solid var(--green);
   background: linear-gradient(
     to right,
@@ -307,13 +357,13 @@
     0 0 9px 3px rgba(27, 253, 156, 0.1);
 }
 
-.btn:hover {
+.buttondb:hover {
   color: #82ffc9;
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
     0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
-.btn:before {
+.buttondb:before {
   content: "";
   position: absolute;
   left: -4em;
@@ -330,6 +380,6 @@
   );
 }
 
-.btn:hover:before {
+.buttondb:hover:before {
   transform: translateX(15em);
-} */
+}

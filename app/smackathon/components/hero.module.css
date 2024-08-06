@@ -335,6 +335,7 @@
 /* Button Variant 4 */
 .buttondb {
   --green: #1bfd9c;
+  --brown: #59402a;
   font-size: 15px;
   padding: 0.7em 1.4em;
   /* letter-spacing: 0.06em; */
@@ -383,3 +384,235 @@
 .buttondb:hover:before {
   transform: translateX(15em);
 }
+
+.btndownload {
+  width: 210px;
+  height: 80px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: #31ae1f;
+  border: 0;
+  position: relative;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btndownload:hover {
+  cursor: pointer;
+}
+
+.btndownload:after,
+.btndownload:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNHB4IiBoZWlnaHQ9IjRweCIgdmlld2JveD0iMCAwIDRweCA0cHgiIHg9IjBweCIgeT0iMHB4Ij48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSJyZ2IoMzcsIDE3NiwgNykiIC8+PC9zdmc+")
+      top left no-repeat,
+    url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNHB4IiBoZWlnaHQ9IjRweCIgdmlld2JveD0iMCAwIDRweCA0cHgiIHg9IjBweCIgeT0iMHB4Ij48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSJyZ2IoMTQxLCAyNTMsIDkyKSIgLz48L3N2Zz4=")
+      top right no-repeat,
+    url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNHB4IiBoZWlnaHQ9IjRweCIgdmlld2JveD0iMCAwIDRweCA0cHgiIHg9IjBweCIgeT0iMHB4Ij48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSJyZ2IoMTgsIDg4LCAzKSIgLz48L3N2Zz4=")
+      bottom left no-repeat,
+    url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNHB4IiBoZWlnaHQ9IjRweCIgdmlld2JveD0iMCAwIDRweCA0cHgiIHg9IjBweCIgeT0iMHB4Ij48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSJyZ2IoMzYsIDE4MCwgNikiIC8+PC9zdmc+")
+      bottom right no-repeat;
+}
+
+.btndownload:before {
+  background: none;
+  border-top: 4px solid #64fd1f;
+  border-bottom: 4px solid #1e8c03;
+  border-left: 4px solid #156c00;
+  border-right: 4px solid #47d009;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.minecraftbutton {
+  /* background-color: #3b8526; */
+  background-color: #59402a;
+  /* background: url(/images/prize/bgbtn.jpeg);
+  background-position: center;
+  background-size: cover; */
+  color: #ffffff;
+
+  /* entfernt Unterstreichung */
+  text-decoration: none;
+
+  /* abstand zwischen Text und Hintergrundfarbe */
+  padding: 20px 40px;
+
+  /* macht Text in Großbuchstaben */
+  text-transform: uppercase;
+
+  /* Schriftart ändern */
+  font-family: "Noto Sans", sans-serif;
+
+  /* fette Schrift buahaha */
+  font-weight: bold;
+
+  /* Buchstaben bissi außeinander */
+  letter-spacing: 1px;
+
+  /* deswegen halt */
+  display: inline-block;
+
+  /* minecraft Schatten */
+  box-shadow: inset 0 4px #4e2f20, inset 0 -4px #2a1810,
+    0 4px rgba(0, 0, 0, 0.25);
+
+  /* box-shadow: inset 0 40px 30px #333; */
+
+  text-shadow: 0 1px 0 #2a1810;
+
+  /* übergangsanimation */
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* wenn isch mit der maus drüber fahre */
+.minecraftbutton:hover {
+  background-color: #171615;
+
+  /* dezenter Verlauf */
+  background-image: linear-gradient(#3d3938, #171615);
+
+  /* noch dezenterer Text Schatten */
+  text-shadow: 0 1px 0 #000;
+
+  box-shadow: inset 0 0 0 2px #1157be;
+
+  /* weißer umriss außerhalb vom schatten*/
+  outline: 0.063rem solid #fff;
+}
+
+.btndb {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40b3a2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btndb:hover {
+  opacity: 0.95;
+}
+
+.btndb .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+      0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+.btnfinale {
+  padding: 12px 24px;
+  font-size: 10px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.btnfinale:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #6e6e6e !important;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.btnfinale:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.btnfinale:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.btnfinale:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+.btnfinale:active {
+  transform: translateY(4px);
+}
+
+.btnfinale:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+/* <div className="relative">
+<Image
+  src="/svgs/prize/ground.svg"
+  width={2020}
+  height={734}
+  className="w-full object-cover"
+/>
+<div className="flex absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] ">
+  <button className={styles.btnfinale}>Download Brochure</button>
+  <button class={styles.btndb}>
+    <i class={styles.animation}></i>BUTTON
+    <i class={styles.animation}></i>
+  </button> 
+</div>
+</div> */

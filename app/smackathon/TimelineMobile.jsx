@@ -223,10 +223,22 @@ export default function TimelineMobile() {
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
       </div>
       <div className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[150px] h-auto" />
+        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[100px] h-auto" />
       </div>
-      <div className="absolute top-40 right-4 transform -translate-x-1/2 -translate-y-1/2 z-0">
+      {/* <div className="absolute top-40 right-4 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
+      </div> */}
+      <div className="absolute top-[500px] right-14 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
+      </div>
+      <div className="absolute top-[780px] right-9 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[70px] h-auto" />
+      </div>
+      <div className="absolute top-[1250px] right-12 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[70px] h-auto" />
+      </div>
+      <div className="absolute bottom-[400px] right-9 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[70px] h-auto" />
       </div>
 
      

@@ -11,7 +11,7 @@ export default function footer() {
             <Image
               className={styles.background_img}
               src="/images/footer/DuckLaugh1.gif"
-              alt="alt"
+              alt="DuckLaugh"
               width={150}
               height={150}
             />

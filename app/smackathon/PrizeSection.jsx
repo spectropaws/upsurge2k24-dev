@@ -6,7 +6,7 @@ export default function Prize() {
   return (
     <>
       <Image
-        src="/images/prize/temp1.png"
+        src="/svgs/prize/ground.svg"
         width={2020}
         height={734}
         className="w-full bg-cover"

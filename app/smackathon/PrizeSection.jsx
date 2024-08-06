@@ -22,7 +22,13 @@ export default function Prize() {
         </div>
       </div>
       {/* <img src= className="" /> */}
-      <div className="bg-[url('/images/prize/prize-bg.png')] w-full bg-cover flex flex-col items-center">
+      <div
+        style={{
+          boxShadow: "rgba(0, 0, 0, 0.8) 0px -80px 36px -28px inset",
+          boxShadow: "0px 25px 20px #000000 inset",
+        }}
+        className="bg-[url('/images/prize/new-prize-bg.png')] w-full bg-center flex flex-col items-center"
+      >
 
         <h2 className="text-5xl mt-16 text-center text-white font-bold">
           Cash Prizes
@@ -96,26 +102,6 @@ export default function Prize() {
           </div>
         </div>
       </div>
-      {/* <Image
-        src="/images/prize/new-transition-2.png"
-        width={1440}
-        height={348}
-        className="w-full bg-center h-44 lg:h-72"
-      /> */}
-
-      {/* <div className="w-full h-32" style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #050a10 0%, #050a0f 100%)", //upper then lower
-        }}>
-
-      </div> */}
-      {/* <div
-        className="w-full h-72"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, #17130f 0% 20%, #011536 20% 40%, #012256 40% 60%, #032F77 60% 80%, #0e121a 80% 100%)",
-        }}
-      ></div> */}
     </>
   );
 }

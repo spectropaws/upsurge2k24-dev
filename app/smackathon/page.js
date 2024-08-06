@@ -34,10 +34,12 @@ export default function Smackathon() {
             <div className="bg-black">
                 <RulesandGuidelines />
                 <AssessmentCriteria />
-                <FAQ />
             </div>
-            <div className='bg-[#3CBDFD] m-0 p-0 w-full'>
+            <div className="bg-[#0D131E]">
+                <FAQ />
                 <LocateUs />
+            </div>
+            <div className='bg-[#3CBCFC] m-0 p-0 w-full'>
                 <Footer />
             </div >
         </>

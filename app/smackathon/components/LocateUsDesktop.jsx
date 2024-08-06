@@ -17,7 +17,7 @@ const LocateUs = () => {
         if (inView) {
             controls.start({
                 rotate: 360,
-                x: '-20vw',
+                x: '-25vw',
                 transition: { duration: 1, ease: 'easeInOut' },
             });
             controls.start("visible");
@@ -30,7 +30,7 @@ const LocateUs = () => {
             display: 'block',
             opacity: 1,
             scale: 1,
-            x: '20vw',
+            x: '25vw',
             transition: { duration: 1, ease: 'easeInOut' }
         }
     };

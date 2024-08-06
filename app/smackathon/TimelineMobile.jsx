@@ -222,8 +222,8 @@ export default function TimelineMobile() {
       <div className="absolute top-40 left-14 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
       </div>
-      <div className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[150px] h-auto" />
+      <div className="absolute top-56 right-12 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[110px] h-auto" />
       </div>
       <div className="absolute top-40 right-4 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />

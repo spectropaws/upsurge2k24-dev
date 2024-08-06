@@ -48,9 +48,9 @@ export default function Timeline() {
                     <p className="absolute">TIMELINE</p>
                 </div>
     
-                <div ref={container} className="container relative min-h-screen w-full flex justify-center gap-20  text-gray-200">
+                <div ref={container} className="container w-[80%] relative min-h-screen w-full flex justify-center gap-20  text-gray-200 lg: w-[100%]">
                     {/* Left container */}
-                    <div className="relative flex flex-col items-end w-[400px] gap-[10rem] text-lg mr-10 mb-[10rem]">
+                    <div className="relative flex flex-col items-end w-[400px] gap-[10rem] text-lg mr-28 mb-[10rem]">
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
                             <p>
                                 {`DAY 1<br/>08:30 AM: Check-in Time for Teams`
@@ -146,7 +146,7 @@ export default function Timeline() {
                     </div>
     
                     {/* Right container */}
-                    <div className="relative flex flex-col items-start w-[400px] gap-[10rem] ml-10 mb-[10rem] mt-20">
+                    <div className="relative flex flex-col items-start w-[400px] gap-[10rem] ml-28 mb-[10rem] mt-20">
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
                             <p>
                                 {`DAY 1<br/>10:00 AM: Problem Statements will be Released<br/>11:30 AM: Teams to Lock and Submit Their Problem Statements`

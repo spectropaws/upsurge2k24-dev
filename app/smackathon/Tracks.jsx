@@ -44,28 +44,19 @@ export default function Tracks() {
     }
   ];
 
-  const blinkingAnimation = {
-    animate: {
-      opacity: [1, 0, 1],
-    },
-    transition: {
-      duration: 1,
-      repeat: Infinity,
-      repeatType: "loop",
-    },
-  };
+
 
   return (<>
     <div className='h-80 bg-gradient-to-b from-zinc-950 via-blue-800 to-blue-500'></div>
     <div className="relative w-full bg-gradient-to-b from-blue-500 to-blue-400 pb-40">
       {/* headline */}
       <div className="relative flex items-center justify-center text-5xl text-white h-[50px]">
-        <motion.div
+        <div
           className="relative flex items-center justify-center text-5xl text-white h-[50px]"
-          {...blinkingAnimation}
+         
         >
           <p className="absolute">TRACKS</p>
-        </motion.div>
+        </div>
       </div>
 
 

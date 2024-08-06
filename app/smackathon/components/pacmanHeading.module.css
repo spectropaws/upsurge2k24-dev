@@ -3,7 +3,6 @@
 .wrapper {
     display: flex;
     position: relative;
-    flex-wrap: wrap;
   }
   
   .wrapperInner {

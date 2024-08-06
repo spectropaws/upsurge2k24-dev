@@ -17,15 +17,14 @@
   }
 }
 
-.parentfooter {
+.Smackathon_footer {
   padding: 0;
   margin: 0;
   border: none;
   font-size: 0.75rem;
-}
-.Smackathon_footer {
   background-color: rgb(136, 112, 0);
   overflow-x: hidden;
+  color: white;
 }
 .Footer {
   background: url("../../../public/images/footer/background_01.png");
@@ -49,7 +48,7 @@
   /* mix-blend-mode: multiply; */
   /* filter: contrast(1.5); */
   background: transparent;
-  top: 29.5rem;
+  top: 25.5rem;
   animation: showObject 4s infinite;
   animation-delay: 4s;
   opacity: 0;
@@ -62,6 +61,7 @@
 }
 
 .footerContents {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -85,7 +85,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   margin-bottom: 15rem;
 }
 
@@ -114,7 +114,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
-  row-gap: 3.5rem;
+  row-gap: 3rem;
   box-sizing: border-box;
   margin-bottom: 15rem;
   font-weight: 700;
@@ -128,23 +128,23 @@
   display: flex;
   row-gap: 5rem;
   gap: 2rem;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .Links_all .link_smackathon:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 .Links_all .link_schedule:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 .Links_all .link_events:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 .Links_all .link_team:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
@@ -156,13 +156,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 
 .socials {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  /* row-gap: 2rem; */
   margin-bottom: 10rem;
 }
 
@@ -170,6 +171,10 @@
   justify-content: center;
   flex-direction: row;
   font-size: 1.3rem;
+}
+
+.follow_us{
+  margin-bottom: 1rem;
 }
 
 .social_logo {
@@ -215,7 +220,7 @@
 .copyrightPara {
   align-items: center;
   margin-bottom: 2rem;
-  font-size: 0.6rem;
+  /* font-size: 0.6rem; */
   row-gap: 2rem;
 }
 
@@ -246,7 +251,8 @@
 
   .dog {
     /* display: none; */
-    top: 50.5rem;
+    top: 58.5rem;
+
     right: 5rem;
     position: relative;
     z-index: 0;
@@ -264,11 +270,10 @@
     display: flex;
     flex-direction: column;
     /* gap: 5rem; */
-    margin-top: 0;
   }
 
   .logos_All {
-    margin-left: 2rem;
+    margin-left: 0;
     margin-bottom: 0;
   }
 
@@ -283,26 +288,44 @@
   .Links_all {
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom:5rem ;
+    margin-top: 2rem;
     row-gap: 2rem;
+    position: relative;
+    top: 3rem;
   }
 
   .footerRight {
     margin-top: 2rem;
   }
   .socials{
+    margin-top: 10rem;
     margin-bottom: 3rem;
     z-index: 100;
+  }
+  .social_logo{
+    margin-top: 0.5rem;
   }
 
   .find_us {
     margin-top: 1rem;
+    position: relative;
+    top: 2rem;
   }
   .contact_us {
     margin-top: 0.25rem;
+    position: relative;
+    top: 2rem;
+  }
+  .contact_details{
+    margin-top: 1rem;
   }
   .copyright {
     /* margin-top: 25rem; */
     text-align: center;
+  }
+
+  .copyrightPara{
+    margin-top: 1rem;
   }
 }

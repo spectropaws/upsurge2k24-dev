@@ -4,14 +4,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className={styles.parentfooter}>
+   
       <div className={styles.Smackathon_footer}>
         <div className={styles.Footer}>
           <div className={styles.dog}>
             <Image
               className={styles.background_img}
               src="/images/footer/DuckLaugh1.gif"
-              alt="alt"
+              alt="DuckLaugh"
               width={150}
               height={150}
             />
@@ -71,9 +71,9 @@ export default function Footer() {
             </div>
             <div className={styles.footerRight}>
               <div className={styles.socials}>
-                <h3 className={styles.follow_us}>Follow US</h3>
+                <h3 className={styles.follow_us}>Follow US <br/></h3>
                 <div className={styles.social_logo}>
-                  <a href="#">
+                  <a href="https://www.instagram.com/cse_ycce_official/">
                     <Image
                       src="/svgs/footer//instagram.svg"
                       alt="instagram"
@@ -81,7 +81,7 @@ export default function Footer() {
                       height={50}
                     />
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/company/yccecosmos/">
                     <Image
                       src="/svgs/footer//linkedin.svg"
                       alt="linkedin"
@@ -139,16 +139,16 @@ export default function Footer() {
               Website Team CSE
             </a>
             <br />
-            <a className={styles.a} href="">
+            <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf">
               Privacy Policy
             </a>
             ,
-            <a className={styles.a} href="">
+            <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf">
               No Refund Policy
             </a>
           </p>
         </div>
       </div>
-    </footer>
+    
   );
 }

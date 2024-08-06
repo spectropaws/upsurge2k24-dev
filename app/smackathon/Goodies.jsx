@@ -8,7 +8,7 @@ export default function Goodies() {
       style={{
         boxShadow: "0px 25px 20px #000000 inset",
       }}
-      className="relative bg-[url('/images/goodies/1.png')] w-full bg-cover bg-center py-8"
+      className="relative bg-[url('/images/goodies/goodies-bg.png')] w-full bg-cover bg-center py-8"
     >
       <h1 className="text-4xl p-7 pb-12 text-center text-white font-bold">
         Exclusive Goodies from GFG

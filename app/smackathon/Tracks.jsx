@@ -55,9 +55,9 @@ export default function Tracks() {
     },
   };
 
-  return (
-    <motion.div className="relative w-full bg-gradient-to-b from-blue-500 to-blue-400 pb-40">
-
+  return (<>
+    <div className='h-80 bg-gradient-to-b from-zinc-950 via-blue-800 to-blue-500'></div>
+    <div className="relative w-full bg-gradient-to-b from-blue-500 to-blue-400 pb-40">
       {/* headline */}
       <div className="relative flex items-center justify-center text-5xl text-white h-[50px]">
         <motion.div
@@ -71,7 +71,7 @@ export default function Tracks() {
 
       {/* cards */}
       <div className="flex justify-center items-center lg:mx-32 ">
-        <div className="w-full lg:w-[90%] 2xl:w-[70%] md:w-4/5 flex flex-wrap justify-center gap-4">
+        <div className="w-full flex flex-wrap justify-center gap-4">
           {
             sampleTracks.map((item, idx) => (
               <div key={idx} className="mt-16">
@@ -81,6 +81,7 @@ export default function Tracks() {
           }
         </div>
       </div>
-    </motion.div>
+    </div>
+    </>
   );
 }

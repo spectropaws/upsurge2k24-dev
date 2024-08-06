@@ -4,8 +4,10 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import useScrollFunction from "./components/scrollFunction";
 
 export default function TimelineMobile() {
+  const isScrolling = useScrollFunction();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -13,36 +15,9 @@ export default function TimelineMobile() {
   });
 
   // Set the y value for Mario and the flag
-  const y = useTransform(scrollYProgress, [0, 1], [0, 1620]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 1645]);
 
-  const [isScrolling, setIsScrolling] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolling(true);
-            clearTimeout(window.scrollTimeout);
-            window.scrollTimeout = setTimeout(() => {
-                setIsScrolling(false);
-            }, 100);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-  // Blinking animation for TIMELINE text
-  const blinkingAnimation = {
-    animate: {
-      opacity: [1, 0, 1],
-    },
-    transition: {
-      duration: 1,
-      repeat: Infinity,
-      repeatType: "loop",
-    },
-  };
 
   // Animation for boxes appearing on scroll
   const boxAnimation = {
@@ -54,12 +29,12 @@ export default function TimelineMobile() {
 
   return (
     <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 w-full min-h-full relative">
-      <motion.div
+      <div
         className="relative flex justify-center text-5xl text-white h-[250px] top-10"
-        {...blinkingAnimation}
+        
       >
         <p className="absolute">TIMELINE</p>
-      </motion.div>
+      </div>
       
 
       <div
@@ -78,19 +53,19 @@ export default function TimelineMobile() {
             style={{ y }}
             className="absolute top-[-1px] w-[3.1rem] right-0"
           >
-            <Image height={48} width={48} src="/images/timeline/flag.png" className="h-[3.1rem] w-[3.1rem]" />
+            <Image height={48} width={48} src="/images/timeline/flag.png" alt="flag" className="h-[3.1rem] w-[3.1rem]" />
           </motion.div>
 
 
           
           <motion.div
             style={{ y }}
-            className="absolute top-[-2rem] h-[9rem] w-[13rem] right-[-95px] z-10"
+            className="absolute top-[-2rem] h-[11rem] w-[13rem] right-[-95px] z-10"
           >
-            <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/marioStatic.png"} height={70} width={70} className=" h-[10rem] w-[12rem]" />
+            <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/mario.png"} height={70} width={70} className=" h-[11rem] w-[12rem]" alt="mario" unoptimized />
           </motion.div>
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-6 w-6">
-                    <Image height={32} width={32} src="/images/timeline/singleblock.png" className="w-8" />
+                    <Image height={32} width={32} src="/images/timeline/singleblock.png" alt="block" className="w-8" />
               </div>
           
         </div>
@@ -107,7 +82,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
                                                 <span className="font-medium">{text}</span>
                                             </>
                                         )}
@@ -115,7 +90,7 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 1.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 1.svg" alt="bricks" className="w-[300px] mt-2" />
             
           </motion.div>
 
@@ -128,7 +103,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
                                                 <span className="font-medium">{text}</span>
                                             </>
                                         )}
@@ -136,7 +111,7 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 4.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 4.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
             className="w-full h-[200px] mt-[60px]"
@@ -149,7 +124,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
                                                 <span className="font-medium">{text}</span>
                                             </>
                                         )}
@@ -157,7 +132,7 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 3.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 3.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
 
           <motion.div
@@ -171,7 +146,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
                                                 <span className="font-medium">{text}</span>
                                             </>
                                         )}
@@ -179,7 +154,7 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 1.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 1.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
             className="w-full h-[200px] mt-[50px]"
@@ -192,7 +167,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"/>
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"/>
                                                 <span className=" font-medium">{text}</span>
                                             </>
                                         )}
@@ -200,7 +175,7 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 5.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 5.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div className="w-full h-[200px] " {...boxAnimation}>
           <p>
@@ -210,7 +185,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
                                                 <span className="font-medium">{text}</span>
                                             </>
                                         )}
@@ -218,10 +193,10 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 2.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 2.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-full h-[200px] mt-[70px]"
+            className="w-full h-[200px] mt-[70px] mb-[40px]"
             {...boxAnimation}
           >
             <p>
@@ -231,7 +206,7 @@ export default function TimelineMobile() {
                                     <span key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
-                                                <img src="/images/timeline/coin.gif" className="inline h-[19px] w-[15px] mr-2 pt-1" />
+                                                <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
                                                 <span className=" font-medium">{text}</span>
                                             </>
                                         )}
@@ -239,26 +214,26 @@ export default function TimelineMobile() {
                                     </span>
                                 ))}
                         </p>
-                        <img src="/svgs/timeline/brick 2.svg" className="w-[300px] mt-2" />
+                        <Image width={300} height={60} src="/svgs/timeline/brick 2.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
         </div>
       </div>
 
       <div className="absolute top-40 left-14 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <img src="/images/timeline/smClouds.png" className="w-[80px] h-auto" />
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
       </div>
       <div className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <img src="/images/timeline/lgClouds.png" className="w-[150px] h-auto" />
+        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[150px] h-auto" />
       </div>
       <div className="absolute top-40 right-4 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <img src="/images/timeline/smClouds.png" className="w-[80px] h-auto" />
+        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
       </div>
 
      
       <div className="relative w-full flex flex-col items-center">
       
                 <div className="bg-black">
-                    <img src="/svgs/timeline/smallGround.svg" className="w-full" />
+                    <Image alt="small ground" height={100} width={375} src="/svgs/timeline/smGround.svg" className="w-full" />
                 </div>
             </div>
     </div>

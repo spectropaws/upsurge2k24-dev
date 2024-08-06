@@ -5,8 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ControllerScreen from './ControllerScreen';
 import { Html } from '@react-three/drei';
 
-
-export default function Controller({ scale, onClick }) {
+export default function Controller() {
     const meshRef = useRef();
 
     useEffect(() => {
@@ -15,14 +14,25 @@ export default function Controller({ scale, onClick }) {
             const model = gltf.scene;
             model.scale.set(21.5, 20, 20);
             model.rotation.set(0.01, Math.PI, Math.PI);
-            meshRef.current.add(gltf.scene);
+            meshRef.current.add(model);
         });
     }, []);
 
+    const handleClick = () => {
+        const event = new Event('controllerClick');
+        window.dispatchEvent(event);
+    };
+
     return (
-        <group ref={meshRef} scale={scale} position={[0, 0, 0]} rotation={[0, 0, 0]} onClick={onClick}>
-            <Html position={[0, 0, 0.01]} transform occlude style={{ transition: 'transform 0.5s' }}>
-                <div className='w-[1920px] h-[1080px]'>
+        <group ref={meshRef} scale={[1, 1, 1]} position={[0, 0, 0]} rotation={[0, 0, 0]} onClick={handleClick}>
+            <Html position={[0, 0, 0.01]} transform occlude width={1536} height={864} 
+                style={{ 
+                    transition: 'transform 0.5s', 
+                    transformStyle: 'preserve-3d', 
+                    transform: "scale(1.25)",
+                    backfaceVisibility: 'hidden'
+                }}>
+                <div className='w-[1536px] h-[864px]'>
                     <ControllerScreen />
                 </div>
             </Html>

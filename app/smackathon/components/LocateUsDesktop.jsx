@@ -1,74 +1,73 @@
-"use client"
+"use client";
 
-import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import dynamic from 'next/dynamic';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import generateStars, { starrySkyStyle } from './generateStars';
 const GoogleMaps = dynamic(() => import('./GoogleMaps'), { ssr: false });
 
-gsap.registerPlugin(ScrollTrigger);
-
 const LocateUs = () => {
     const earthRef = useRef(null);
-    const circularDivRef = useRef(null);
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ triggerOnce: true });
 
     useEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: earthRef.current,
-                start: 'top center',
-                end: 'bottom center',
-                onEnter: () => {
-                    gsap.to(earthRef.current, {
-                        duration: 1,
-                        rotation: 360,
-                        x: '-20vw',
-                        ease: 'power1.inOut',
-                    });
-                    gsap.set(circularDivRef.current, { display: 'block' });
-                    gsap.to(circularDivRef.current, {
-                        duration: 1,
-                        x: '20vw',
-                        top: 0,
-                        scale: 1,
-                        opacity: 1,
-                        transitionDuration: '0.4s',
-                        transition: '0.4s ease-in-out',
-                        ease: 'power1.inOut',
-                    }, 0);
-                },
-            },
-        });
+        if (inView) {
+            controls.start({
+                rotate: 360,
+                x: '-20vw',
+                transition: { duration: 1, ease: 'easeInOut' },
+            });
+            controls.start("visible");
+        }
+    }, [controls, inView]);
 
-        return () => {
-            if (tl.scrollTrigger) tl.scrollTrigger.kill();
-        };
-    }, []);
+    const circularDivVariants = {
+        hidden: { opacity: 0, scale: 0.1, x: 0 },
+        visible: {
+            display: 'block',
+            opacity: 1,
+            scale: 1,
+            x: '20vw',
+            transition: { duration: 1, ease: 'easeInOut' }
+        }
+    };
 
     return (
-        <div style={starrySkyStyle} className="h-screen py-10">
+        <div style={starrySkyStyle} className="pb-10">
             {generateStars(200)}
             <h1 className="text-center text-white text-5xl">Locate Us</h1>
-            <div className="relative flex justify-center items-end mx-5 my-32 md:mx-10">
-                <Image
+            <div className="relative flex justify-center items-end mx-5 my-20 md:mx-10">
+                <motion.img
                     width={500}
                     height={500}
                     ref={earthRef}
                     src="/images/locateus/pixel-earth-cropped.png"
                     alt="Earth"
-                    className="w-96 h-96 transform origin-center"
+                    className="w-[30rem] h-[30rem] transform origin-center"
+                    initial={{ rotate: 0, x: 0 }}
+                    animate={controls}
                 />
-                <div
-                    ref={circularDivRef}
-                    className="-top-1/4 w-96 h-96 rounded-full absolute opacity-0 overflow-hidden transform-gpu transition-all duration:1000 ease-in-out hover:scale-150 hover:rounded-2xl"
-                    style={{ display: 'none', transform: "scale(0.1)", transition: '0.8s ease-in-out' }}
+                <motion.div
+                    ref={ref}
+                    className="w-[30rem] h-[30rem] rounded-full absolute opacity-0 overflow-hidden transform-gpu transition-all duration:1000 ease-in-out hover:md:scale-150 hover:rounded-2xl"
+                    variants={circularDivVariants}
+                    initial="hidden"
+                    animate={controls}
                 >
-                    {/* Here you can later integrate Google Maps */}
                     <GoogleMaps />
-                </div>
+                </motion.div>
+            </div>
+
+            <div className="text-center text-white text-2xl pb-10 flex items-center justify-center">
+                <span className="text-wrap">
+                    <svg className="w-6 h-6 text-white mr-2 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                    </svg>
+                    23rd August 2024, Seminar Hall, CSE building, YCCE campus
+                </span>
             </div>
         </div>
     );

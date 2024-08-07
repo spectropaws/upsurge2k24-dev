@@ -68,7 +68,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
             height={500}
             className="border-[3px] border-yellow-300 h-20 w-20 rounded-full"
           />
-          <h3 className="text-xl font-bold text-blue-700 ml-2">{trackTitle}</h3>
+          <p className="text-xl font-bold text-blue-700 ml-2">{trackTitle}</p>
         </div>
         <p className="text-sm px-6 text-white font-medium text-justify" >
           {trackDesc}

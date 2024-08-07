@@ -39,7 +39,7 @@ export default function FAQ() {
         <div className="bg-gradient-to-t from-[#030d1f] h-40 via-slate-950 to-black pt-64 "></div>
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)}
-            <h1 className="text-4xl md:text-5xl text-white py-5 z-10 mb-16">FAQ&apos;s</h1>
+            <h1 className="text-3xl md:text-5xl text-white py-5 z-10 mb-16">FAQ&apos;s</h1>
             <Accordion type="single" collapsible className="md:w-[80%] text-white rounded-md m-auto px-5 pb-5 h-[55rem] sm:h-[47rem] bg-opacity-[0.85] relative z-10">
                 {
                     faq.map((val, index) => {

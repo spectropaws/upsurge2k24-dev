@@ -213,6 +213,10 @@
   background-color: rgb(94, 77, 10);
 }
 
+.Contact{
+  font-size: 15px;
+}
+
 .copyright {
   
   width: 80%;
@@ -226,12 +230,12 @@
   margin-top: 1rem;
   align-items: center;
   margin-bottom: 2rem;
-  /* font-size: 0.6rem; */
+  font-size: 13px;
   row-gap: 2rem;
 }
 
 .a {
-  color: white;
+  color: rgb(238, 194, 72);
 }
 @media (min-width: 779px) and (max-width: 850px){
   .dog{
@@ -240,15 +244,23 @@
     opacity: 1;
   }
 }
-@media (min-width: 659px) and (max-width: 778px){
+@media (min-width: 599px) and (max-width: 778px){
   .dog{
     position: relative;
     top: 25rem;
     opacity: 1;
   }
+
+  .upsurge_logo{
+    margin-left: 3rem;
+  }
+
+  .footerLeft{
+    margin-right: 3rem;
+  }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 600px) {
   @keyframes moveDuck {
     from {
       top: 30%;
@@ -271,7 +283,7 @@
 
   .dog {
     /* display: none; */
-    top: 55.5rem;
+    top: 48.5rem;
     right: 5rem;
     position: relative;
     z-index: 0;
@@ -294,6 +306,10 @@
 
   .footerLeft{
   margin-right: 0;
+}
+
+.upsurge_logo{
+  margin-left: 0;
 }
   .logos_All {
     margin-left: 0;
@@ -325,12 +341,15 @@
     
   }
   .socials{
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     margin-bottom: 3rem;
     z-index: 100;
   }
   .social_logo{
     margin-top: 0.5rem;
+  }
+  .mail{
+    background-color: transparent;
   }
 
   .find_us {

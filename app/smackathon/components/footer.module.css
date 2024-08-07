@@ -246,6 +246,14 @@
     top: 25rem;
     opacity: 1;
   }
+
+  .upsurge_logo{
+    margin-left: 3rem;
+  }
+
+  .footerLeft{
+    margin-right: 3rem;
+  }
 }
 
 @media (max-width: 660px) {
@@ -294,6 +302,10 @@
 
   .footerLeft{
   margin-right: 0;
+}
+
+.upsurge_logo{
+  margin-left: 0;
 }
   .logos_All {
     margin-left: 0;

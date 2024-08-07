@@ -5,29 +5,41 @@ import { useThree, useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 import { motion } from 'framer-motion-3d';
 import { useAnimation } from "framer-motion";
+import { cameraConf } from "./three-config"; 
 
 export default function AnimatedCamera() {
+    // config
+    const fakeObjAnimation = cameraConf.fakeObj.animation;
+
     const groupRef = useRef();
     const invisibleObjectRef = useRef();
     const { camera } = useThree();
     const [isZoomed, setIsZoomed] = useState(false);
-    const [prevRotationY, setPrevRotationY] = useState(Math.PI / 4);
+    const [prevRotationY, setPrevRotationY] = useState(fakeObjAnimation.INITIAL_ROTATION);
     const [transitionComplete, setTransitionComplete] = useState(true);
     const [hasLerped, setHasLerped] = useState(false);
 
     const groupControls = useAnimation();
     const objectControls = useAnimation();
 
+
     // set isZoomed state based on event listener
     useEffect(() => {
+        const handleEscape = ((e) => {
+            if (e.key == "Escape")
+                setIsZoomed((prevState) => prevState & false)
+        });
+
         const handleControllerClick = () => {
             setIsZoomed((prevZoomed) => !prevZoomed);
         };
 
         window.addEventListener('controllerClick', handleControllerClick);
+        window.addEventListener("keydown", handleEscape);
 
         return () => {
             window.removeEventListener('controllerClick', handleControllerClick);
+            window.removeEventListener("keydown", handleEscape);
         };
     }, []);
 
@@ -37,59 +49,61 @@ export default function AnimatedCamera() {
             setPrevRotationY(groupRef.current.rotation.y);
             groupControls.start({
                 rotateY: 0,
-                transition: { duration: 1, ease: 'easeInOut' }
+                transition: { duration: fakeObjAnimation.ZOOM_DURATION, ease: 'easeInOut' }
             });
             objectControls.start({
-                x: 0,
-                y: 0,
-                z: 19,
-                transition: { duration: 1, ease: 'easeInOut' }
+                x: fakeObjAnimation.TARGET_POSITION.X,
+                y: fakeObjAnimation.TARGET_POSITION.Y,
+                z: fakeObjAnimation.TARGET_POSITION.Z,
+                transition: { duration: fakeObjAnimation.ZOOM_DURATION, ease: 'easeInOut' }
             });
             setTransitionComplete(false);
             setHasLerped(false);
-        } else {
+        } else { 
             objectControls.start({
-                x: 0,
-                y: 30,
-                z: 70,
-                transition: { duration: 1, ease: 'easeInOut' }
+                x: fakeObjAnimation.INITIAL_POSITION.X,
+                y: fakeObjAnimation.INITIAL_POSITION.Y,
+                z: fakeObjAnimation.INITIAL_POSITION.Z,
+                transition: { duration: fakeObjAnimation.ZOOM_DURATION, ease: 'easeInOut' }
             });
             groupControls.start({
                 rotateY: prevRotationY,
                 transition: {
-                    duration: 1,
+                    duration: fakeObjAnimation.ZOOM_DURATION,
                     ease: 'easeInOut',
                     onComplete: () => setHasLerped(true)
                 }
             });
         }
-    }, [isZoomed, groupControls, objectControls, prevRotationY]);
+    }, [isZoomed, groupControls, objectControls, prevRotationY, fakeObjAnimation.ZOOM_DURATION, fakeObjAnimation.INITIAL_POSITION.X, fakeObjAnimation.INITIAL_POSITION.Y, fakeObjAnimation.INITIAL_POSITION.Z, fakeObjAnimation.TARGET_POSITION.X, fakeObjAnimation.TARGET_POSITION.Y, fakeObjAnimation.TARGET_POSITION.Z]);
 
     // Lerp rotation
     useEffect(() => {
         if (hasLerped) {
-            const duration = (((Math.PI / 4) - Math.abs(prevRotationY)) * 40) / Math.PI;
+            const duration = ((fakeObjAnimation.INITIAL_ROTATION - Math.abs(prevRotationY)) * fakeObjAnimation.OSCILLATION_DURATION) / (2 * fakeObjAnimation.INITIAL_ROTATION);
             groupControls.start({
-                rotateY: (Math.abs(prevRotationY) / prevRotationY) * Math.PI / 4,
-                transition: { duration: duration, ease: 'easeInOut', 
+                rotateY: (Math.abs(prevRotationY) / prevRotationY) * fakeObjAnimation.INITIAL_ROTATION,
+                transition: {
+                    duration: duration, ease: 'easeInOut',
                     onComplete: () => {
-                    setPrevRotationY(groupRef.current.rotation.y);
-                    setTransitionComplete(true);
-                    setHasLerped(false);
-                }},
+                        setPrevRotationY(groupRef.current.rotation.y);
+                        setTransitionComplete(true);
+                        setHasLerped(false);
+                    }
+                },
             });
         }
-    }, [hasLerped, prevRotationY, groupControls]);
-    
+    }, [hasLerped, prevRotationY, groupControls, fakeObjAnimation.INITIAL_ROTATION, fakeObjAnimation.OSCILLATION_DURATION]);
+
 
     useEffect(() => {
         if (transitionComplete) {
             groupControls.start({
-                rotateY: [prevRotationY, -(Math.abs(prevRotationY) / prevRotationY) * Math.PI / 4],
-                transition: { duration: 20, ease: 'easeInOut', yoyo: true, repeat: Infinity, repeatType: 'reverse' }
+                rotateY: [prevRotationY, -(Math.abs(prevRotationY) / prevRotationY) * fakeObjAnimation.INITIAL_ROTATION],
+                transition: { duration: fakeObjAnimation.OSCILLATION_DURATION, ease: 'easeInOut', yoyo: true, repeat: Infinity, repeatType: 'reverse' }
             });
         }
-    }, [transitionComplete, prevRotationY, groupControls]);
+    }, [transitionComplete, prevRotationY, groupControls, fakeObjAnimation.INITIAL_ROTATION, fakeObjAnimation.OSCILLATION_DURATION]);
 
     useFrame(() => {
         if (invisibleObjectRef.current) {
@@ -104,7 +118,7 @@ export default function AnimatedCamera() {
         <motion.group ref={groupRef} animate={groupControls}>
             <motion.mesh
                 ref={invisibleObjectRef}
-                position={[50, 50, 100]}
+                position={cameraConf.fakeObj.POSITION}
                 visible={false}
                 animate={objectControls}
             >

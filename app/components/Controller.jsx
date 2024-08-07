@@ -13,12 +13,9 @@ export default function Controller() {
     useEffect(() => {
         const loader = new GLTFLoader();
         loader.load('/models/controller.glb', (gltf) => {
-            const scale = controller.model.scale;
-            const rotation = controller.model.rotation;
-
             const model = gltf.scene;
-            model.scale.set(scale.X, scale.Y, scale.Z);
-            model.rotation.set(rotation.X, rotation.Y, rotation.Z);
+            model.scale.set(21.5, 20, 20);
+            model.rotation.set(0.01, Math.PI, Math.PI);
             meshRef.current.add(model);
         });
     }, []);
@@ -31,14 +28,14 @@ export default function Controller() {
 
     return (
         <group ref={meshRef} scale={[1, 1, 1]} position={[0, 0, 0]} rotation={[0, 0, 0]} onClick={handleClick}>
-            <Html position={controller.screen.POSITION} transform occlude width={controller.screen.WIDTH} height={controller.screen.HEIGHT} 
+            <Html position={[0, 0, 0.01]} transform occlude width={1536} height={864} 
                 style={{ 
                     transition: 'transform 0.5s', 
                     transformStyle: 'preserve-3d', 
-                    transform: `scale(${controller.screen.SCALE})`,
+                    transform: "scale(1.25)",
                     backfaceVisibility: 'hidden'
                 }}>
-                <div className={`w-[${controller.screen.WIDTH}px] h-[${controller.screen.HEIGHT}px]`}>
+                <div className='w-[1536px] h-[864px]'>
                     <ControllerScreen />
                 </div>
             </Html>

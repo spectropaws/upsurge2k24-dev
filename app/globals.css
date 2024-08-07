@@ -92,3 +92,7 @@ iframe {
   height: 100%;
   transform-origin: 0 0;
 }
+
+h1, h2 {
+    font-family: var(--font-ps2p);
+}

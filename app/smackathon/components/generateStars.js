@@ -1,6 +1,5 @@
 const starrySkyStyle = {
     position: 'relative',
-    overflow: 'hidden',
     backgroundColor: '#0D131E',
     zIndex: 0,
 };

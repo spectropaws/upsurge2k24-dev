@@ -1,5 +1,4 @@
 
-
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -16,7 +15,7 @@ export default function TimelineMobile() {
 
   // Set the y value for Mario and the flag
   const y = useTransform(scrollYProgress, [0, 1], [0, 1645]);
-
+  const x = 4 - Math.random()*2;
 
 
   // Animation for boxes appearing on scroll
@@ -29,11 +28,8 @@ export default function TimelineMobile() {
 
   return (
     <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 w-full min-h-full relative">
-      <div
-        className="relative flex justify-center text-5xl text-white h-[250px] top-10"
-        
-      >
-        <p className="absolute">TIMELINE</p>
+      <div className="relative flex justify-center text-5xl text-white h-[250px] top-10">
+        <h1 className="absolute">Timeline</h1>
       </div>
       
 
@@ -48,25 +44,17 @@ export default function TimelineMobile() {
           {/* Central Line */}
 
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[6px] bg-green-600 z-0"></div>
+          
           {/* Mario and Flag */}
-          <motion.div
-            style={{ y }}
-            className="absolute top-[-1px] w-[3.1rem] right-0"
-          >
+          <motion.div style={{ y }} className="absolute top-[-1px] w-[3.1rem] right-0">
             <Image height={48} width={48} src="/images/timeline/flag.png" alt="flag" className="h-[3.1rem] w-[3.1rem]" />
           </motion.div>
-
-
-          
-          <motion.div
-            style={{ y }}
-            className="absolute top-[-2rem] h-[11rem] w-[13rem] right-[-95px] z-10"
-          >
+          <motion.div style={{ y }} className="absolute top-[-2rem] h-[11rem] w-[13rem] right-[-95px] z-10">
             <Image src={isScrolling ? "/images/timeline/marioRun.gif" : "/images/timeline/mario.png"} height={70} width={70} className=" h-[11rem] w-[12rem]" alt="mario" unoptimized />
           </motion.div>
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-6 w-6">
-                    <Image height={32} width={32} src="/images/timeline/singleblock.png" alt="block" className="w-8" />
-              </div>
+              <Image height={32} width={32} src="/images/timeline/singleblock.png" alt="block" className="w-8" />
+          </div>
           
         </div>
         
@@ -177,6 +165,7 @@ export default function TimelineMobile() {
                         </p>
                         <Image width={300} height={60} src="/svgs/timeline/brick 5.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
+          
           <motion.div className="w-full h-[200px] " {...boxAnimation}>
           <p>
                             {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
@@ -219,15 +208,13 @@ export default function TimelineMobile() {
         </div>
       </div>
 
-      <div className="absolute top-40 left-14 transform -translate-x-1/2 -translate-y-1/2 z-0">
+      <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-40 left-1/4 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
-      </div>
-      <div className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[150px] h-auto" />
-      </div>
-      <div className="absolute top-40 right-4 transform -translate-x-1/2 -translate-y-1/2 z-0">
-        <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
-      </div>
+
+      </motion.div>
+      <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
+        <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[100px] h-auto" />
+      </motion.div>
 
      
       <div className="relative w-full flex flex-col items-center">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./components/hero.module.css";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { easeIn, easeInOut, motion } from "framer-motion";
-
 export default function HeroSection() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function HeroSection() {
         >
           <source alt="hero video" src="/videos/hero/bgg.mp4" />
         </video>
+
         <div className="w-[80%] py-10 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
           <div className="flex flex-col items-center gap-12">
             <div className="flex flex-col items-center">
@@ -82,8 +83,10 @@ export default function HeroSection() {
                   transition: { delay: 2, duration: 1, ease: easeIn },
                 }}
               >
-                <div className="flex text-xs justify-center">
-                  <button className={styles.button}>
+                <Dialog>
+                  <DialogTrigger
+                    className={`${styles.button} flex text-xs justify-center`}
+                  >
                     <span className={styles.box}>R</span>
                     <span className={styles.box}>E</span>
                     <span className={styles.box}>G</span>
@@ -92,8 +95,17 @@ export default function HeroSection() {
                     <span className={styles.box}>T</span>
                     <span className={styles.box}>E</span>
                     <span className={styles.box}>R</span>
-                  </button>
-                </div>
+                  </DialogTrigger>
+                  <DialogContent className="w-[90%] h-[75%] px-6 py-8">
+                    <iframe
+                      src="https://konfhub.com/widget/smackathon-2024?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Nunito&borderRadius=5"
+                      id="konfhub-widget"
+                      title="Register for Smackathon 2024"
+                      width="200%"
+                      height="500"
+                    ></iframe>
+                  </DialogContent>
+                </Dialog>
               </motion.div>
             </div>
             <motion.div

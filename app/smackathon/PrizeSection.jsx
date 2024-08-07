@@ -1,18 +1,34 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import styles from "./components/hero.module.css";
 
 export default function Prize() {
   return (
     <>
-      <div className="bg-[url(/images/prize/temp1.png)] h-[60vh] w-full bg-cover"></div>
-
+      <div className="relative">
+        <Image
+          src="/svgs/prize/ground.svg"
+          width={2020}
+          height={734}
+          className="w-full object-cover"
+        />
+        <div className="flex absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] ">
+          <button className={styles.btnfinale}>Download Brochure</button>
+          {/* <button class={styles.btndb}>
+            <i class={styles.animation}></i>BUTTON
+            <i class={styles.animation}></i>
+          </button> */}
+        </div>
+      </div>
+      {/* <img src= className="" /> */}
       <div
         style={{
           boxShadow: "0px 25px 80px #000000 inset",
         }}
         className="bg-[url('/images/prize/new-prize-bg.png')] w-full bg-center flex flex-col items-center"
       >
+
         <h2 className="text-5xl mt-16 text-center text-white font-bold">
           Cash Prizes
         </h2>

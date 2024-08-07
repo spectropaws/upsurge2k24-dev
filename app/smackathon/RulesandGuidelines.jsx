@@ -1,36 +1,148 @@
-import React from 'react';
+// PacmanGame.jsx
+"use client"
 import Image from 'next/image';
-import styles1 from './components/RulesandGuidelines.module.css';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import PacmanHeading from './components/PacmanHeading';
 
-const Demo2 = () => {
-  return (
-    <div className='main bg-black'>
-      <Image width={500} height={500} src="/images/pacman/downwalls.svg" alt="Upwall Logo" className={`mx-auto mb-20 -4 ${styles1.imageSize}`} />
-      <h1 className={`${styles1.heading}  text-5xl`}>Rules and Guidelines for Smackathon 2024</h1>
-      <div className={styles1.container}>
+const RulesAndGuidelines = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
 
-        <div className={`${styles1.content} ${styles1.customBorder} relative md:mx-32 mx-12`}>
-          <ul className={`${styles1.list} text-justify`}>
-            <li className="my-5 md:my-3">A team consists of a minimum of 5 members.</li>
-            <li className="my-5 md:my-3">A team access pass will be distributed to the team upon registration, which shall be used for future reference.</li>
-            <li className="my-5 md:my-3">The ideas presented by the teams should be original and not protected by means of patents, copyrights, or technical publications by anyone.</li>
-            <li className="my-5 md:my-3">All official communication will be conducted through the Smackathon email. Participants are advised to monitor all folders in their email accounts.</li>
-            <li className="my-5 md:my-3">Registrations must be completed through the Upsurge website by the [registration deadline] to secure a spot.</li>
-            <li className="my-5 md:my-3">No responsibility will be held by the Smackathon Team for any late, lost, or misdirected entries.</li>
-            <li className="my-5 md:my-3">Problem statements will be provided on the day the hackathon starts.</li>
-            <li className="my-5 md:my-3">All projects must align with the pre-announced Smackathon theme or problem statement.</li>
-            <li className="my-5 md:my-3">Participants must not engage in any malicious or harmful activities.</li>
-            <li className="my-5 md:my-3">Meals and rest areas will be provided onsite only if accommodation is taken.</li>
-            <li className="my-5 md:my-3">According to YCCE Policy, no female participants are allowed to stay overnight. After 9 pm, they must leave the campus but can rejoin at 6 am the next day. Those from outside Nagpur will stay at YCCE girls hostel, and the organizing team will manage their accommodation.</li>
-            <li className="my-5 md:my-3">Rules and guidelines are subjected to change as per the organizing team.</li>
-          </ul>
-          <div className={styles1.pacman}>
-            <div className={styles1.mouth}></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Stop observing after visibility is detected
+                }
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+            }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
+    const rules = [
+        {
+            content: "A team must consist of a minimum of 3 members and maximum of 5 members.",
+            icon: "/images/pacman/blue.svg",
+        },
+        {
+            content: "A team access pass will be distributed to the team upon registration, which shall be used for future references.",
+            icon: "/images/pacman/green.svg",
+        },
+        {
+            content: "The ideas presented by the teams should be original and not protected by means of patents, copyrights, or technical publications by anyone.",
+            icon: "/images/pacman/lemon.svg",
+        },
+        {
+            content: "All official communication will be conducted through the Smackathon email. Participants are advised to monitor all folders in their email accounts.",
+            icon: "/images/pacman/pink.svg",
+        },
+        {
+            content: "Registrations must be completed through the Upsurge website by the [registration deadline] to secure a spot.",
+            icon: "/images/pacman/red.svg",
+        },
+        {
+            content: "No responsibility will be held by the Smackathon Team for any late, lost, or misdirected entries.",
+            icon: "/images/pacman/skyBlue.svg",
+        },
+        {
+            content: "Problem statements will be provided on the day the hackathon starts.",
+            icon: "/images/pacman/teal.svg",
+        },
+        {
+            content: "All projects must align with the pre-announced Smackathon theme or problem statement.",
+            icon: "/images/pacman/yellow.svg",
+        },
+        {
+            content: "Participants must not engage in any malicious or harmful activities.",
+            icon: "/images/pacman/red.svg",
+        },
+        {
+            content: "Meals and rest areas will be provided onsite only if accommodation is taken.",
+            icon: "/images/pacman/green.svg",
+        },
+        {
+            content: "According to YCCE Policy, no female participants are allowed to stay overnight. After 9 pm, they must leave the campus but can rejoin at 6 am the next day. Those from outside Nagpur will stay at YCCE girls hostel, and the organizing team will manage their accommodation.",
+            icon: "/images/pacman/lemon.svg",
+        },
+        {
+            content: "Rules and guidelines are subjected to change as per organizing team.",
+            icon: "/images/pacman/pink.svg",
+        },
+    ];
+
+    return (
+        <motion.div
+            className='flex flex-col items-center bg-black text-white'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 1 }}
+            ref={ref}
+        >
+            <div className='w-full md:block hidden'><Image src={"/images/pacman/downwalls2.svg"} className='scale-y-[-1] scale-x-[-1] w-[40%] ' width={500} height={500}></Image></div>
+            <div className='w-[90%]'>
+                <div className='flex justify-center md:mb-20'><PacmanHeading></PacmanHeading></div>
+                <motion.div
+                    className='flex flex-col md:flex-row justify-center items-center'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isVisible ? 1 : 0 }}
+                    transition={{ duration: 1.5 }} // Increased duration for rules and guidelines
+                >
+                    <motion.div
+                        className='w-4/5 md:w-[30%]'
+                        initial={{ x: -50, opacity: 0 }} // Start with opacity 0 and slide from the left
+                        animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
+                        transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }} // Smooth fade-in and sliding effect
+                    >
+                        <img src="/images/pacman/pacmanGameplay.gif" className='w-full' alt="Pacman Gameplay" />
+                    </motion.div>
+                    <motion.div
+                        className='w-full md:w-3/5 md:ps-12 mt-4 md:mt-0'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: isVisible ? 1 : 0 }}
+                        transition={{ duration: 2 }} // Increased duration for rules and guidelines
+                    >
+                        <div className='text-center text-3xl md:text-5xl mb-4'>
+                            Rules and Guidelines For Smackathon 2024
+                        </div>
+                        <div className='text-center text-2xl md:text-3xl mb-8'>
+                            Here are some rules and guidelines for our community:
+                        </div>
+                        <div className='ps-0 md:ps-7 leading-5'>
+                            {
+                                rules.map((rule, idx) => {
+                                    return (
+                                        <motion.div
+                                            key={idx}
+                                            className='flex items-start my-4'
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
+                                            transition={{ duration: 0.5, delay: idx * 0.15 }} // Adjusted timing
+                                        >
+                                            <Image src={rule.icon} className='w-5 h-5 mr-2' width={20} height={20} alt="Rule Icon" />
+                                            <div>{rule.content}</div>
+                                        </motion.div>
+                                    );
+                                })}
+                        </div>
+                    </motion.div>
+                </motion.div>
+            </div>
+        </motion.div>
+    );
 };
 
-export default Demo2;
+export default RulesAndGuidelines;

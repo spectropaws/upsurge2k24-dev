@@ -74,7 +74,7 @@ export default function Tracks() {
       <div className="relative w-full bg-gradient-to-b from-blue-500 to-blue-400 pb-40">
         {/* headline */}
         <div className="relative flex items-center justify-center text-3xl md:text-5xl text-white h-[100px]">
-          <h1 className="absolute text-5xl">Tracks</h1>
+          <h1 className="absolute text-3xl md:text-5xl">Tracks</h1>
         </div>
 
         {/* cards */}

@@ -131,7 +131,7 @@ const RulesAndGuidelines = () => {
                                             transition={{ duration: 0.5, delay: idx * 0.15 }} // Adjusted timing
                                         >
                                             <Image src={rule.icon} className='w-5 h-5 mr-4' width={20} height={20} alt="Rule Icon" />
-                                            <div>{rule.content}</div>
+                                            <p>{rule.content}</p>
                                         </motion.div>
                                     );
                                 })}

@@ -154,16 +154,62 @@
   }
   
   @keyframes movePacMan {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    20% { transform: translate(0, 12vmin) rotate(0deg); } /* Move down */
-    22% { transform: translate(12vmin, 12vmin) rotate(90deg); } /* Move right */
-    45% { transform: translate(12vmin, 0) rotate(90deg); } /* Move right */
-    47% { transform: translate(0, 0) rotate(180deg); } /* Move up */
-    70% { transform: translate(0, 0) rotate(180deg); } /* Move up */
-    72% { transform: translate(0, 12vmin) rotate(270deg); } /* Move right */
-    95% { transform: translate(12vmin, 12vmin) rotate(270deg); } /* Move right */
-    100% { transform: translate(12vmin, 0) rotate(360deg); } /* End at start position */
+    0% { 
+      transform: translate(0, 0) rotate(0deg); 
+    }
+    25% { 
+      transform: translateX(300%) rotate(0deg); 
+    } /* Move right */
+    30% { 
+      transform: translateX(400%) rotate(90deg); 
+    } /* Prepare to move down */
+    55% { 
+      transform: translate(400%, 180%) rotate(90deg); 
+    } /* Move down */
+    60% { 
+      transform: translate(400%, 180%) rotate(180deg); 
+    } /* Prepare to move left */
+    85% { 
+      transform: translate(0, 180%) rotate(180deg); 
+    } /* Move left */
+    90% { 
+      transform: translate(0, 150%) rotate(270deg); 
+    } /* Prepare to move up */
+    100% { 
+      transform: translate(0, 0) rotate(270deg); 
+    } /* Move up and end at start position */
   }
+
+
+  @media (max-width: 768px) {
+    @keyframes movePacMan {
+      0% { 
+        transform: translate(0, 0) rotate(0deg); 
+      }
+      25% { 
+        transform: translateX(150%) rotate(0deg); 
+      } /* Move right */
+      30% { 
+        transform: translateX(150%) rotate(90deg); 
+      } /* Prepare to move down */
+      55% { 
+        transform: translate(150%, 50%) rotate(90deg); 
+      } /* Move down */
+      60% { 
+        transform: translate(150%, 50%) rotate(180deg); 
+      } /* Prepare to move left */
+      85% { 
+        transform: translate(0, 50%) rotate(180deg); 
+      } /* Move left */
+      90% { 
+        transform: translate(0, 50%) rotate(270deg); 
+      } /* Prepare to move up */
+      100% { 
+        transform: translate(0, 0) rotate(270deg); 
+      } /* Move up and end at start position */
+    }
+  }
+  
   
   .pacMan .eye {
     width: 10%;

@@ -4,7 +4,7 @@ import style from "./pacmanHeading.module.css"
 export default function PacmanHeading() {
     return (
         <div >
-            <div className= {`${style.wrapper}`} >
+            <div className= {`${style.wrapper} w-[90%] md:w-full`} >
                 <div className={`${style.wrapperInner}`}>
                     <div className={`${style.dot}`}></div>
                     <div className={`${style.dot}`}></div>

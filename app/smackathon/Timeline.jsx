@@ -29,10 +29,10 @@ export default function Timeline() {
         <>
             <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 min-h-full gap-10 relative">
                 <div className="relative flex items-center justify-center text-5xl text-white h-[250px]">
-                    <h1 className="absolute text-5xl">TIMELINE</h1>
+                    <h1 className="absolute text-5xl">Timeline</h1>
                 </div>
     
-                <div ref={container} className="container relative min-h-screen w-full flex justify-center gap-20  text-gray-200">
+                <div ref={container} className="container w-[80%] relative min-h-screen w-full flex justify-center gap-20  text-gray-200 lg: w-[100%]">
                     {/* Left container */}
                     <div className="relative flex flex-col items-end w-[400px] gap-[10rem] text-lg mr-28 mb-[10rem]">
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>

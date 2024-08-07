@@ -29,7 +29,7 @@ export default function TimelineMobile() {
   return (
     <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 w-full min-h-full relative">
       <div className="relative flex justify-center text-5xl text-white h-[250px] top-10">
-        <h1 className="absolute">TIMELINE</h1>
+        <h1 className="absolute">Timeline</h1>
       </div>
       
 
@@ -165,6 +165,7 @@ export default function TimelineMobile() {
                         </p>
                         <Image width={300} height={60} src="/svgs/timeline/brick 5.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
+          
           <motion.div className="w-full h-[200px] " {...boxAnimation}>
           <p>
                             {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
@@ -209,11 +210,11 @@ export default function TimelineMobile() {
 
       <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-40 left-1/4 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={80} src="/images/timeline/pixelatedCloud.png" alt="cloud" className="w-[80px] h-auto" />
+
       </motion.div>
       <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-56 right-10 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <Image height={20} width={150} src="/images/timeline/bigCloud.png" alt="cloud" className="w-[100px] h-auto" />
       </motion.div>
-     
 
      
       <div className="relative w-full flex flex-col items-center">

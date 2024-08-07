@@ -152,28 +152,39 @@
     transform-origin: center center;
     animation: movePacMan linear 8s infinite;
   }
+
+  @media (max-width: 768px) {
+    .pacMan {
+      width: 10px;
+      height: 20px;
+      position: absolute;
+      transform-origin: center center;
+      animation: movePacMan linear 8s infinite;
+    }
+  }
   
+
   @keyframes movePacMan {
     0% { 
       transform: translate(0, 0) rotate(0deg); 
     }
     25% { 
-      transform: translateX(300%) rotate(0deg); 
+      transform: translateX(400%) rotate(0deg); 
     } /* Move right */
     30% { 
       transform: translateX(400%) rotate(90deg); 
     } /* Prepare to move down */
     55% { 
-      transform: translate(400%, 180%) rotate(90deg); 
+      transform: translate(400%, 170%) rotate(90deg); 
     } /* Move down */
     60% { 
-      transform: translate(400%, 180%) rotate(180deg); 
+      transform: translate(400%, 170%) rotate(180deg); 
     } /* Prepare to move left */
     85% { 
-      transform: translate(0, 180%) rotate(180deg); 
+      transform: translate(0, 170%) rotate(180deg); 
     } /* Move left */
     90% { 
-      transform: translate(0, 150%) rotate(270deg); 
+      transform: translate(0, 170%) rotate(270deg); 
     } /* Prepare to move up */
     100% { 
       transform: translate(0, 0) rotate(270deg); 
@@ -181,28 +192,28 @@
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     @keyframes movePacMan {
       0% { 
         transform: translate(0, 0) rotate(0deg); 
       }
       25% { 
-        transform: translateX(150%) rotate(0deg); 
+        transform: translateX(300%) rotate(0deg); 
       } /* Move right */
       30% { 
-        transform: translateX(150%) rotate(90deg); 
+        transform: translateX(300%) rotate(90deg); 
       } /* Prepare to move down */
       55% { 
-        transform: translate(150%, 50%) rotate(90deg); 
+        transform: translate(300%, 150%) rotate(90deg); 
       } /* Move down */
       60% { 
-        transform: translate(150%, 50%) rotate(180deg); 
+        transform: translate(300%, 150%) rotate(180deg); 
       } /* Prepare to move left */
       85% { 
-        transform: translate(0, 50%) rotate(180deg); 
+        transform: translate(0, 150%) rotate(180deg); 
       } /* Move left */
       90% { 
-        transform: translate(0, 50%) rotate(270deg); 
+        transform: translate(0, 150%) rotate(270deg); 
       } /* Prepare to move up */
       100% { 
         transform: translate(0, 0) rotate(270deg); 

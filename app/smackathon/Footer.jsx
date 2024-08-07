@@ -89,12 +89,13 @@ export default function Footer() {
                       height={50}
                     />
                   </a>
-                  <a href="#">
+                  <a href="mailto:smackathon@upsurge2k24.tech">
                     <Image
-                      src="/svgs/footer/discord.svg"
-                      alt="discord"
-                      width={50}
-                      height={50}
+                      src="/svgs/footer/Mail.svg"
+                      alt="mail"
+                      className={styles.mail}
+                      width={65}
+                      height={70}
                     />
                   </a>
                   {/* <a href="#">
@@ -116,11 +117,11 @@ export default function Footer() {
                 <div className={styles.contact_us}>
                   <h3 className="">Contact Us</h3>
                   <div className={styles.contact_details}>
-                      <div className="">
+                      <div className={styles.Contact}>
                         <p className="">Abhijeet Shahu  </p>
                         <p className="">(9922509022)</p>
                       </div>
-                      <div className="">
+                      <div className={styles.Contact}>
                         <p className="">Kartik Tiichkule </p>
                         <p className="">(9834723587)</p>
                       </div>
@@ -141,9 +142,9 @@ export default function Footer() {
               </a>
               <br />
               <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf">
-                Privacy Policy
+                Privacy Policy&nbsp;
               </a>
-              ,
+              ,&nbsp;
               <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf">
                 No Refund Policy
               </a>

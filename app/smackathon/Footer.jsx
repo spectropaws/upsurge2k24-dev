@@ -73,23 +73,23 @@ export default function Footer() {
               <div className={styles.socials}>
                 <h3 className={styles.follow_us}><p>Follow US</p> <br/></h3>
                 <div className={styles.social_logo}>
-                  <a href="https://www.instagram.com/cse_ycce_official/">
+                  <Link href="https://www.instagram.com/cse_ycce_official/">
                     <Image
                       src="/svgs/footer//instagram.svg"
                       alt="instagram"
                       width={50}
                       height={50}
                     />
-                  </a>
-                  <a href="https://www.linkedin.com/company/yccecosmos/">
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/yccecosmos/">
                     <Image
                       src="/svgs/footer//linkedin.svg"
                       alt="linkedin"
                       width={50}
                       height={50}
                     />
-                  </a>
-                  <a href="mailto:smackathon@upsurge2k24.tech">
+                  </Link>
+                  <Link href="mailto:smackathon@upsurge2k24.tech">
                     <Image
                       src="/svgs/footer/Mail.svg"
                       alt="mail"
@@ -97,7 +97,7 @@ export default function Footer() {
                       width={65}
                       height={70}
                     />
-                  </a>
+                  </Link>
                   {/* <a href="#">
                     <Image
                       src="/svgs/footer/twitter.svg"
@@ -122,7 +122,7 @@ export default function Footer() {
                         <p className="">(9922509022)</p>
                       </div>
                       <div className={styles.Contact}>
-                        <p className="">Kartik Tiichkule </p>
+                        <p className="">Kartik Tichkule </p>
                         <p className="">(9834723587)</p>
                       </div>
                   </div>
@@ -141,13 +141,13 @@ export default function Footer() {
                 Website Team CSE
               </a>
               <br />
-              <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf">
+              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf" className={styles.a}>
                 Privacy Policy&nbsp;
-              </a>
+              </Link>
               ,&nbsp;
-              <a className={styles.a} href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf">
+              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf" className={styles.a}>
                 No Refund Policy
-              </a>
+              </Link>
             </p>
           </div>
         </div>

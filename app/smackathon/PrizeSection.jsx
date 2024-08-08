@@ -43,8 +43,12 @@ const Prize = () => {
     <>
       <div className="relative">
         <div className="bg-[url(/svgs/prize/ground.svg)] bg-cover h-[60vh]"></div>
-        <div className="flex absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <button className={styles.btnfinale}>Download Brochure</button>
+        <div className="flex gap-10 items-center absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+          <div>
+            <button className="text-sm font-semibold bg-[url(/images/prize/btn.png)] px-4 py-5 bg-cover bg-center md:px-7 md:py-7 md:text-lg active:translate-y-1 transition-all duration-100">
+              Download Brochure
+            </button>
+          </div>
         </div>
       </div>
       <div

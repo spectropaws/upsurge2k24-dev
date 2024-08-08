@@ -15,7 +15,7 @@ export default function Timeline() {
         offset: ["0 0.7", "1 0.5"],
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [0, 1280]);
+    const y = useTransform(scrollYProgress, [0, 1], [0, 1160]);
     const x = 4 - Math.random()*2;
 
     const boxAnimation = {

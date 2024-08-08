@@ -8,8 +8,18 @@ export default function Prize() {
     <>
       <div className="relative">
         <div className="bg-[url(/svgs/prize/ground.svg)] bg-cover h-[60vh]"></div>
-        <div className="flex absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] ">
-          <button className={styles.btnfinale}>Download Brochure</button>
+        <div className="flex gap-10 items-center absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] ">
+          {/* <Image
+            src="/images/prize/ghost.gif"
+            width={100}
+            height={100}
+          /> */}
+          <div>
+            <button className="text-sm font-semibold bg-[url(/images/prize/btn.png)] px-4 py-5 bg-cover bg-center md:px-6 md:py-7 md:text-lg active:translate-y-1 transition-all duration-100">
+              Download Brochure
+            </button>
+          </div>
+
           {/* <button class={styles.btndb}>
             <i class={styles.animation}></i>BUTTON
             <i class={styles.animation}></i>
@@ -23,7 +33,6 @@ export default function Prize() {
         }}
         className="bg-[url('/images/prize/new-prize-bg.png')] w-full bg-center flex flex-col items-center"
       >
-
         <h1 className="text-5xl mt-16 text-center text-white font-bold">
           Cash Prizes
         </h1>

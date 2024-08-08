@@ -601,18 +601,8 @@
   box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
 }
 
-/* <div className="relative">
-<Image
-  src="/svgs/prize/ground.svg"
-  width={2020}
-  height={734}
-  className="w-full object-cover"
-/>
-<div className="flex absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] ">
-  <button className={styles.btnfinale}>Download Brochure</button>
-  <button class={styles.btndb}>
-    <i class={styles.animation}></i>BUTTON
-    <i class={styles.animation}></i>
-  </button> 
-</div>
-</div> */
+/* .btnfinal {
+  background-color: #b02940;
+  padding: 12px 24px;
+  box-shadow: ;
+} */

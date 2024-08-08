@@ -115,7 +115,7 @@ export default function HeroSection() {
                 transition: { delay: 2, duration: 1, ease: easeIn },
               }}
             >
-              <div className="flex flex-col items-center gap-8 sm:flex-row md:gap-60">
+              <div className="flex flex-col items-center gap-8 sm:flex-row md:gap-[500px]">
                 <div className="flex flex-col items-center gap-2">
                   <span className="text-base text-white font-semibold pb-1">
                     Powered By

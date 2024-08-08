@@ -66,6 +66,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  p, h3, h4, h5, h6 {
+    @apply text-xl md:text-2xl;
+    font-family: var(--font-dotGothic);
+  }
 }
 
 @layer utilities {
@@ -97,6 +102,4 @@ h1, h2 {
     font-family: var(--font-ps2p);
 }
 
-p {
-    font-family: var(--font-dotGothic);
-}
+

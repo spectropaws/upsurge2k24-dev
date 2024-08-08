@@ -13,7 +13,7 @@ export default function LocateUs() {
                 <LocateUsMobile />
             </div> 
             <div
-                style = {{ backgroundImage: "linear-gradient(to bottom, #0D131E, #18253e, #243b68, #30569f, #366cd2 60%, #3CBCFC 100%)" }}
+                style = {{ backgroundImage: "linear-gradient(to bottom, #010919, #0d1b34, #1a2e5a, #214b73 50%, #2A8AC0 80%, #3CBCFC 100%)" }}
                 className='h-72 w-full'></div>
         </>
     );

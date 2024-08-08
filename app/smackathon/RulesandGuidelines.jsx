@@ -86,28 +86,32 @@ const RulesAndGuidelines = () => {
 
     return (
         <motion.div
-            className='flex flex-col items-center bg-black text-white'
+            className='flex flex-col items-center bg-black pt-56 text-white'
             initial={{ opacity: 0 }}
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1 }}
             ref={ref}
         >
-            <div className='w-full md:block hidden'><Image src={"/images/pacman/downwalls2.svg"} className='scale-y-[-1] scale-x-[-1] w-[40%] ' width={500} height={500}></Image></div>
+                <div className='flex justify-center mb-10 md:mb-16'><PacmanHeading></PacmanHeading></div>
+            <div className='w-full md:block hidden mb-24'><Image src={"/images/pacman/downwalls.svg"} className='scale-y-[-1] scale-x-[-1] w-full' width={500} height={500}></Image></div>
             <div className='w-[90%]'>
-                <div className='flex justify-center md:mb-20'><PacmanHeading></PacmanHeading></div>
+                <h1 className='text-center text-3xl md:text-5xl mb-8 md:mb-16 mt-24 md:mt-0'>
+                    Rules and Guidelines For Smackathon 2024
+                </h1>
                 <motion.div
                     className='flex flex-col md:flex-row justify-center items-center'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isVisible ? 1 : 0 }}
                     transition={{ duration: 1.5 }} // Increased duration for rules and guidelines
                 >
+
                     <motion.div
                         className='w-4/5 md:w-[30%]'
                         initial={{ x: -50, opacity: 0 }} // Start with opacity 0 and slide from the left
                         animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
                         transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }} // Smooth fade-in and sliding effect
                     >
-                        <img src="/images/pacman/pacmanGameplay.gif" className='w-full' alt="Pacman Gameplay" />
+                        <img src="/images/pacman/pacmanGameplay.gif" className='w-full hidden md:block' alt="Pacman Gameplay" />
                     </motion.div>
                     <motion.div
                         className='w-full md:w-3/5 md:ps-12 mt-4 md:mt-0'
@@ -115,25 +119,19 @@ const RulesAndGuidelines = () => {
                         animate={{ opacity: isVisible ? 1 : 0 }}
                         transition={{ duration: 2 }} // Increased duration for rules and guidelines
                     >
-                        <div className='text-center text-3xl md:text-5xl mb-4'>
-                            Rules and Guidelines For Smackathon 2024
-                        </div>
-                        <div className='text-center text-2xl md:text-3xl mb-8'>
-                            Here are some rules and guidelines for our community:
-                        </div>
-                        <div className='ps-0 md:ps-7 leading-5'>
+                        <div className='px-5 md:ps-7 leading-6'>
                             {
                                 rules.map((rule, idx) => {
                                     return (
                                         <motion.div
                                             key={idx}
-                                            className='flex items-start my-4'
+                                            className='flex items-start my-5 text-justify'
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
                                             transition={{ duration: 0.5, delay: idx * 0.15 }} // Adjusted timing
                                         >
-                                            <Image src={rule.icon} className='w-5 h-5 mr-2' width={20} height={20} alt="Rule Icon" />
-                                            <div>{rule.content}</div>
+                                            <Image src={rule.icon} className='w-5 h-5 mr-4' width={20} height={20} alt="Rule Icon" />
+                                            <p>{rule.content}</p>
                                         </motion.div>
                                     );
                                 })}

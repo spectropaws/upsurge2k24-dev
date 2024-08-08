@@ -69,17 +69,12 @@ export default function Tracks() {
         style={{
           backgroundImage:
             "linear-gradient(to bottom, #0e121a 0% 8%, #000C1F 8% 16%, #081229 16% 24%, #011536 24% 32%, #012256 32% 40%, #032F77 40% 48%, #063D98 48% 56%, #0C4AB1 56% 64%, #1556C2 64% 72%, #1F65D8 72% 80%, #2C72E5 80% 89%, #3b82f6 89% 100%)",
-        }}        
+        }}
       ></div>
       <div className="relative w-full bg-gradient-to-b from-blue-500 to-blue-400 pb-40">
         {/* headline */}
-        <div className="relative flex items-center justify-center text-5xl text-white h-[50px]">
-          <motion.div
-            className="relative flex items-center justify-center text-5xl text-white h-[50px]"
-            {...blinkingAnimation}
-          >
-            <p className="absolute">TRACKS</p>
-          </motion.div>
+        <div className="relative flex items-center justify-center text-3xl md:text-5xl text-white h-[100px]">
+          <h1 className="absolute text-3xl md:text-5xl">Tracks</h1>
         </div>
 
         {/* cards */}

@@ -54,8 +54,8 @@ const AssessmentCriteria = () => {
     };
 
     return (<>
-        <div className='bg-black pt-32'>
-            <div className=' text-white text-center text-3xl md:text-5xl'>Assessment Criteria</div>
+        <div className='bg-black pt-64'>
+            <h1 className=' text-white text-center text-3xl md:text-5xl mb-12'>Assessment Criteria</h1>
             <div className={`relative w-[80%] h-[350px]  mx-auto overflow-hidden shadow-lg flex justify-center items-center ${styles.sliderContainer}`}>
                 {assessmentCriteria.map((slide, i) => (
                     <div
@@ -75,14 +75,13 @@ const AssessmentCriteria = () => {
                     {assessmentCriteria.map((_, i) => (
                         <span
                             key={i}
-                            className={`inline-block bg-gray-400 p-2 rounded-full m-1 cursor-pointer ${index === i ? 'bg-white' : ''}`}
+                            className={`inline-block bg-gray-400 p-1 rounded-full m-1 cursor-pointer ${index === i ? 'bg-white' : ''}`}
                             onClick={() => setIndex(i)}
                             aria-label={`Slide ${i + 1}`}
                         ></span>
                     ))}
                 </div>
             </div>
-            <div className=' md:flex hidden justify-end w-full'> <Image src={"/images/pacman/downwalls2.svg"} className='w-[40%]' width={500} height={500}></Image> </div>
         </div>
     </>
     );

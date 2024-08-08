@@ -43,7 +43,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif" alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif" alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -61,7 +61,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -79,7 +79,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium  text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -97,7 +97,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -139,7 +139,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -157,7 +157,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}
@@ -175,7 +175,7 @@ export default function Timeline() {
                                         <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
-                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[20px] w-[20px] mr-2" />
+                                                    <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
                                                     <span className="w-full font-medium text-2xl">{text}</span>
                                                 </>
                                             )}

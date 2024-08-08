@@ -24,7 +24,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
             )}
             {...props}
         >
-            <div className="flex-1 text-left">{children}</div>
+            <p className="flex-1 text-left ">{children}</p>
             <Image
                 src={"/images/trackIcons/plane.svg"}
                 width={30}
@@ -43,7 +43,7 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
         ref={ref}
         className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
         {...props}>
-        <div className={cn("pb-4 pt-0", className)}>{children}</div>
+        <p className={cn("pb-4 pt-0", className)}>{children}</p>
     </AccordionPrimitive.Content>
 ))
 

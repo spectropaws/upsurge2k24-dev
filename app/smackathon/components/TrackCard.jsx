@@ -56,7 +56,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
         ref={ref}
         initial={{ opacity: 0, y: 100 }} // Initial state: invisible and moved down
         animate={ inView && { opacity: 1, y: 0 }} // Animate based on `inView`
-        transition={ inView && { duration: 0.8, delay:0.2, ease: "easeOut" }} // Duration and easing for smooth transition
+        transition={ inView && { duration: 0.8, delay:0.1, ease: "easeOut" }} // Duration and easing for smooth transition
         className="absolute flex flex-col w-80 h-80 pb-16 z-10 bg-slate-200 shadow-lg shadow-indigo-900 bg-opacity-[0.35] rounded-lg"
         style={customShadow}
       >
@@ -68,7 +68,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
             height={500}
             className="border-[3px] border-yellow-300 h-20 w-20 rounded-full"
           />
-          <h3 className="text-xl font-bold text-blue-700 ml-2">{trackTitle}</h3>
+          <p className="text-xl font-bold text-blue-700 ml-2">{trackTitle}</p>
         </div>
         <p className="text-sm px-6 text-white font-medium text-justify" >
           {trackDesc}

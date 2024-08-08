@@ -56,22 +56,22 @@ export default function Footer() {
             <div className={styles.footerCenter}>
               <div className={styles.Links_all}>
                 <Link href="href" className={styles.link_smackathon}>
-                  Smackathon
+                  <p>Smackathon</p>
                 </Link>
                 <Link href="href" className={styles.link_schedule}>
-                  Schedule
+                  <p>Schedule</p>
                 </Link>
                 <Link href="href" className={styles.link_events}>
-                  Events
+                  <p>Events</p>
                 </Link>
                 <Link href="href" className={styles.link_team}>
-                  Team
+                  <p>Team</p>
                 </Link>
               </div>
             </div>
             <div className={styles.footerRight}>
               <div className={styles.socials}>
-                <h3 className={styles.follow_us}>Follow US <br/></h3>
+                <h3 className={styles.follow_us}><p>Follow US</p> <br/></h3>
                 <div className={styles.social_logo}>
                   <a href="https://www.instagram.com/cse_ycce_official/">
                     <Image
@@ -115,7 +115,7 @@ export default function Footer() {
                   </p>
                 </div> */}
                 <div className={styles.contact_us}>
-                  <h3 className="">Contact Us</h3>
+                  <h3 className=""><p>Contact Us</p></h3>
                   <div className={styles.contact_details}>
                       <div className={styles.Contact}>
                         <p className="">Abhijeet Shahu  </p>

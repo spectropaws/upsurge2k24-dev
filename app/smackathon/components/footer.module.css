@@ -203,7 +203,7 @@
 }
 .contact_details {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   margin-top: 1rem;
   gap: 20px;
   text-align: center;

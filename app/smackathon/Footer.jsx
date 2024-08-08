@@ -122,7 +122,7 @@ export default function Footer() {
                         <p className="">(9922509022)</p>
                       </div>
                       <div className={styles.Contact}>
-                        <p className="">Kartik Tiichkule </p>
+                        <p className="">Kartik Tichkule </p>
                         <p className="">(9834723587)</p>
                       </div>
                   </div>

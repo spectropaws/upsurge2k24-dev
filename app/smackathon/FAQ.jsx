@@ -36,7 +36,7 @@ export default function FAQ() {
 
     return (
         <>
-        <div className="bg-gradient-to-t from-[#030d1f] h-40 via-slate-950 to-black pt-64 "></div>
+        <div className="bg-gradient-to-t from-[#010919] h-40 via-slate-950 to-black pt-64 "></div>
         <div style={starrySkyStyle} className="py-10 flex flex-col items-center">
             {generateStars(100)}
             <h1 className="text-3xl md:text-5xl text-white py-5 z-10 mb-16">FAQ&apos;s</h1>

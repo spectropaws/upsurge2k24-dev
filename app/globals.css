@@ -96,3 +96,7 @@ iframe {
 h1, h2 {
     font-family: var(--font-ps2p);
 }
+
+p {
+    font-family: var(--font-dotGothic);
+}

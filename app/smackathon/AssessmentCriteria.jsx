@@ -73,12 +73,12 @@ const AssessmentCriteria = () => {
                 ))}
                 <div className="text-center absolute bottom-1 w-full">
                     {assessmentCriteria.map((_, i) => (
-                        <span
+                        <h3
                             key={i}
                             className={`inline-block bg-gray-400 p-1 rounded-full m-1 cursor-pointer ${index === i ? 'bg-white' : ''}`}
                             onClick={() => setIndex(i)}
                             aria-label={`Slide ${i + 1}`}
-                        ></span>
+                        ></h3>
                     ))}
                 </div>
             </div>

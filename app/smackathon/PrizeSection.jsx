@@ -10,7 +10,7 @@ const Prize = () => {
   const controls = useAnimation();
 
   // Define the maximum scroll distance for the image to move up
-  const maxScrollDistance = 350;
+  const maxScrollDistance = 400;
 
   // Handle scroll events
   const handleScroll = () => {
@@ -30,7 +30,6 @@ const Prize = () => {
       // Update scroll position
       setScrollPosition(scrollEffectHeight);
 
-      // Trigger animation based on scroll position
       controls.start({
         y: -scrollEffectHeight,
         transition: { duration: 1.7 },
@@ -40,7 +39,7 @@ const Prize = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger scroll check on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [controls]);
@@ -69,26 +68,28 @@ const Prize = () => {
       </div>
       <div
         ref={divRef}
-        className="bg-[url('/images/prize/new-prize-bg.png')] relative w-full h-[170vh] bg-center bg-no-repeat flex flex-col items-center overflow-hidden md:h-[170vh]"
+        className="bg-[url('/images/prize/new-prize-bg.png')] relative w-full h-full lg:h-[150vh] bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
       >
 
         <motion.div
           animate={controls}
-          className="absolute -bottom-80 transform -translate-x-1/2"
+          className="absolute -bottom-96 transform hidden lg:block -translate-x-1/2 w-full h-96 lg:-bottom-80"
         >
           <img
             src="/images/prize/minecraft-rise.png"
             alt="Animated"
-            className="w-[100%] bottom-0"
+            className="w-full h-full bottom-0 object-cover object-center"
           />
         </motion.div>
 
-        <h1 className="text-5xl mt-16 text-center text-white font-bold">
+        <div></div>
+
+        <h1 className="text-3xl sm:text-5xl mt-16 text-center text-white font-bold">
           Cash Prizes
         </h1>
-        <div className="flex flex-col gap-6 px-12 lg:flex-row lg:px-24 lg:gap-20 py-32 md:px-24 md:gap-20">
+        <div className="flex flex-col gap-5 px-12 lg:flex-row lg:px-24 lg:gap-20 py-32 md:px-24 md:gap-20">
           <div className="flex flex-col items-center gap-10 order-1 md:order-0">
-            <div className="p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-14 sm:p-10 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -110,7 +111,7 @@ const Prize = () => {
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 order-0 md:order-1">
-            <div className="bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_75%)] p-14">
+            <div className="p-14 sm:p-10 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -133,7 +134,7 @@ const Prize = () => {
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 order-1">
-            <div className="p-16 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_60%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-16 sm:p-12 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_60%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],

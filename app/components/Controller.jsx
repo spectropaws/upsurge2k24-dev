@@ -4,6 +4,8 @@ import { useRef, useEffect } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ControllerScreen from './ControllerScreen';
 import { Html } from '@react-three/drei';
+import { controller } from "./three-config";
+
 
 export default function Controller() {
     const meshRef = useRef();
@@ -18,7 +20,8 @@ export default function Controller() {
         });
     }, []);
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.stopPropagation();
         const event = new Event('controllerClick');
         window.dispatchEvent(event);
     };

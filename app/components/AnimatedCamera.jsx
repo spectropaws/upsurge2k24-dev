@@ -18,16 +18,25 @@ export default function AnimatedCamera() {
     const groupControls = useAnimation();
     const objectControls = useAnimation();
 
+
     // set isZoomed state based on event listener
     useEffect(() => {
+
+        const handleEscape = ((e) => {
+            if (e.key == "Escape")
+                setIsZoomed((prevState) => prevState & false)
+        });
+
         const handleControllerClick = () => {
             setIsZoomed((prevZoomed) => !prevZoomed);
         };
 
         window.addEventListener('controllerClick', handleControllerClick);
+        window.addEventListener("keydown", handleEscape);
 
         return () => {
             window.removeEventListener('controllerClick', handleControllerClick);
+            window.removeEventListener("keydown", handleEscape);
         };
     }, []);
 
@@ -71,16 +80,18 @@ export default function AnimatedCamera() {
             const duration = (((Math.PI / 4) - Math.abs(prevRotationY)) * 40) / Math.PI;
             groupControls.start({
                 rotateY: (Math.abs(prevRotationY) / prevRotationY) * Math.PI / 4,
-                transition: { duration: duration, ease: 'easeInOut', 
+                transition: {
+                    duration: duration, ease: 'easeInOut',
                     onComplete: () => {
-                    setPrevRotationY(groupRef.current.rotation.y);
-                    setTransitionComplete(true);
-                    setHasLerped(false);
-                }},
+                        setPrevRotationY(groupRef.current.rotation.y);
+                        setTransitionComplete(true);
+                        setHasLerped(false);
+                    }
+                },
             });
         }
     }, [hasLerped, prevRotationY, groupControls]);
-    
+
 
     useEffect(() => {
         if (transitionComplete) {

@@ -1,5 +1,23 @@
-export const camera = {
-
+export const cameraConf = {
+    rotation: {},
+    fakeObj: {
+        POSITION: [50, 50, 100],
+        animation: {
+            INITIAL_POSITION: {
+                X: 0,
+                Y: 30,
+                Z: 70
+            },
+            TARGET_POSITION: {
+                X: 0,
+                Y: 0,
+                Z: 19 
+            },
+            INITIAL_ROTATION: Math.PI / 4,
+            ZOOM_DURATION: 0.8,
+            OSCILLATION_DURATION: 20
+        }
+    }
 }
 
 export const scene = {

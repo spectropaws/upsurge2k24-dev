@@ -29,7 +29,7 @@ export default function TimelineMobile() {
   return (
     <div className="timeline bg-gradient-to-b from-blue-400 via-blue-400 to-blue-300 w-full min-h-full relative">
       <div className="relative flex justify-center text-5xl text-white h-[250px] top-10">
-        <h1 className="absolute">Timeline</h1>
+        <h1 className="absolute text-3xl">Timeline</h1>
       </div>
       
 

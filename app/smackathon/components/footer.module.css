@@ -170,7 +170,7 @@
 .socials h3 {
   justify-content: center;
   flex-direction: row;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 .follow_us{
@@ -230,7 +230,7 @@
   margin-top: 1rem;
   align-items: center;
   margin-bottom: 2rem;
-  font-size: 13px;
+  /* font-size: 13px; */
   row-gap: 2rem;
 }
 

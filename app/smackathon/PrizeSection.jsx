@@ -68,12 +68,12 @@ const Prize = () => {
 
         <div></div>
 
-        <h1 className="text-3xl sm:text-5xl mt-16 text-center text-white font-bold">
+        <h1 className="text-3xl sm:text-5xl mt-16 text-center text-white font-bold lg:mb-12">
           Cash Prizes
         </h1>
-        <div className="flex flex-col gap-4 px-10 lg:flex-row lg:px-24 lg:gap-20 py-32 md:px-24 md:gap-20">
+        <div className="flex flex-col gap-6 px-10 lg:flex-row lg:px-24 lg:gap-20 py-32 md:px-24 md:gap-20">
           <div className="flex flex-col items-center gap-10 order-1 md:order-0">
-            <div className="p-14 sm:p-10 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-10 md:p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -87,15 +87,15 @@ const Prize = () => {
               >
                 <Image
                   src="/images/prize/second-prize.png"
-                  width={338}
-                  height={397}
+                  width={500}
+                  height={500}
                   alt="Second Prize"
                 />
               </motion.div>
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 order-0 md:order-1">
-            <div className="p-14 sm:p-10 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-8 md:p-8 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -110,15 +110,15 @@ const Prize = () => {
               >
                 <Image
                   src="/images/prize/first-prize.png"
-                  width={430}
-                  height={442}
+                  width={500}
+                  height={500}
                   alt="First Prize"
                 />
               </motion.div>
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 order-1">
-            <div className="p-16 sm:p-12 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_60%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-10 md:p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_60%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -132,8 +132,8 @@ const Prize = () => {
               >
                 <Image
                   src="/images/prize/third-prize.png"
-                  width={338}
-                  height={397}
+                  width={500}
+                  height={500}
                   alt="Third Prize"
                 />
               </motion.div>

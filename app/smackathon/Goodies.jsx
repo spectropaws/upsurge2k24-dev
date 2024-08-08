@@ -29,9 +29,9 @@ export default function Goodies() {
               className="rotate-45 p-4 mr-2 lg:mr-0"
             />
 
-            <span className="text-justify text-lg text-white lg:text-xl lg:px-2">
+            <p className="text-justify text-lg text-white lg:text-xl lg:px-2">
               GFG Kits to the top 3 winners of the Hackathon.
-            </span>
+            </p>
           </div>
           <div className="flex items-center">
             <Image
@@ -40,9 +40,9 @@ export default function Goodies() {
               height={50}
               className="rotate-45 p-4 mr-2 lg:mr-0"
             />
-            <span className="text-justify text-lg text-white lg:text-xl lg:px-2">
+            <p className="text-justify text-lg text-white lg:text-xl lg:px-2">
               GFG Discount coupons worth Rs 2000 for winners.
-            </span>
+            </p>
           </div>
           <div className="flex items-center ">
             <Image
@@ -51,9 +51,9 @@ export default function Goodies() {
               height={50}
               className="rotate-45 p-4 mr-2 lg:mr-0"
             />
-            <span className="text-justify text-lg text-white lg:text-xl lg:px-2">
+            <p className="text-justify text-lg text-white lg:text-xl lg:px-2">
               GFG Discount coupons worth Rs 300 for all participants.
-            </span>
+            </p>
           </div>
         </div>
       </div>

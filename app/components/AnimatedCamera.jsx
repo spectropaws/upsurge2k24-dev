@@ -22,10 +22,17 @@ export default function AnimatedCamera() {
     // set isZoomed state based on event listener
     useEffect(() => {
 
-        const handleEscape = ((e) => {
+        const handleEscape = (e) => {
             if (e.key == "Escape")
-                setIsZoomed((prevState) => prevState & false)
-        });
+                setIsZoomed(false);
+        };
+
+        const handleMessage = (e) => {
+            if (e.data == "screenClick")
+                setIsZoomed(true);
+            else if (e.data == "escapeZoom")
+                setIsZoomed(false);
+        };
 
         const handleControllerClick = () => {
             setIsZoomed((prevZoomed) => !prevZoomed);
@@ -33,10 +40,12 @@ export default function AnimatedCamera() {
 
         window.addEventListener('controllerClick', handleControllerClick);
         window.addEventListener("keydown", handleEscape);
+        window.addEventListener('message', handleMessage);
 
         return () => {
             window.removeEventListener('controllerClick', handleControllerClick);
             window.removeEventListener("keydown", handleEscape);
+            window.removeEventListener('message', handleMessage);
         };
     }, []);
 

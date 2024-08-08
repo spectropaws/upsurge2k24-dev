@@ -4,8 +4,13 @@ import Image from "next/image";
 
 export default function Goodies() {
   return (
-    <div className="relative bg-[url('/images/goodies/goodies-bg.png')] w-full bg-cover bg-center py-8">
-      <h1 className="text-4xl p-7 pb-16 text-center text-white font-bold">
+    <div
+      style={{
+        boxShadow: "0px 26px 26px 0px rgba(0,0,0,0.75) inset",
+      }}
+      className="relative bg-[url('/images/goodies/goodies-bg.png')] w-full bg-cover bg-center py-8"
+    >
+      <h1 className="text-3xl sm:text-5xl p-7 pb-16 text-center text-white font-bold">
         Exclusive Goodies from GFG
       </h1>
       <div className="flex flex-col gap-5 items-center justify-center px-10 pb-40 lg:flex-row lg:px-16">

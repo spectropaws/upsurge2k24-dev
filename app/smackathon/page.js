@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect } from "react";
 import dynamic from 'next/dynamic';
 import HeroSection from "./hero";
 import PrizeSection from "./PrizeSection";
@@ -11,12 +12,13 @@ import RulesandGuidelines from "./RulesandGuidelines";
 import AssessmentCriteria from "./AssessmentCriteria";
 import LocateUs from './LocateUs';
 import Footer from "./Footer";
+import ScreenEventEmitter from "@/app/components/ScreenEventEmitter";
 
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
 
 export default function Smackathon() {
     return (
-        <>
+        <ScreenEventEmitter>
             <div className="bg-black">
                 <HeroSection />
                 <PrizeSection />
@@ -42,6 +44,6 @@ export default function Smackathon() {
             <div className='bg-[#3CBCFC] m-0 p-0 w-full'>
                 <Footer />
             </div >
-        </>
+        </ScreenEventEmitter>
     );
 }

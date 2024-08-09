@@ -118,7 +118,7 @@
   box-sizing: border-box;
   margin-bottom: 15rem;
   font-weight: 700;
-  font-size: 4rem;
+  /* font-size: 6rem; */
 }
 
 .Links_all .link_smackathon,
@@ -170,7 +170,7 @@
 .socials h3 {
   justify-content: center;
   flex-direction: row;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .follow_us{
@@ -198,12 +198,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   /* margin-left: 2rem; */
 }
 .contact_details {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   margin-top: 1rem;
   gap: 20px;
   text-align: center;
@@ -215,6 +215,10 @@
 
 .Contact{
   font-size: 15px;
+}
+
+.follow_us{
+  display: flex;
 }
 
 .copyright {
@@ -283,7 +287,7 @@
 
   .dog {
     /* display: none; */
-    top: 48.5rem;
+    top: 51.5rem;
     right: 5rem;
     position: relative;
     z-index: 0;
@@ -352,11 +356,16 @@
     background-color: transparent;
   }
 
+  .follow_us{
+    display: flex;
+  }
+
   .find_us {
     margin-top: 1rem;
     /* position: relative; */
     /* top: 2rem; */
   }
+
   .contact_us {
     margin-top: 0.25rem;
     position: relative;

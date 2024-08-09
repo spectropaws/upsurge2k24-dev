@@ -41,11 +41,9 @@ export default function HeroSection() {
                 }}
                 className="py-4"
               >
-                <span
-                  className={`${styles.fontglow} text-lg text-white font-bold md:text-2xl`}
-                >
+                <p className={`text-lg text-white font-bold md:text-2xl`}>
                   Presents
-                </span>
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -62,10 +60,11 @@ export default function HeroSection() {
                 }}
               >
                 <Image
-                  src="/images/hero/smackathon_logo.png"
+                  src="/images/hero/smackathon_logo_cropped.png"
                   alt="smackathon logo"
                   width="500"
                   height="191"
+                  className="mb-4"
                 />
               </motion.div>
               <motion.div
@@ -78,7 +77,7 @@ export default function HeroSection() {
               >
                 {/* <span className="text-lg text-white font-bold">On</span> */}
                 <h2
-                  className={`${styles.fontglow} text-lg md:text-2xl text-center text-white font-semibold mb-6`}
+                  className={`${styles.fontglow} text-lg md:text-2xl text-center text-white font-semibold mb-8`}
                 >
                   {/* On <br /> */}
                   23rd - 24th August
@@ -91,20 +90,20 @@ export default function HeroSection() {
                   transition: { delay: 2, duration: 1, ease: easeIn },
                 }}
               >
-                <Dialog>
+                <Dialog className="w-full">
                   <DialogTrigger
                     className={`${styles.button} flex text-xs justify-center md:text-lg`}
                   >
-                    <span className={styles.box}>R</span>
-                    <span className={styles.box}>E</span>
-                    <span className={styles.box}>G</span>
-                    <span className={styles.box}>I</span>
-                    <span className={styles.box}>S</span>
-                    <span className={styles.box}>T</span>
-                    <span className={styles.box}>E</span>
-                    <span className={styles.box}>R</span>
+                    <p className={styles.box}>R</p>
+                    <p className={styles.box}>E</p>
+                    <p className={styles.box}>G</p>
+                    <p className={styles.box}>I</p>
+                    <p className={styles.box}>S</p>
+                    <p className={styles.box}>T</p>
+                    <p className={styles.box}>E</p>
+                    <p className={styles.box}>R</p>
                   </DialogTrigger>
-                  <DialogContent className="w-[90%] h-[75%] px-6 py-8">
+                  <DialogContent className="w-[100%] h-[90%] px-6 py-8">
                     <iframe
                       src="https://konfhub.com/widget/smackathon-2024?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Nunito&borderRadius=5"
                       id="konfhub-widget"
@@ -125,9 +124,9 @@ export default function HeroSection() {
             >
               <div className="flex flex-col items-center gap-8  sm:flex-row sm:gap-20 md:gap-80 lg:gap-[400px]">
                 <div className="flex flex-col items-center gap-2">
-                  <span className="text-base text-white font-semibold pb-1 md:text-2xl">
+                  <p className="text-base text-white font-semibold pb-1 md:text-2xl">
                     Powered By
-                  </span>
+                  </p>
                   <Image
                     src="/images/hero/COJAG.png"
                     alt="COJAG logo"
@@ -137,9 +136,9 @@ export default function HeroSection() {
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <span className="text-base text-white font-semibold pb-1 md:text-2xl">
+                  <p className="text-base text-white font-semibold pb-1 md:text-2xl">
                     Co-powered By
-                  </span>
+                  </p>
                   <Image
                     src="/images/hero/webgurukul.png"
                     alt="webgurukul logo"

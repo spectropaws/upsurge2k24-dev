@@ -36,75 +36,75 @@ export default function Timeline() {
                     {/* Left container */}
                     <div className="relative flex flex-col items-end w-[400px] gap-[10rem] text-lg mr-28 mb-[10rem]">
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 1<br/>08:30 AM: Check-in Time for Teams`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif" alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 1.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 1<br/>12:00 PM: Development to be started <br/> 3:00 PM - 5:00 PM: Idea presentation <br/> Round 1 Shortlisting`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 3.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 2<br/>7:00 AM- 8:00 AM: Breakfast <br/> 8:30 AM : Final Elimination`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium  text-2xl">{text}</span>
+                                                    <p className="w-full font-medium  text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 5.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                         <motion.div className="relative w-full" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 2 <br/> 2:00 PM : Winners to be Announced in the valedictory ceremony`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 2.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                     </div>
@@ -132,57 +132,57 @@ export default function Timeline() {
                     {/* Right container */}
                     <div className="relative flex flex-col items-start w-[400px] gap-[10rem] ml-28 mb-[10rem] mt-20">
                         <motion.div className="relative w-full mb-10" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 1<br/>10:00 AM: Problem Statements will be Released<br/>11:30 AM: Teams to Lock and Submit Their Problem Statements`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                        
                             <Image height={60} width={300} src="/svgs/timeline/brick 4.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                         <motion.div className="relative w-full mb-10 mt-[5rem]" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for accommodation`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 1.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                         <motion.div className="relative w-full" {...boxAnimation}>
-                            <p>
+                            
                                 {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
                                     .split("<br/>")
                                     .map((text, index) => (
-                                        <span key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
+                                        <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
                                             {index > 0 && (
                                                 <>
                                                     <img src="/images/timeline/coin.gif"  alt="coin" className="inline pt-[6px] h-[25px] w-[20px] mr-2" />
-                                                    <span className="w-full font-medium text-2xl">{text}</span>
+                                                    <p className="w-full font-medium text-2xl">{text}</p>
                                                 </>
                                             )}
                                             {index === 0 && text}
-                                        </span>
+                                        </h3>
                                     ))}
-                            </p>
+                            
                             <Image height={60} width={300} src="/svgs/timeline/brick 2.svg" alt="bricks" className="absolute w-full" />
                         </motion.div>
                     </div>
@@ -200,16 +200,16 @@ export default function Timeline() {
                     <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[14rem] left-[7rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />        
                     </motion.div>
-                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[45rem] left-[20rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
+                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[40rem] left-[20rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
                     <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[30rem] right-[20rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
-                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[68rem] right-[3rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
+                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[50rem] right-[3rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
-                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[66rem] left-[10rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
+                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[60rem] left-[10rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
                 </div>

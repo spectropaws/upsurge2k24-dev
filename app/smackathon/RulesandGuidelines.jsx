@@ -96,7 +96,7 @@ const RulesAndGuidelines = () => {
             <div className='w-full md:block hidden mb-24'><Image src={"/images/pacman/downwalls.svg"} className='scale-y-[-1] scale-x-[-1] w-full' width={500} height={500}></Image></div>
             <div className='w-[90%]'>
                 <h1 className='text-center text-3xl md:text-5xl mb-8 md:mb-16 mt-24 md:mt-0'>
-                    Rules and Guidelines For Smackathon 2024
+                    Rules and Guidelines
                 </h1>
                 <motion.div
                     className='flex flex-col md:flex-row justify-center items-center'

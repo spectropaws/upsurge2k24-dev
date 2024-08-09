@@ -63,63 +63,63 @@ export default function TimelineMobile() {
             className="w-full h-[200px] mt-[70px]"
             {...boxAnimation}
           >
-            <p>
+            
                             {`DAY 1<br/>08:30 AM: Check-in Time for Teams`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
-                                                <span className="font-medium">{text}</span>
+                                                <p className="font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+                        
                         <Image width={300} height={60} src="/svgs/timeline/brick 1.svg" alt="bricks" className="w-[300px] mt-2" />
             
           </motion.div>
 
 
           <motion.div className="w-full h-[200px] " {...boxAnimation}>
-          <p>
+          
                             {`DAY 1<br/>10:00 AM: Problem Statements will be Released<br/>11:30 AM: Teams to Lock and Submit Their Problem Statements`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="font-medium">{text}</span>
+                                                <p className="font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+                 
                         <Image width={300} height={60} src="/svgs/timeline/brick 4.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
             className="w-full h-[200px] mt-[60px]"
             {...boxAnimation}
           >
-            <p>
+            
                             {`DAY 1<br/>12:00 PM: Development to be started <br/> 3:00 PM - 5:00 PM: Idea presentation <br/> Round 1 Shortlisting`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="font-medium">{text}</span>
+                                                <p className="font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+       
                         <Image width={300} height={60} src="/svgs/timeline/brick 3.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
 
@@ -127,82 +127,82 @@ export default function TimelineMobile() {
             className="w-full h-[200px] mt-[70px]"
             {...boxAnimation}
           >
-            <p>
+        
                             {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for accommodation`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className="font-medium">{text}</span>
+                                                <p className="font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+             
                         <Image width={300} height={60} src="/svgs/timeline/brick 1.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
             className="w-full h-[200px] mt-[50px]"
             {...boxAnimation}
           >
-            <p>
+       
                             {`DAY 2<br/>7:00 AM- 8:00 AM: Breakfast <br/> 8:30 AM : Final Elimination`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"/>
-                                                <span className=" font-medium">{text}</span>
+                                                <p className=" font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+                  
                         <Image width={300} height={60} src="/svgs/timeline/brick 5.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           
           <motion.div className="w-full h-[200px] " {...boxAnimation}>
-          <p>
+
                             {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1"  />
-                                                <span className="font-medium">{text}</span>
+                                                <p className="font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+          
                         <Image width={300} height={60} src="/svgs/timeline/brick 2.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
             className="w-full h-[200px] mt-[70px] mb-[40px]"
             {...boxAnimation}
           >
-            <p>
+     
                             {`DAY 2 <br/> 2:00 PM : Winners to be Announced in the valedictory ceremony`
                                 .split("<br/>")
                                 .map((text, index) => (
-                                    <span key={index} className="flex mt-2 font-bold">
+                                    <h3 key={index} className="flex mt-2 font-bold">
                                         {index > 0 && (
                                             <>
                                                 <img src="/images/timeline/coin.gif"  alt="coin" className="inline h-[19px] w-[15px] mr-2 pt-1" />
-                                                <span className=" font-medium">{text}</span>
+                                                <p className=" font-medium">{text}</p>
                                             </>
                                         )}
                                         {index === 0 && text}
-                                    </span>
+                                    </h3>
                                 ))}
-                        </p>
+                    
                         <Image width={300} height={60} src="/svgs/timeline/brick 2.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
         </div>

@@ -43,7 +43,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
     animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}}
     className="flex flex-col items-center overflow-hidden pt-10 w-[360px] md:w-[360px] relative ">
       {/* Cloud Image */}
-      <div className="relative mt-64 z-20 w-[350px] md:w-[360px] h-20 ">
+      <div className="relative mt-[260px] z-20 w-[350px] md:w-[360px] h-20 ">
         <Image 
           src="/images/trackIcons/pixelCloud.png" 
           alt="Cloud" 
@@ -57,7 +57,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
         initial={{ opacity: 0, y: 100 }} // Initial state: invisible and moved down
         animate={ inView && { opacity: 1, y: 0 }} // Animate based on `inView`
         transition={ inView && { duration: 0.8, delay:0.1, ease: "easeOut" }} // Duration and easing for smooth transition
-        className="absolute flex flex-col w-80 h-80 pb-16 z-10 bg-slate-200 shadow-lg shadow-indigo-900 bg-opacity-[0.35] rounded-lg"
+        className="absolute flex flex-col w-80 h-[310px] pb-16 z-10 bg-slate-200 shadow-lg shadow-indigo-900 bg-opacity-[0.35] rounded-lg"
         style={customShadow}
       >
         <div className="flex flex-col justify-center items-center mb-2 -mt-10">
@@ -70,7 +70,7 @@ export default function TrackCard({ trackTitle, trackDesc, trackIcon }) {
           />
           <h3 className="font-bold text-blue-700 ml-2">{trackTitle}</h3>
         </div>
-        <p className="px-6 text-white hyphens-auto text-justify">
+        <p style={{wordSpacing:"-5px"}} className="px-6 text-white text-[22px] hyphens-auto text-justify leading-5">
           {trackDesc}
         </p>
       </motion.div>

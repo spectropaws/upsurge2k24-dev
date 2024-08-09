@@ -11,43 +11,43 @@ export default function Tracks() {
       trackIcon: "/images/trackIcons/education1.jpg",
       trackTitle: "Education",
       trackDesc:
-        "These projects increase access to educational resources, facilitate learning in the classroom, or generally make acquiring knowledge a more engaging process. Hacks submitted under this category can range from all-encompassing edtech solutions to projects that bring awareness to a specific topic.",
+        "This category focuses on enhancing access to educational resources, improving classroom learning, and facilitating a more engaging knowledge acquisition process. Submissions can include solutions that raise awareness about educational issues.",
     },
     {
       trackIcon: "/images/trackIcons/health.png",
       trackTitle: "Healthcare",
       trackDesc:
-        "These projects take on public health challenges, combat health disparities, or assist with maintaining personal wellness. Hacks submitted under this category can range from digital archives of public health information to apps that track the fitness data of an individual user.",
+        "This category focuses to address public health challenges, reduce health disparities, or promote personal wellness. Submissions can range from digital archives of public health data to fitness tracking apps, all with the goal of improving health outcomes.",
     },
     {
       trackIcon: "/images/trackIcons/environment2.png",
       trackTitle: "Environment",
       trackDesc:
-        "These projects use technology to preserve ecological ecosystems or promote sustainable lifestyles. Hacks submitted under this category can range from sweeping solutions to pertinent environmental crises to apps that encourage small sustainable habits",
+        "This category focuses on projects that leverage technology to preserve ecological ecosystems or promote sustainable practices. Submissions might include solutions for reducing environmental impacts or developing sustainable habits.",
     },
     {
       trackIcon: "/images/trackIcons/finance.png",
       trackTitle: "Finance",
       trackDesc:
-        "These projects use technology to drive economic growth, generate employment opportunities, attract investments and achieve economic sustainability. Hacks submitted under this category can range from solutions to mitigate risks, revolutionize fintech, make transactions more secure and handle existing financial crisis.",
+        "This category focuses on using technology to stimulate economic growth, create employment opportunities, attract investments, and ensure economic sustainability. Submissions might include solutions for financial risk mitigation, innovative fintech ideas, or secure transaction handling.",
     },
     {
       trackIcon: "/images/trackIcons/web3.png",
       trackTitle: "Web3",
       trackDesc:
-        "These projects use technology to revolutionize the digital landscape, impacting data security with online platforms and building robust decentralized applications. Hacks in this category may address data ownership, privacy, censorship resistance, interoperability, and environmental sustainability.",
+        "This category focuses on projects that aim to revolutionize the digital landscape, enhance data security, and address decentralized applications. Submissions can vary from enhancing digital privacy to promoting environmental sustainability through technological innovation.",
     },
     {
       trackIcon: "/images/trackIcons/agriculture2.png",
       trackTitle: "Agriculture",
       trackDesc:
-        "These projects use technology to impact various factors, including crop cultivation, livestock management, and agribusiness development. Hacks in this category can address agricultural crises, promote eco-friendly farming techniques, and support sustainable agribusiness practices.",
+        "This category focuses on technology to influence various aspects of agriculture, from crop cultivation and network management to agribusiness development. Submissions might include solutions for agricultural sustainability or efficiency improvements in farming practices.",
     },
     {
       trackIcon: "/images/trackIcons/openinnvo2.png",
       trackTitle: "Open Innovation",
       trackDesc:
-        "Open innovation projects leverage technology and collaboration to foster innovation across various sectors and industries. Projects submitted under this category can encompass a wide range of initiatives, from open-source software development to collaborative research efforts and ecosystem-building activities.",
+        "This category focuses on leveraging technological advancements and collaborative efforts to foster innovation across multiple sectors. Submissions might include open-source software developments, ecosystem-building activities, or collaborative research initiatives.",
     },
   ];
 

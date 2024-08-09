@@ -73,7 +73,7 @@ export default function Footer() {
               <div className={styles.socials}>
                 <h3 className={styles.follow_us}><p>Follow US</p> <br/></h3>
                 <div className={styles.social_logo}>
-                  <Link href="https://www.instagram.com/cse_ycce_official/">
+                  <Link href="https://www.instagram.com/cse_ycce_official/" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/svgs/footer//instagram.svg"
                       alt="instagram"
@@ -81,7 +81,7 @@ export default function Footer() {
                       height={50}
                     />
                   </Link>
-                  <Link href="https://www.linkedin.com/company/yccecosmos/">
+                  <Link href="https://www.linkedin.com/company/yccecosmos/" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/svgs/footer//linkedin.svg"
                       alt="linkedin"
@@ -89,7 +89,7 @@ export default function Footer() {
                       height={50}
                     />
                   </Link>
-                  <Link href="mailto:smackathon@upsurge2k24.tech">
+                  <Link href="mailto:smackathon@upsurge2k24.tech" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/svgs/footer/Mail.svg"
                       alt="mail"

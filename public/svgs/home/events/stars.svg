@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+  <circle cx="10" cy="10" r="0.5" fill="white" />
+  <circle cx="30" cy="20" r="0.7" fill="white" />
+  <circle cx="50" cy="30" r="0.6" fill="white" />
+  <circle cx="70" cy="40" r="0.8" fill="white" />
+  <circle cx="90" cy="50" r="0.4" fill="white" />
+  <!-- Add more stars or adjust positions as needed -->
+</svg>

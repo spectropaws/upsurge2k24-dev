@@ -68,17 +68,17 @@ const AssessmentCriteria = () => {
                             alt={slide.alt}
                             className={`w-[200px] h-[200px] rounded-full ${styles.circularImage}`}
                         />
-                        <p className={`text-lg font-semibold mt-4 text-white ${styles.text}`}>{slide.text}</p>
+                        <h3 className={`text-lg font-semibold mt-4 text-white ${styles.text}`}>{slide.text}</h3>
                     </div>
                 ))}
                 <div className="text-center absolute bottom-1 w-full">
                     {assessmentCriteria.map((_, i) => (
-                        <h3
+                        <div
                             key={i}
                             className={`inline-block bg-gray-400 p-1 rounded-full m-1 cursor-pointer ${index === i ? 'bg-white' : ''}`}
                             onClick={() => setIndex(i)}
                             aria-label={`Slide ${i + 1}`}
-                        ></h3>
+                        ></div>
                     ))}
                 </div>
             </div>

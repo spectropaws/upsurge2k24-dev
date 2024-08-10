@@ -31,12 +31,14 @@ export default function HeroSection() {
                 <p className="text-base text-white font-semibold pb-1 md:text-2xl">
                   Powered By
                 </p>
-                <Image
-                  src="/images/hero/Unstop-Logo-White-Small.png"
-                  alt="unstop logo"
-                  width="200"
-                  height="50"
-                />
+                <div className="bg-[#00376D] p-4 rounded-xl">
+                  <Image
+                    src="/images/hero/Unstop-Logo-White-Small.png"
+                    alt="unstop logo"
+                    width="150"
+                    height="50"
+                  />
+                </div>
               </div>
             </motion.div>
             <div className="flex flex-col items-center ">

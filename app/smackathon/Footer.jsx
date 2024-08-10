@@ -28,7 +28,7 @@ export default function Footer() {
             <div className={styles.footerLeft}>
               <div className={styles.logos_All}>
                 <Image
-                  src="/images/footer/Upsurge_Logo.png"
+                  src="/images/footer/UPSURGE_Logo.png"
                   alt="upsurge"
                   width={170}
                   height={100}

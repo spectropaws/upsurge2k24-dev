@@ -73,7 +73,7 @@ const Prize = () => {
         </h1>
         <div className="flex flex-col gap-6 px-10 lg:flex-row lg:px-24 lg:gap-20 py-32 md:px-24 md:gap-20">
           <div className="flex flex-col items-center gap-10 order-1 md:order-0">
-            <div className="p-10 md:p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-10 md:p-14 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_72%)] lg:bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.6),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],
@@ -95,7 +95,7 @@ const Prize = () => {
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 order-0 md:order-1">
-            <div className="p-8 md:p-8 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.4),_rgba(147,_133,_227,_0)_75%)]">
+            <div className="p-8 md:p-8 bg-[radial-gradient(circle,_rgba(147,_133,_227,_0.8),_rgba(147,_133,_227,_0)_75%)]">
               <motion.div
                 animate={{
                   y: [10, -10],

@@ -2,6 +2,8 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+import { useLoader } from '@react-three/fiber';
 import ControllerScreen from './ControllerScreen';
 import { Html, Text } from '@react-three/drei';
 import Arrow from './Arrow';
@@ -11,6 +13,16 @@ import { controller } from "./three-config";
 export default function Controller() {
     const meshRef = useRef();
     const [interacted, setInteracted] = useState(false);
+    const [font, setFont] = useState(null);
+
+    useEffect(() => {
+    const loader = new FontLoader();
+    loader.load('/fonts/Orbitron_Bold.json', (loadedFont) => {
+      setFont(loadedFont);
+    }, undefined, (error) => {
+      console.error('Error loading font:', error);
+    });
+  }, []);
 
     useEffect(() => {
         const loader = new GLTFLoader();

@@ -67,7 +67,15 @@
     @apply bg-background text-foreground;
   }
 
-  p, h3, h4, h5, h6 {
+  h1 {
+    @apply text-3xl md:text-5xl;
+  }
+
+  h2, h3 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  p, h4, h5, h6 {
     @apply text-xl md:text-2xl;
     font-family: var(--font-dotGothic);
   }

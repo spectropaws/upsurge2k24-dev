@@ -60,7 +60,7 @@ export default function Start() {
         className="absolute h-1/2 bottom-[6rem] right-6"
       />
       <img src="/images/startScreen/upsurgeLogo.png" className="absolute h-96 top-0 left-1/2 w-[60%] transform -translate-x-1/2" />
-      <img src="/images/startScreen/fire.svg" className="absolute bottom-0" />
+      <img src="/images/startScreen/fire.svg" className="absolute bottom-0 -mt-[2px]" />
       <div className="absolute bottom-[6rem] left-1/4 transform -translate-x-1/2 flex flex-col space-y-3">
         {options.map((option, index) => (
           <div

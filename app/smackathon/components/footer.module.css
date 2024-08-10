@@ -128,7 +128,7 @@
   display: flex;
   row-gap: 5rem;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .Links_all .link_smackathon:hover {
@@ -219,6 +219,7 @@
 
 .follow_us{
   display: flex;
+  font-size: 1.5rem;
 }
 
 .copyright {

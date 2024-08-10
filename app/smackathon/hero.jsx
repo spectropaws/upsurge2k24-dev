@@ -32,7 +32,7 @@ export default function HeroSection() {
                   Powered By
                 </p>
                 <Image
-                  src="/images/hero/unstop-bg-white.png"
+                  src="/images/hero/unstop-white.png"
                   alt="unstop logo"
                   width="150"
                   height="50"
@@ -62,7 +62,7 @@ export default function HeroSection() {
                 }}
                 className="pb-4"
               >
-                <p className={`text-lg text-white font-bold md:text-2xl`}>
+                <p className={`text-lg text-white font-bold md:text-3xl`}>
                   Presents
                 </p>
               </motion.div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
                 }}
               >
                 <Image
-                  src="/images/hero/smackathon_logo_cropped.png"
+                  src="/images/hero/smackathon_logo.png"
                   alt="smackathon logo"
                   width="400"
                   height="191"
@@ -149,7 +149,7 @@ export default function HeroSection() {
                   Co-powered By
                 </p>
                 <Image
-                  src="/images/hero/mk-bg-white.png"
+                  src="/images/hero/mk.png"
                   alt="mk constructions logo"
                   width="100"
                   height="50"

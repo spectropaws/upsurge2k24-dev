@@ -16,7 +16,7 @@ export default function HeroSection() {
           <source alt="hero video" src="/videos/hero/bgg.mp4" />
         </video>
 
-        <div className="w-[80%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <div className="w-[80%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] scale-125">
           <div className="flex flex-col items-center gap-8 md:gap-32 md:flex-row md:justify-center md:items-end">
             <motion.div
               initial={{ opacity: 0 }}
@@ -24,6 +24,7 @@ export default function HeroSection() {
                 opacity: 1,
                 transition: { delay: 2, duration: 1, ease: easeIn },
               }}
+              className="order-1 md:order-[0]"
             >
               <div className="flex flex-col items-center gap-2 md:mb-[-25px]">
                 <p className="text-base text-white font-semibold pb-1 md:text-2xl">
@@ -48,7 +49,7 @@ export default function HeroSection() {
                 <Image
                   src="/images/hero/cojag.png"
                   alt="Cojag Logo"
-                  width="200"
+                  width="225"
                   height="41"
                 />
               </motion.div>
@@ -83,7 +84,7 @@ export default function HeroSection() {
                   alt="smackathon logo"
                   width="400"
                   height="191"
-                  className="mb-4"
+                  className="mb-8"
                 />
               </motion.div>
               <motion.div
@@ -96,7 +97,7 @@ export default function HeroSection() {
               >
                 {/* <span className="text-lg text-white font-bold">On</span> */}
                 <h2
-                  className={`${styles.fontglow} text-lg md:text-2xl text-center text-white font-semibold mb-8`}
+                  className={`${styles.fontglow} text-lg md:text-2xl text-center text-white font-semibold mb-12`}
                 >
                   {/* On <br /> */}
                   23rd - 24th August
@@ -139,19 +140,18 @@ export default function HeroSection() {
                 opacity: 1,
                 transition: { delay: 2, duration: 1, ease: easeIn },
               }}
+              className="order-1 "
             >
-              <div className="flex flex-col items-center gap-8  sm:flex-row sm:gap-20 md:gap-80 lg:gap-[400px]">
-                <div className="flex flex-col items-center md:mb-[-50px]">
-                  <p className="text-base text-white font-semibold pb-1 md:text-2xl">
-                    Co-powered By
-                  </p>
-                  <Image
-                    src="/images/hero/Mk.png"
-                    alt="mk constructions logo"
-                    width="100"
-                    height="50"
-                  />
-                </div>
+              <div className="flex flex-col items-center md:mb-[-50px]">
+                <p className="text-base text-white font-semibold pb-1 md:text-2xl">
+                  Co-powered By
+                </p>
+                <Image
+                  src="/images/hero/Mk.png"
+                  alt="mk constructions logo"
+                  width="100"
+                  height="50"
+                />
               </div>
             </motion.div>
           </div>

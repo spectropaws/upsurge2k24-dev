@@ -118,7 +118,7 @@ export default function Footer() {
                   <h3 className=""><p>Contact Us</p></h3>
                   <div className={styles.contact_details}>
                       <div className={styles.Contact}>
-                        <p className="">Abhijeet Shahu  </p>
+                        <p className="">Abhijeet Sahu  </p>
                         <p className="">(9922509022)</p>
                       </div>
                       <div className={styles.Contact}>

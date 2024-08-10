@@ -43,11 +43,10 @@ export default function Controller() {
 
     return (
         <group ref={meshRef} scale={[1, 1, 1]} position={[0, 0, 0]} rotation={[0, 0, 0]} onClick={handleClick}>
-            <Html position={[0, 0, 0.01]} transform occlude width={1536} height={864}
+            <Html position={[0, 0, 0.01]} transform occlude width={1536} height={864} scale={1.25}
                 style={{
                     transition: 'transform 0.5s',
                     transformStyle: 'preserve-3d',
-                    transform: "scale(1.25)",
                     backfaceVisibility: 'hidden'
                 }}>
                 <div className='w-[1536px] h-[864px]'>

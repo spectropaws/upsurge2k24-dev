@@ -8,7 +8,7 @@ import CustomEnvironment from './CustomEnvironment';
 
 export default function MainScene() {
     return (
-        <Canvas style={{ height: '100vh', width: '100vw' }} antialias pixelRatio={window.devicePixelRatio}>
+        <Canvas style={{ height: '100vh', width: '100vw' }} pixelRatio={window.devicePixelRatio} gl={{ antialias: true, logarithmicDepthBuffer: true }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[0, 5, 30]} intensity={5} />
             <CustomEnvironment /> 

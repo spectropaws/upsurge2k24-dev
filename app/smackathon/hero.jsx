@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./components/hero.module.css";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { easeIn, easeInOut, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
@@ -16,7 +17,7 @@ export default function HeroSection() {
           <source alt="hero video" src="/videos/hero/bgg.mp4" />
         </video>
 
-        <div className="w-[80%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] scale-125">
+        <div className="w-[80%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
           <div className="flex flex-col items-center gap-8 md:gap-32 md:flex-row md:justify-center md:items-end">
             <motion.div
               initial={{ opacity: 0 }}
@@ -31,7 +32,7 @@ export default function HeroSection() {
                   Powered By
                 </p>
                 <Image
-                  src="/images/hero/unstop.png"
+                  src="/images/hero/unstop-bg-white.png"
                   alt="unstop logo"
                   width="150"
                   height="50"
@@ -110,7 +111,7 @@ export default function HeroSection() {
                   transition: { delay: 2, duration: 1, ease: easeIn },
                 }}
               >
-                <Dialog className="w-full">
+                <Dialog>
                   <DialogTrigger
                     className={`${styles.button} flex text-xs justify-center md:text-lg`}
                   >
@@ -123,11 +124,12 @@ export default function HeroSection() {
                     <p className={styles.box}>E</p>
                     <p className={styles.box}>R</p>
                   </DialogTrigger>
-                  <DialogContent className="w-[100%] h-[90%] px-6 py-8">
+                  <DialogContent className="w-[100%] max-w-3xl h-[90%] px-6 py-14">
                     <iframe
                       src="https://konfhub.com/widget/smackathon-2024?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Nunito&borderRadius=5"
                       id="konfhub-widget"
                       title="Register for Smackathon 2024"
+                      className="w-full"
                       // className="scale-125"
                     ></iframe>
                   </DialogContent>
@@ -147,7 +149,7 @@ export default function HeroSection() {
                   Co-powered By
                 </p>
                 <Image
-                  src="/images/hero/Mk.png"
+                  src="/images/hero/mk-bg-white.png"
                   alt="mk constructions logo"
                   width="100"
                   height="50"

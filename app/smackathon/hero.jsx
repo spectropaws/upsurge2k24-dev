@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <>
-      <div className=" relative h-[120vh] lg:h-[100vh]">
+      <div className=" relative h-[160vh] lg:h-[100vh]">
         <video
           autoPlay="autoplay"
           loop
@@ -17,7 +17,7 @@ export default function HeroSection() {
           <source alt="hero video" src="/videos/hero/bgg.mp4" />
         </video>
 
-        <div className="w-[80%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <div className="w-[90%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
           <div className="flex flex-col items-center gap-8 md:gap-32 md:flex-row md:justify-center md:items-end">
             <motion.div
               initial={{ opacity: 0 }}
@@ -27,19 +27,34 @@ export default function HeroSection() {
               }}
               className="order-1 md:order-[0]"
             >
-              <div className="flex flex-col items-center gap-2 md:mb-[-25px]">
+              <div className="flex flex-col items-center gap-1 md:mb-[-35px]">
                 <p className="text-base text-white font-semibold pb-1 md:text-2xl">
                   Powered By
                 </p>
                 <Image
-                  src="/images/hero/unstop-white.png"
+                  src="/images/hero/Unstop-Logo-White-Small.png"
                   alt="unstop logo"
-                  width="150"
+                  width="200"
                   height="50"
                 />
               </div>
             </motion.div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center ">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 2, duration: 1, ease: easeIn },
+                }}
+                className="flex flex-col items-center"
+              >
+                <h2 className={`${styles.fontglow} text-center text-white`}>
+                  YCCE Techfest
+                </h2>
+                <p className={`text-lg text-white font-bold md:text-3xl my-4`}>
+                  and
+                </p>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -62,7 +77,7 @@ export default function HeroSection() {
                 }}
                 className="pb-4"
               >
-                <p className={`text-lg text-white font-bold md:text-3xl`}>
+                <p className={` text-white text-lg font-bold md:text-3xl`}>
                   Presents
                 </p>
               </motion.div>
@@ -130,7 +145,10 @@ export default function HeroSection() {
                       id="konfhub-widget"
                       title="Register for Smackathon 2024"
                       className="w-full"
-                      // className="scale-125"
+                      style={{
+                        transform: "translateZ(0)",
+                        backfaceVisibility: "hidden",
+                      }}
                     ></iframe>
                   </DialogContent>
                 </Dialog>
@@ -144,14 +162,14 @@ export default function HeroSection() {
               }}
               className="order-1 "
             >
-              <div className="flex flex-col items-center md:mb-[-50px]">
+              <div className="flex flex-col items-center md:mb-[-75px]">
                 <p className="text-base text-white font-semibold pb-1 md:text-2xl">
                   Co-powered By
                 </p>
                 <Image
-                  src="/images/hero/mk.png"
+                  src="/images/hero/new-Mk.png"
                   alt="mk constructions logo"
-                  width="100"
+                  width="150"
                   height="50"
                 />
               </div>

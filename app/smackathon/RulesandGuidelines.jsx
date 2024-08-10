@@ -75,10 +75,6 @@ const RulesAndGuidelines = () => {
             icon: "/images/pacman/green.svg",
         },
         {
-            content: "According to YCCE Policy, no female participants are allowed to stay overnight. After 9 pm, they must leave the campus but can rejoin at 6 am the next day. Those from outside Nagpur will stay at YCCE girls hostel, and the organizing team will manage their accommodation.",
-            icon: "/images/pacman/lemon.svg",
-        },
-        {
             content: "Rules and guidelines are subjected to change as per organizing team.",
             icon: "/images/pacman/pink.svg",
         },

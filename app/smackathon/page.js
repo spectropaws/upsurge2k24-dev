@@ -41,7 +41,7 @@ export default function Smackathon() {
                 <FAQ />
                 <LocateUs />
             </div>
-            <div className='bg-[#3CBCFC] m-0 p-0 w-full'>
+            <div className='bg-[#3CBCFC] m-0 p-0 w-full -mt-[2px]'>
                 <Footer />
             </div >
         </ScreenEventEmitter>

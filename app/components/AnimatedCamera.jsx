@@ -14,28 +14,42 @@ export default function AnimatedCamera() {
     const [prevRotationY, setPrevRotationY] = useState(Math.PI / 4);
     const [transitionComplete, setTransitionComplete] = useState(true);
     const [hasLerped, setHasLerped] = useState(false);
-
+    const [audioPlayed, setAudioPlayed] = useState(false);
     const groupControls = useAnimation();
     const objectControls = useAnimation();
 
 
     // set isZoomed state based on event listener
     useEffect(() => {
+        
+        const playAudio = () => {
+            if (!audioPlayed) {
+                const audio = new Audio("/audios/contra-audio.mpeg");
+                audio.play();
+                setAudioPlayed(true);
+            }
+        };
 
         const handleEscape = (e) => {
-            if (e.key == "Escape")
+            if (e.key == "Escape") {
                 setIsZoomed(false);
+                setAudioPlayed(false);
+            }
         };
 
         const handleMessage = (e) => {
-            if (e.data == "screenClick")
+            if (e.data == "screenClick") {
                 setIsZoomed(true);
+                playAudio();
+            }
             else if (e.data == "escapeZoom")
                 setIsZoomed(false);
+                setAudioPlayed(false);
         };
 
         const handleControllerClick = () => {
             setIsZoomed((prevZoomed) => !prevZoomed);
+            playAudio();
         };
 
         window.addEventListener('controllerClick', handleControllerClick);
@@ -47,7 +61,7 @@ export default function AnimatedCamera() {
             window.removeEventListener("keydown", handleEscape);
             window.removeEventListener('message', handleMessage);
         };
-    }, []);
+    }, [audioPlayed]);
 
     // Zoom in or out based on state
     useEffect(() => {

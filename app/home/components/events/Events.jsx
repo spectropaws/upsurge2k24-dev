@@ -1,4 +1,9 @@
+"use client";
+
+import React, { useEffect } from "react";
 import useHorizontalScroll from './HorizontalScroll';
+import Spaceship from './Spaceship';
+import { generateStars } from "./generateStars";
 
 
 export default function Events() {
@@ -15,24 +20,30 @@ export default function Events() {
 
     function HorizontalSection({ children, className }) {
         return (
-            <div ref={el => sectionsRef.current.push(el)} className={`horizontal-scroll-section m-0 p-0 flex-shrink-0 w-screen h-screen bg-black text-white ${className}`}>
+            <div ref={el => sectionsRef.current.push(el)} className={`horizontal-scroll-section m-0 p-0 flex-shrink-0 w-screen h-screen bg-black text-white ${className}`}> 
                 {children}
             </div>
         );
     }
 
+    useEffect(() => {
+    if (sectionsRef.current) {
+      generateStars(sectionsRef.current[0], 300, 100);
+    }
+  }, [sectionsRef]);
+
     return (
-        <div className="relative">
+        <div className="relative" >
             <ScrollContainer>
                 <HorizontalSection>
-                    <h1>Event 1</h1>
+                    <Spaceship />
                 </HorizontalSection>
 
                 <HorizontalSection>
                     <h1>Event 2</h1>
                 </HorizontalSection>
 
-                <HorizontalSection>
+                <HorizontalSection className="-ml-[1px]">
                     <h1>Event 3</h1>
                 </HorizontalSection>
             </ScrollContainer >

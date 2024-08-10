@@ -73,7 +73,7 @@ export default function Start() {
               src="/images/startScreen/contraSwitch.png"
               className={`h-14 w-14 z-10 ${selectedOption === index ? 'block' : 'invisible'}`}
             />
-            <h1 className="text-2xl text-[#808382]">{option.label}</h1>
+            <h1 className="text-2xl text-[#808382]" style={option.label == "SMACKATHON" ? { textShadow: "0 0 30px white", color: "white" } : {}}>{option.label}</h1>
           </div>
         ))}
       </div>

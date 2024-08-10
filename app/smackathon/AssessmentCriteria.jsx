@@ -68,7 +68,7 @@ const AssessmentCriteria = () => {
                             alt={slide.alt}
                             className={`w-[200px] h-[200px] rounded-full ${styles.circularImage}`}
                         />
-                        <h3 className={`text-lg font-semibold mt-4 text-white ${styles.text}`}>{slide.text}</h3>
+                        <h3 className={`font-semibold mt-4 text-white ${styles.text}`}>{slide.text}</h3>
                     </div>
                 ))}
                 <div className="text-center absolute bottom-1 w-full">

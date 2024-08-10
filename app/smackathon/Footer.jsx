@@ -28,7 +28,7 @@ export default function Footer() {
             <div className={styles.footerLeft}>
               <div className={styles.logos_All}>
                 <Image
-                  src="/images/footer/UpsurgeLogo.png"
+                  src="/images/footer/Upsurge_Logo.png"
                   alt="upsurge"
                   width={170}
                   height={100}
@@ -137,15 +137,13 @@ export default function Footer() {
               &copy; Copyrights belongs to Department Of Computer Science and
               Engineering
               <br /> Developed by&nbsp;
-              <a className={styles.a} href="">
                 Website Team CSE
-              </a>
               <br />
-              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf" className={styles.a}>
+              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf" className={styles.a} target="_blank" rel="noopener noreferrer">
                 Privacy Policy&nbsp;
               </Link>
               ,&nbsp;
-              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf" className={styles.a}>
+              <Link href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf" className={styles.a} target="_blank" rel="noopener noreferrer">
                 No Refund Policy
               </Link>
             </p>

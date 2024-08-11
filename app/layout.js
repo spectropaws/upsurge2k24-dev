@@ -25,6 +25,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="no-scrollbar">
+
+            <Head>
+                <meta property="og:title" content="Upsurge 2k24" />
+                <meta property="og:description" content="Get ready for Upsurge 2k24" />
+                <meta property="og:image" content="https://upsurge2k24.tech/images/upsurge_logo.png" />
+                <meta property="og:url" content="https://upsurge2k24.tech/" />
+                <meta property="og:type" content="website" />
+            </Head>
+
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SCQ6TF2C4E"></Script>
             <Script id="google-analytics" dangerouslySetInnerHTML={{
                 __html: `

@@ -89,7 +89,7 @@ export default function Footer() {
                       height={50}
                     />
                   </Link>
-                  <Link href="mailto:smackathon@upsurge2k24.tech" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://mail.google.com/mail/?view=cm&to=smackathon-support@upsurge2k24.tech" target="_blank" rel="noopener noreferrer">
                     <Image
                       src="/svgs/footer/Mail.svg"
                       alt="mail"

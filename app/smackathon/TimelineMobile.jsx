@@ -14,7 +14,7 @@ export default function TimelineMobile() {
   });
 
   // Set the y value for Mario and the flag
-  const y = useTransform(scrollYProgress, [0, 1], [0, 1645]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 1800]);
   const x = 4 - Math.random()*2;
 
 
@@ -102,7 +102,7 @@ export default function TimelineMobile() {
                         <Image width={300} height={60} src="/svgs/timeline/brick 4.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-full h-[200px] mt-[60px]"
+            className="w-full h-[200px] mt-[100px]"
             {...boxAnimation}
           >
             
@@ -128,7 +128,7 @@ export default function TimelineMobile() {
             {...boxAnimation}
           >
         
-                            {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for accommodation`
+                            {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for food coupons <br/>10:30 PM: Accommodation will be provided to those who have taken accommodation ticket`
                                 .split("<br/>")
                                 .map((text, index) => (
                                     <h3 key={index} className="flex mt-2 font-bold">
@@ -145,7 +145,7 @@ export default function TimelineMobile() {
                         <Image width={300} height={60} src="/svgs/timeline/brick 1.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           <motion.div
-            className="w-full h-[200px] mt-[50px]"
+            className="w-full h-[200px] mt-[110px]"
             {...boxAnimation}
           >
        
@@ -166,7 +166,7 @@ export default function TimelineMobile() {
                         <Image width={300} height={60} src="/svgs/timeline/brick 5.svg" alt="bricks" className="w-[300px] mt-2" />
           </motion.div>
           
-          <motion.div className="w-full h-[200px] " {...boxAnimation}>
+          <motion.div className="w-full h-[200px] mt-[50px]" {...boxAnimation}>
 
                             {`DAY 2<br/>10:00 AM - 12:00 PM: Final Presentation Round 2 Shortlisting<br/>12:00 PM: Top 5 Finalists Declaration`
                                 .split("<br/>")

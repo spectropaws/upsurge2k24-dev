@@ -151,7 +151,7 @@ export default function Timeline() {
                         </motion.div>
                         <motion.div className="relative w-full mb-10 mt-[5rem]" {...boxAnimation}>
                             
-                                {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for accommodation`
+                                {`DAY 1<br/>7:30 PM - 8:30 PM: Dinner for teams who have opted for food coupons <br/>10:30 PM: Accommodation will be provided to those who have taken accommodation ticket`
                                     .split("<br/>")
                                     .map((text, index) => (
                                         <h3 key={index} className="flex mt-2 font-bold text-2xl mb-4 mt-2">
@@ -206,7 +206,7 @@ export default function Timeline() {
                     <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[30rem] right-[20rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
-                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[50rem] right-[3rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
+                    <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[58rem] right-[5rem] transform -translate-x-1/2 -translate-y-1/2 z-0">
                         <Image src="/images/timeline/pixelatedCloud.png" alt="cloud" width={90} height={32}  className="w-[110px] h-auto" />
                     </motion.div>
                     <motion.div animate={{x:[10, -10], transition:{repeat:Infinity, repeatType:"reverse", duration:x}}} className="absolute top-[60rem] left-[10rem] transform -translate-x-1/2 -translate-y-1/2 z-0">

@@ -35,11 +35,11 @@ const RulesAndGuidelines = () => {
 
     const rules = [
         {
-            content: "A team must consist of a minimum of 3 members and maximum of 5 members.",
+            content: "Team must consist of minimum 3 and a maximum of 5 members.",
             icon: "/images/pacman/blue.svg",
         },
         {
-            content: "A team access pass will be distributed to the team upon registration, which shall be used for future references.",
+            content: "Team access pass will be distributed to the team upon registration, which will be used for further references.",
             icon: "/images/pacman/green.svg",
         },
         {
@@ -47,35 +47,43 @@ const RulesAndGuidelines = () => {
             icon: "/images/pacman/lemon.svg",
         },
         {
-            content: "All official communication will be conducted through the Smackathon email. Participants are advised to monitor all folders in their email accounts.",
+            content: "All official communication will be conducted through the Smackathon email (smackathon@upsurge2k24.tech). Participants must monitor all folders in their email account.",
             icon: "/images/pacman/pink.svg",
         },
         {
-            content: "Registrations must be completed through the Upsurge website by the [registration deadline] to secure a spot.",
+            content: "Registrations must be completed through the Upsurge 2k24 website by 21st August 2024 to secure a spot.",
             icon: "/images/pacman/red.svg",
         },
         {
-            content: "No responsibility will be held by the Smackathon Team for any late, lost, or misdirected entries.",
+            content: "No responsibility will be held by the Smackathon team for any late, loss, or mis-directed entries.",
             icon: "/images/pacman/skyBlue.svg",
         },
         {
-            content: "Problem statements will be provided on the day the hackathon starts.",
+            content: "Problem statements will be provided on the day the Hackathon starts.",
             icon: "/images/pacman/teal.svg",
         },
         {
-            content: "All projects must align with the pre-announced Smackathon theme or problem statement.",
+            content: "The team must commit to the given Git repository every hour during the course of Hackathon.",
             icon: "/images/pacman/yellow.svg",
         },
         {
-            content: "Participants must not engage in any malicious or harmful activities.",
+            content: "A minimum of 2 members must be present at the allotted table for the given team at all times during Smackathon.",
             icon: "/images/pacman/red.svg",
         },
         {
-            content: "Meals and rest areas will be provided onsite only if accommodation is taken.",
+            content: "Participants must not engage in any malicious or harmful activities. Any damage to college property will lead to strict disciplinary action and disqualification.",
             icon: "/images/pacman/green.svg",
         },
         {
-            content: "Rules and guidelines are subjected to change as per organizing team.",
+            content: "Meals and rest areas will be provided on site only if  food coupon and accomodation is opted for. Only 1 accomodation ticket will be provided for each team which will include 2 beds.",
+            icon: "/images/pacman/blue.svg",
+        },
+        {
+            content: "According to YCCE Policy, no female participants are allowed to stay overnight. After 8 pm, they must leave the campus but can rejoin at 6 am the next day. Those from outside Nagpur will stay at YCCE girls hostel, and the organizing team will manage their accomodation.",
+            icon: "/images/pacman/teal.svg",
+        },
+        {
+            content: "The rules and guidelines are subjected to change as per the Smackathon organising team.",
             icon: "/images/pacman/pink.svg",
         },
     ];

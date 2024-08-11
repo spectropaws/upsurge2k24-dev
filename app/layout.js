@@ -20,6 +20,17 @@ const dotGothic = VT323({
 export const metadata = {
     title: "Upsurge 2k24",
     description: "Get ready for Upsurge 2k24",
+    openGraph: {
+        title: "Upsurge 2k24",
+        description: "Get ready for Upsurge 2k24",
+        url: "https://upsurge2k24.tech/",
+        type: "website",
+        images: [
+            {
+                url: "https://upsurge2k24.tech/images/upsurge_logo.png",
+            },
+        ],
+    },
 };
 
 export default function RootLayout({ children }) {

@@ -18,6 +18,13 @@ const retroCharacters = [
   '/svgs/eventCardCharacters/char13.svg',
   '/svgs/eventCardCharacters/char14.svg',
   '/svgs/eventCardCharacters/char15.svg',
+  '/svgs/eventCardCharacters/char16.svg',
+  '/svgs/eventCardCharacters/char17.svg',
+  '/svgs/eventCardCharacters/char18.svg',
+  '/svgs/eventCardCharacters/char19.svg',
+  '/svgs/eventCardCharacters/char20.svg',
+  '/svgs/eventCardCharacters/char21.svg',
+  '/svgs/eventCardCharacters/char22.svg',
 ];
 
 const getRandomCharacter = () => {
@@ -35,11 +42,11 @@ const EventCardMobile = ({ title, description, image }) => {
     >
       {/* Image at the top */}
       <div className="w-full h-[210px] relative z-10">
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image src={image} alt={title} fill className="object-cover border-b-2 border-yellow-500 " />
       </div>
       
       {/* Content at the bottom */}
-      <div className="w-full h-[230px] bg-blue-950 bg-opacity-40  border-t relative z-10">
+      <div className="w-full h-[230px] bg-blue-950 bg-opacity-40 relative z-10">
         <div className="text-left retro-font text-white">
           <h3 className="font-bold text-2xl mb-2 px-3 pt-3 leading-5 mr-7">{title}</h3>
           <p className="mt-2 mb-4 leading-4 text-justify text-[20px] px-3 overflow-hidden">

@@ -1,14 +1,16 @@
 "use client";
 
 import ScreenEventEmitter from "@/app/components/ScreenEventEmitter";
+import Hero from "./components/hero/Hero";
 import Events from "./components/events/Events";
-
 
 
 export default function Home() {
     return (
         <ScreenEventEmitter>
-            <div className="w-screen h-screen"><h1>Coming soon...</h1></div>
+            <div className="w-screen h-screen">
+                <Hero />
+            </div>
 
             <Events />
 

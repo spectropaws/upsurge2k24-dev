@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function EventsPage() {
-    return <div>Coming soon...</div>;
+  return <Footer />;
 }

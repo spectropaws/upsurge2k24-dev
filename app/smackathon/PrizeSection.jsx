@@ -2,8 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import styles from "./components/hero.module.css";
-import Link from "next/link";
+
 
 const Prize = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -47,8 +46,8 @@ const Prize = () => {
         <div className="flex gap-10 items-center absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
           <div>
             <a
-              href="https://drive.google.com/file/d/1QPfo7UxXeOXyvbF-1s5kUx0nnEl5zu-9/view?usp=sharing"
-              target="blank"
+              href="https://drive.google.com/file/d/1I5dP6EDHEMmjUUjzGsfRF7d3afzNfZg4/view?usp=sharing"
+              target="_blank"
               className="text-sm font-semibold bg-[url(/images/prize/btn.png)] px-4 py-5 bg-cover bg-center md:px-7 md:py-7 md:text-lg active:translate-y-1 transition-all duration-100"
               download
             >

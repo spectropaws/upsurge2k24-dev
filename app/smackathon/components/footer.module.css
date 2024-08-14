@@ -114,7 +114,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
-  row-gap:2.5rem;
+  row-gap: 2.5rem;
   box-sizing: border-box;
   margin-bottom: 15rem;
   font-weight: 700;
@@ -173,7 +173,7 @@
   font-size: 1.5rem;
 }
 
-.follow_us{
+.follow_us {
   margin-bottom: 1rem;
 }
 
@@ -209,21 +209,20 @@
   text-align: center;
 }
 
-.parentCopyright{
+.parentCopyright {
   background-color: rgb(94, 77, 10);
 }
 
-.Contact{
+.Contact {
   font-size: 15px;
 }
 
-.follow_us{
+.follow_us {
   display: flex;
   font-size: 1.5rem;
 }
 
 .copyright {
-  
   width: 80%;
   margin: auto;
   display: flex;
@@ -242,25 +241,25 @@
 .a {
   color: rgb(238, 194, 72);
 }
-@media (min-width: 779px) and (max-width: 850px){
-  .dog{
+@media (min-width: 779px) and (max-width: 850px) {
+  .dog {
     position: relative;
     top: 26rem;
     opacity: 1;
   }
 }
-@media (min-width: 599px) and (max-width: 778px){
-  .dog{
+@media (min-width: 599px) and (max-width: 778px) {
+  .dog {
     position: relative;
     top: 25rem;
     opacity: 1;
   }
 
-  .upsurge_logo{
+  .upsurge_logo {
     margin-left: 3rem;
   }
 
-  .footerLeft{
+  .footerLeft {
     margin-right: 3rem;
   }
 }
@@ -309,13 +308,13 @@
     /* gap: 5rem; */
   }
 
-  .footerLeft{
-  margin-right: 0;
-}
+  .footerLeft {
+    margin-right: 0;
+  }
 
-.upsurge_logo{
-  margin-left: 0;
-}
+  .upsurge_logo {
+    margin-left: 0;
+  }
   .logos_All {
     margin-left: 0;
     margin-bottom: 0;
@@ -332,7 +331,7 @@
   .Links_all {
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom:5rem ;
+    margin-bottom: 5rem;
     margin-top: 2rem;
     row-gap: 2rem;
     position: relative;
@@ -343,21 +342,20 @@
     display: flex;
     align-items: center;
     margin-top: 2rem;
-    
   }
-  .socials{
+  .socials {
     /* margin-top: 10rem; */
     margin-bottom: 3rem;
     z-index: 100;
   }
-  .social_logo{
+  .social_logo {
     margin-top: 0.5rem;
   }
-  .mail{
+  .mail {
     background-color: transparent;
   }
 
-  .follow_us{
+  .follow_us {
     display: flex;
   }
 
@@ -372,7 +370,7 @@
     position: relative;
     top: 2rem;
   }
-  .contact_details{
+  .contact_details {
     margin-top: 1rem;
   }
   .copyright {
@@ -380,7 +378,16 @@
     text-align: center;
   }
 
-  .copyrightPara{
+  .copyrightPara {
     margin-top: 1rem;
   }
+}
+
+/* FURTHER EDITS BY SUYASH FOR UNIVERSAL FOOTER */
+.unifooter {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/unifooter/space1.jpg);
+
+  background-position: center;
+  background-size: cover;
 }

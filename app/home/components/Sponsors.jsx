@@ -100,12 +100,12 @@ const Sponsors = () => {
                                     position: 'absolute',
                                     inset: '0',
                                     backgroundImage: 'linear-gradient(to right, #090A0F, white, #090A0F)',
-                                    opacity: '0.15',
+                                    opacity: '0',
                                     borderRadius: '0'
                                 }}
                             ></div>
                             <motion.div
-                                className="flex"
+                                className="flex pt-40"
                                 animate={{
                                     x: ["0%", "-100%"], // Scroll left and loop back
                                 }}
@@ -122,7 +122,7 @@ const Sponsors = () => {
                                 {sponsorData.concat(sponsorData).map((slide, i) => (
                                     <div
                                         key={i}
-                                        className="flex-shrink-0 flex justify-center items-center w-[300px] h-[300px] mx-[70px] rounded-lg relative"
+                                        className="flex-shrink-0 flex justify-center items-center bg-white w-[300px] h-[300px] mx-[70px] rounded-xl relative"
                                     >
                                         <Image
                                             src={slide.src}

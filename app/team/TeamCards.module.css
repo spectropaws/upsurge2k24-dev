@@ -1,0 +1,610 @@
+.Body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamName {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.cards {
+  width: 80%;
+  gap: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 71.5vw;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  touch-action: none;
+  border-radius: 5% / 3.5%;
+  background-color: #040712;
+  /* background-image: var(--front); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  
+  /* Flexbox settings */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Pushes content to the bottom */
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+}
+
+.card:hover {
+  box-shadow: -20px -20px 40px -10px var(--color1), 20px 20px 40px -10px var(--color2),
+    0 0 60px 20px rgba(255, 255, 255, 0.5), 0 55px 45px -20px rgba(0, 0, 0, 0.6);
+}
+
+.cardContent {
+  display: flex;
+  align-items: flex-end;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto; /* Pushes .socials to the bottom of the card */
+  margin-bottom: 16px;
+  z-index: 10; /* Brings the socials div on top of the card */
+  position: relative;
+}
+
+.ig,
+.li,
+.git {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+}
+
+.card:before {
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(176, 132, 150) 25%,
+    transparent 47%,
+    transparent 53%,
+    #ddccaa 75%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  filter: brightness(1.7) contrast(1.1);
+  z-index: 1;
+}
+
+.card:after {
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
+    linear-gradient(
+      125deg,
+      #ff008450 15%,
+      #fca40040 30%,
+      #ffff0030 40%,
+      #00ff8a20 60%,
+      #00cfff40 70%,
+      #cc4cfa50 85%
+    );
+  background-position: 50% 50%;
+  background-size: 160%;
+  background-blend-mode: overlay;
+  filter: brightness(0.2) contrast(1.8);
+  transition: all 0.33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: 0.85;
+  z-index: 2; /* Ensures that this is below the socials div */
+}
+
+.card.active:after,
+.card:hover:after {
+  filter: brightness(1.3) contrast(1.2);
+  opacity: 1;
+}
+
+.card.active,
+.card:hover {
+  animation: none;
+  transition: box-shadow 0.1s ease-out;
+}
+
+
+  /* Core team  */
+  .card.naincy {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Naincy.png);
+    /* --front: var(--naincyfront); */
+  }
+  .card.abhijeet {
+    --color1: #54a29e;
+    --color2: #a79d66;
+    /* --front: var(--abhijeetfront); */
+    background-image: url(../../../public/images/cards/Abhijeet.png);
+  }
+  .card.hardik {
+    --color1: #54a29e;
+    --color2: #a79d66;
+    background-image: url(../../../public/images/cards/Hardik_Tajne.png);
+  }
+  
+  .card.kartik {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Kartik.png);
+  }
+  
+  .card.taha {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Taha.png);
+  }
+  
+  .card.PrachiPattewar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Prachi.png);
+  }
+  
+  .card.ShrutiJain {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Shruti.png);
+  }
+  
+  .card.YugandharaJagtap {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Yugandhara.png);
+  }
+  
+    .card.HemanshuWaghmare {
+      --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+      background-image: url(../../../public/images/cards/Hemanshu.png);
+    }
+    
+    .card.AaryaAherrao {
+      --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+      background-image: url(../../../public/images/cards/Aarya.png);
+    }
+  
+  .card.VidhiSatpute {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vidhi.png);
+  }
+  
+  /* Technical Team  */
+  .card.DivyanshSharma {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Divyansh.png);
+  }
+  
+  .card.HarshalTonge {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Harshal.png);
+  }
+  
+  .card.UnnatiThakre {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Unnati.png);
+  }
+  .card.MehulKohad {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Mehul.png);
+  }
+  .card.LokeshParate {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Lokesh.png);
+  }
+  .card.VidhanDahatkar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vidhan.png);
+  }
+  
+  .card.SuyashBorikar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Suyash.png);
+  }
+  
+  .card.OmMane {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Om.png);
+  }
+  
+  .card.LaukikLanje {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Laukik.png);
+  }
+  
+  .card.SaniyaBorkar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Saniya.png);
+  }
+
+  /* Design team  */
+  .card.RitikaAnantwar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Ritika.png);
+  }
+  .card.SanchiDhoke {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Sanchi.png);
+  }
+  .card.VinayMuraskar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vinay.png);
+  }
+  .card.ChitrakshChavan {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Chitraksh.png);
+  }
+  .card.AbhishekPaitode {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Abhishek.png);
+  }
+  .card.IshitaBoldhane {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Ishita.png);
+  }
+  .card.AdityaRajankar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Aditya.png);
+  }
+
+  /* Event Management Team*/
+  .card.KrishnaBobade {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Krishna.png);
+  }
+  .card.PranjalHatwar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Pranjal.png);
+  }
+  .card.KaranKangali {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Karan.png);
+  }
+  .card.ParasKalbande {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Paras.png);
+  }
+  .card.SargamKamble {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Sargam.png);
+  }
+  .card.DeepanshuNandanwar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Deepanshu.png);
+  }
+  .card.GurudattaBidkar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Gurudatta.png);
+  }
+
+  /* Cultural team */
+
+  .card.VaidehiNarkhede {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vaidehi.png);
+  }
+  .card.NayanMudewar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Nayan.png);
+  }
+  .card.RichaKalpande {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Richa.png);
+  }
+  .card.AyushAsutkar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Ayush.png);
+  }
+
+  /* Sponsership Team */
+
+  .card.AnshAnthal {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Ansh1.png);
+  }
+  .card.AnshulRaut {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Anshul.png);
+  }
+  .card.AvantiRaut {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Avanti.png);
+  }
+  .card.AnshShriwas {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Ansh2.png);
+  }
+  .card.SakshiKathane {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Sakshi.png);
+  }
+  .card.KhushiNannore {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Khushi.png);
+  }
+  .card.ShreyaKashyap {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Shreya.png);
+  }
+  .card.VinitSingh {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vinit.png);
+  }
+  .card.OmRusia {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Om2.png);
+  }
+  .card.AmanTonpe {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Aman.png);
+  }
+  .card.DhruvMunghate {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Dhruv.png);
+  }
+  .card.ShashankMankar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Shashank.png);
+  }
+  .card.AaditiBedarkar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Aaditi.png);
+  }
+  .card.JagdishKachhawah {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Jagdish.png);
+  }
+  .card.HrishikeshKakde {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Hrishikesh.png);
+  }
+  .card.ShantanuNichante {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Shantanu.png);
+  }
+
+  /* Literature Team */
+
+  .card.RadhikaKimmatwar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Radhika.png);
+  }
+  .card.DevkiParajiya {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Devki.png);
+  }
+  .card.GayatriUmap {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Gayatri.png);
+  }
+  .card.RayeeWasankar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Rayee.png);
+  }
+  /* Art team */
+  .card.SharwariHatwar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Sharwari.png);
+  }
+  .card.MrunalJagtap {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Mrunal.png);
+  }
+  .card.NishitaDande {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Nishita.png);
+  }
+  /* Sports Team */
+  .card.VipinKumar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vipin.png);
+  }
+  .card.VedantRaut {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Vedant.png);
+  }
+  .card.SujalNagpure {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Sujal.png);
+  }
+  .card.YatharthHadke {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Yatharth.png);
+  }
+  .card.KrushnangiManekar {
+    --color1: rgb(176, 132, 150);
+    --color2: #ddccaa;
+    background-image: url(../../../public/images/cards/Krushnangi.png);
+  }
+  
+
+  
+  /* .card.active:before,
+  .card:hover:before {
+    background-image: linear-gradient(
+      110deg,
+      transparent 25%,
+      var(--color1) 48%,
+      var(--color2) 52%,
+      transparent 75%
+    );
+    background-position: 50% 50%;
+    background-size: 250% 250%;
+    opacity: .9;
+    filter: brightness(.7) contrast(1.3);
+    transition: none;
+  } */
+  
+
+  
+  @keyframes holoSparkle {
+    0%, 100% {
+      opacity: .85; background-position: 50% 50%; filter: brightness(1.3) contrast(1.3);
+    }
+    5%, 8% {
+      opacity: 1; background-position: 40% 40%; filter: brightness(.9) contrast(1.2);
+    }
+    13%, 16% {
+      opacity: .7; background-position: 50% 50%; filter: brightness(1.2) contrast(.9);
+    }
+    35%, 38% {
+      opacity: 1; background-position: 60% 60%; filter: brightness(1.1) contrast(1.1);
+    }
+    55% {
+      opacity: .5; background-position: 45% 45%; filter: brightness(1.3) contrast(1.3);
+    }
+  }
+  
+  @keyframes holoGradient {
+    0%, 100% {
+      opacity: 0.6;
+      background-position: 50% 50%;
+      filter: brightness(.7) contrast(1);
+    }
+    5%, 9% {
+      background-position: 100% 100%;
+      opacity: 1;
+      filter: brightness(.9) contrast(1.3);
+    }
+    13%, 17% {
+      background-position: 0% 0%;
+      opacity: .95;
+    }
+    35%, 39% {
+      background-position: 100% 100%;
+      opacity: 1;
+      filter: brightness(.7) contrast(1);
+    }
+    55% {
+      background-position: 0% 0%;
+      opacity: 1;
+      filter: brightness(.9) contrast(1.3);
+    }
+  }
+  
+  @keyframes holoCard {
+    0%, 100% {
+      transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+    }
+    5%, 8% {
+      transform: rotateZ(0deg) rotateX(8deg) rotateY(-25deg);
+    }
+    13%, 16% {
+      transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+    }
+    35%, 38% {
+        transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+    }
+    55% {
+      transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+}
+}   

@@ -109,28 +109,28 @@ export default function Footer() {
             <ul className="flex flex-col gap-7 items-center md:gap-10">
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/">
+                  <Link className="text-4xl font-bold" href="/smackathon">
                     Smackathon
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/">
+                  <Link className="text-4xl font-bold" href="/schedule">
                     Schedule
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/">
+                  <Link className="text-4xl font-bold" href="/events">
                     Events
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/">
+                  <Link className="text-4xl font-bold" href="/team">
                     Teams
                   </Link>
                 </p>
@@ -164,10 +164,27 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-xl text-center md:pt-8 md:px-24 md:text-3xl">
+        <p className="text-xl text-center md:pt-8 md:px-24 md:text-3xl z-10">
           © Copyrights belongs to Department Computer Science and Engineering
           <br />
-          Developed By Website Team CSE Privacy Policy,No Refund Policy
+          Developed By Website Team CSE <br />
+          <Link
+            href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf"
+            className={styles.a}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy&nbsp;
+          </Link>
+          ,&nbsp;
+          <Link
+            href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/no+refund+policy+.pdf"
+            className={styles.a}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            No Refund Policy
+          </Link>
         </p>
       </footer>
     </>

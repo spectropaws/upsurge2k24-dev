@@ -32,7 +32,7 @@ const Sponsors = () => {
             width: "180"
         },
         {
-            src: "/images/sponsors/times.png",
+            src: "/images/sponsors/time.png",
             alt: "TIMES",
             width: "180"
         },
@@ -42,7 +42,7 @@ const Sponsors = () => {
             width: "180"
         },
         {
-            src: "/images/sponsors/dahiya.png",
+            src: "/images/sponsors/dahiya.jpg",
             alt: "Dahiya Momos",
             width: "180"
         },
@@ -50,6 +50,16 @@ const Sponsors = () => {
             src: "/images/sponsors/travosa.png",
             alt: "Travosa",
             width: "200"
+        },
+        {
+            src: "/images/sponsors/SHIVTWISTER.jpg",
+            alt: "Shiv Twister",
+            width: "200"
+        },
+        {
+            src: "/images/sponsors/SubhiMocktils.png",
+            alt: "Subhi Mocktails",
+            width: "180"
         },
     ];
 
@@ -115,7 +125,7 @@ const Sponsors = () => {
                                 }}
                             ></div>
                             <motion.div
-                                className="flex pt-40"
+                                className="flex pt-20"
                                 animate={{
                                     x: ["0%", "-100%"], // Scroll left and loop back
                                 }}
@@ -126,7 +136,7 @@ const Sponsors = () => {
                                 }}
                                 style={{
                                     display: "flex",
-                                    width: `calc(390px * 8.9)`,
+                                    width: `calc(390px * 10.9)`,
                                 }}
                             >
                                 {sponsorData.concat(sponsorData).map((slide, i) => (

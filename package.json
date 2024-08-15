@@ -25,6 +25,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.13.0",
+    "react-swipeable": "^7.0.1",
+    "react-tilty": "^3.0.0",
     "run-parallel": "^1.2.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"

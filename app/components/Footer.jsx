@@ -11,10 +11,11 @@ export default function Footer() {
 
   return (
     <>
+      <div className="w-full h-[662px] bg-[url(/images/unifooter/transition.png)] bg-cover bg-center"></div>
       <footer
-        className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12 overflow-hidden`}
+        className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12`}
       >
-        <motion.div ref={ref} className="absolute bottom-20 right-[475px]">
+        <motion.div ref={ref} className="absolute bottom-2 right-[475px]">
           <Image
             src="/images/unifooter/ufo-removebg-preview.png"
             width={200}
@@ -31,8 +32,8 @@ export default function Footer() {
             <motion.div ref={ref}>
               <Image
                 src="/images/footer/UPSURGE_Logo.png"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 alt="upsruge logo"
                 style={{
                   transform: isInView ? "none" : "translateY(-250px)",
@@ -43,8 +44,8 @@ export default function Footer() {
             <div className="flex items-center gap-5">
               <Image
                 src="/images/footer/cosmosLogo.png"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 alt="upsruge logo"
                 style={{
                   transform: isInView ? "none" : "translateY(-250px)",
@@ -53,8 +54,8 @@ export default function Footer() {
               />
               <Image
                 src="/images/footer/ACM_final.png"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 alt="upsruge logo"
                 style={{
                   transform: isInView ? "none" : "translateY(-250px)",
@@ -109,35 +110,44 @@ export default function Footer() {
             <ul className="flex flex-col gap-5 items-center md:gap-8">
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/home">
+                  <Link className="text-3xl font-bold md:text-4xl" href="/home">
                     Home
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/smackathon">
+                  <Link
+                    className="text-3xl font-bold md:text-4xl"
+                    href="/smackathon"
+                  >
                     Smackathon
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/schedule">
+                  <Link
+                    className="text-3xl font-bold md:text-4xl"
+                    href="/schedule"
+                  >
                     Schedule
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/events">
+                  <Link
+                    className="text-3xl font-bold md:text-4xl"
+                    href="/events"
+                  >
                     Events
                   </Link>
                 </p>
               </li>
               <li>
                 <p>
-                  <Link className="text-4xl font-bold" href="/team">
+                  <Link className="text-3xl font-bold md:text-4xl" href="/team">
                     Teams
                   </Link>
                 </p>

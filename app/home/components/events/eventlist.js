@@ -16,7 +16,7 @@ const events = [
     },
     {
         title: 'Coding Relay',
-        description: 'Get ready for the high-energy CODING RELAY at UPSURGE 2K24! Kick off with a Debugging Quiz then, race against time in the Coding Relay. With a prize pool of ₹1200, bring your laptops and join us on August 24th, 2024, at the CSE Department!',
+        description: 'Get ready for the high-energy CODING RELAY at UPSURGE 2K24! Kick off with a Debugging Quiz then, race against time in the Coding Relay. With a prize pool of ₹2400, bring your laptops and join us on August 24th, 2024, at the CSE Department!',
         image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/codingRelay.png'
     },
     {

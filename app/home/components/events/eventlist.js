@@ -44,7 +44,12 @@ const events = [
         title: 'Data Science Seminar',
         description: "Unlock your future in data science and technology! Join us on August 23rd at 1 PM, where our expert speaker will guide you on how to break into the tech industry and jumpstart your career.",
         image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/dataScience.png'
-    }
+    },
+    {
+        title: 'Demo',
+        description: "Unlock your future in data science and technology! Join us on August 23rd at 1 PM, where our expert speaker will guide you on how to break into the tech industry and jumpstart your career.",
+        image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/dataScience.png'
+    },
 ];
 
 

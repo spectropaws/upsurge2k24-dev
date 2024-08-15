@@ -7,62 +7,62 @@ import { motion } from 'framer-motion';
 const Sponsors = () => {
     const sponsorData = [
         {
-            src: "/images/sponsors/gitConsultancy.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/gitConsultancy.png",
             alt: "Git Consultancy",
             width: "200"
         },
         {
-            src: "/images/sponsors/cojag.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/cojag.png",
             alt: "cojag",
             width: "220"
         },
         {
-            src: "/images/sponsors/new-Mk.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/new-Mk.png",
             alt: "MK",
             width: "150"
         },
         {
-            src: "/images/sponsors/unstop-logo.svg",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/unstop-logo.svg",
             alt: "unstop",
             width: "200"
         },
         {
-            src: "/images/sponsors/DBMart.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/DBMart.png",
             alt: "DB Mart",
             width: "180"
         },
         {
-            src: "/images/sponsors/webgurukul.png", 
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/webgurukul.png", 
             alt: "Webgurukul",
             width: "180"
         },
         {
-            src: "/images/sponsors/time.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/time.png",
             alt: "TIMES",
             width: "180"
         },
         {
-            src: "/images/sponsors/brLifeStyle.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/brLifeStyle.png",
             alt: "BR Life Styles",
             width: "180"
         },
         {
-            src: "/images/sponsors/dahiya.jpg",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/dahiya.jpg",
             alt: "Dahiya Momos",
             width: "180"
         },
         {
-            src: "/images/sponsors/travosa.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/travosa.png",
             alt: "Travosa",
             width: "200"
         },
         {
-            src: "/images/sponsors/SHIVTWISTER.jpg",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/SHIVTWISTER.jpg",
             alt: "Shiv Twister",
             width: "200"
         },
         {
-            src: "/images/sponsors/SubhiMocktils.png",
+            src: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/SubhiMocktils.png",
             alt: "Subhi Mocktails",
             width: "180"
         },
@@ -76,7 +76,7 @@ const Sponsors = () => {
                     className=" hidden md:block absolute -top-[190px] -left-[150px] w-[380px] h-[380px] -z-10"
                 >
                     <Image
-                        src="/images/sponsors/bluePlanet.png"
+                        src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/bluePlanet.png"
                         alt="Large Planet"
                         layout="fill"
                         objectFit="cover"
@@ -87,7 +87,7 @@ const Sponsors = () => {
                     className="absolute -top-40 md:-top-10 right-[200px] h-32 w-32 md:w-56 md:h-56 -z-10"
                 >
                     <Image
-                        src="/images/sponsors/planet3.png"
+                        src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/planet3.png"
                         alt="Large Planet"
                         layout="fill"
                         objectFit="contain"
@@ -108,7 +108,7 @@ const Sponsors = () => {
                     }}
                 >
                     <Image
-                        src="/images/sponsors/glowingEnemy.png"
+                        src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/glowingEnemy.png"
                         alt="Glowing Enemy"
                         layout="fill"
                         objectFit="cover"

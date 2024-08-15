@@ -160,391 +160,370 @@
 .card.naincy {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Naincy.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Naincy.png');
   /* --front: var(--naincyfront); */
 }
 .card.abhijeet {
   --color1: #54a29e;
   --color2: #a79d66;
   /* --front: var(--abhijeetfront); */
-  background-image: url('/images/teams/Abhijeet.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Abhijeet.png');
 }
 .card.hardik {
   --color1: #54a29e;
   --color2: #a79d66;
-  background-image: url('/images/teams/Hardik_Tajne.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Hardik_Tajne.png');
 }
 
 .card.kartik {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Kartik.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Kartik.png');
 }
 
 .card.taha {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Taha.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Taha.png');
 }
 
 .card.PrachiPattewar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Prachi.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Prachi.png');
 }
 
 .card.ShrutiJain {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Shruti.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Shruti.png');
 }
 
 .card.YugandharaJagtap {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Yugandhara.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Yugandhara.png');
 }
 
 .card.HemanshuWaghmare {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Hemanshu.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Hemanshu.png');
 }
 
 .card.AaryaAherrao {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Aarya.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Aarya.png');
 }
 
 .card.VidhiSatpute {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Vidhi.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vidhi.png');
 }
 
 /* Technical Team  */
 .card.DivyanshSharma {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Divyansh.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Divyansh.png');
 }
 
 .card.HarshalTonge {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Harshal.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Harshal.png');
 }
 
 .card.UnnatiThakre {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Unnati.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Unnati.png');
 }
 
 .card.MehulKohad {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url('/images/teams/Mehul.png');
+  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Mehul.png');
 }
 
 .card.LokeshParate {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Lokesh.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Lokesh.png");
 }
 .card.VidhanDahatkar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vidhan.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vidhan.png");
 }
 
 .card.SuyashBorikar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Suyash.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Suyash.png");
 }
 
 .card.OmMane {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Om.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Om.png");
 }
 
 .card.LaukikLanje {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Laukik.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Laukik.png");
 }
 
 .card.SaniyaBorkar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Saniya.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Saniya.png");
 }
 
 /* Design team */
 .card.RitikaAnantwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Ritika.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ritika.png");
 }
 .card.SanchiDhoke {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Sanchi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sanchi.png");
 }
 .card.VinayMuraskar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vinay.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vinay.png");
 }
 .card.ChitrakshChavan {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Chitraksh.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Chitraksh.png");
 }
 .card.AbhishekPaitode {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Abhishek.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Abhishek.png");
 }
 .card.IshitaBoldhane {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Ishita.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ishita.png");
 }
 .card.AdityaRajankar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Aditya.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Aditya.png");
 }
 
 /* Event Management Team */
 .card.KrishnaBobade {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Krishna.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Krishna.png");
 }
 .card.PranjalHatwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Pranjal.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Pranjal.png");
 }
 .card.KaranKangali {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Karan.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Karan.png");
 }
 .card.ParasKalbande {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Paras.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Paras.png");
 }
 .card.SargamKamble {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Sargam.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sargam.png");
 }
 .card.DeepanshuNandanwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Deepanshu.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Deepanshu.png");
 }
 .card.GurudattaBidkar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Gurudatta.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Gurudatta.png");
 }
 
 /* Cultural team */
 .card.VaidehiNarkhede {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vaidehi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vaidehi.png");
 }
 .card.NayanMudewar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Nayan.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Nayan.png");
 }
 .card.RichaKalpande {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Richa.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Richa.png");
 }
 .card.AyushAsutkar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Ayush.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ayush.png");
 }
 
 /* Sponsorship Team */
 .card.AnshAnthal {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Ansh1.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ansh1.png");
 }
 .card.AnshulRaut {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Anshul.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Anshul.png");
 }
 .card.AvantiRaut {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Avanti.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Avanti.png");
 }
 .card.AnshShriwas {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Ansh2.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ansh2.png");
 }
 .card.SakshiKathane {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Sakshi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sakshi.png");
 }
 .card.KhushiNannore {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Khushi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Khushi.png");
 }
 .card.ShreyaKashyap {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Shreya.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Shreya.png");
 }
 .card.VinitSingh {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vinit.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vinit.png");
 }
 .card.OmRusia {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Om2.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Om2.png");
 }
 .card.AmanTonpe {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Aman.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Aman.png");
 }
 .card.DhruvMunghate {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Dhruv.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Dhruv.png");
 }
 .card.ShashankMankar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Shashank.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Shashank.png");
 }
 .card.AaditiBedarkar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Aaditi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Aaditi.png");
 }
 .card.JagdishKachhawah {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Jagdish.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Jagdish.png");
 }
 .card.HrishikeshKakde {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Hrishikesh.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Hrishikesh.png");
 }
 .card.ShantanuNichante {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Shantanu.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Shantanu.png");
 }
 
 /* Literature Team */
 .card.RadhikaKimmatwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Radhika.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Radhika.png");
 }
 .card.DevkiParajiya {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Devki.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Devki.png");
 }
 .card.GayatriUmap {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Gayatri.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Gayatri.png");
 }
 .card.RayeeWasankar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Rayee.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Rayee.png");
 }
 /* Art team */
 .card.SharwariHatwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Sharwari.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sharwari.png");
 }
 .card.MrunalJagtap {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Mrunal.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Mrunal.png");
 }
 .card.NishitaDande {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Nishita.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Nishita.png");
 }
 /* Sports Team */
 .card.VipinKumar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vipin.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vipin.png");
 }
 .card.VedantRaut {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Vedant.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vedant.png");
 }
 .card.SujalNagpure {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Sujal.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sujal.png");
 }
 .card.YatharthHadke {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Yatharth.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Yatharth.png");
 }
 .card.KrushnangiManekar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("/images/teams/Krushnangi.png");
+  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Krushnangi.png");
 }
-
-  
-
-  
-  /* .card.active:before,
-  .card:hover:before {
-    background-image: linear-gradient(
-      110deg,
-      transparent 25%,
-      var(--color1) 48%,
-      var(--color2) 52%,
-      transparent 75%
-    );
-    background-position: 50% 50%;
-    background-size: 250% 250%;
-    opacity: .9;
-    filter: brightness(.7) contrast(1.3);
-    transition: none;
-  } */
-  
-
   
   @keyframes holoSparkle {
     0%, 100% {

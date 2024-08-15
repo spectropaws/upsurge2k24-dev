@@ -24,12 +24,12 @@ export default function useHorizontalScroll() {
       }
     });
 
-    
+
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
-  
+
   return { containerRef, sectionsRef };
 }

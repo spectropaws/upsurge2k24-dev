@@ -1,0 +1,154 @@
+.container {
+    width: 350px;
+    position: relative;
+}
+
+.movingDiv {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    z-index: 10;
+    animation: fly 5s infinite;
+}
+
+/* UFO parts */
+.ufo {
+    position: absolute;
+    top: 40px;
+    width: 400px;
+    height: 175px;
+    background: #898988;
+    border-radius: 50%;
+}
+
+.ufoUnderside {
+    position: absolute;
+    top: 10px;
+    width: 400px;
+    height: 175px;
+    background: #414141;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.ufoTop {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    height: 175px;
+    width: 275px;
+    border-radius: 50% 50% 50% 50% / 50% 50% 30% 30%;
+    border-bottom: 8px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+@keyframes fly {
+    50% {
+        transform: translate(50px, 0) rotate(0);
+    }
+
+    33% {
+        transform: translate(50px, 50px);
+    }
+
+    66% {
+        transform: translate(0, 50px);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+
+.ufo::before {
+    content: "";
+    left: 25px;
+    bottom: 70px;
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-bottom: 2px solid black;
+}
+
+.ufo::after {
+    content: "";
+    right: 25px;
+    bottom: 70px;
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-bottom: 2px solid black;
+}
+
+.centerDot {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-bottom: 2px solid black;
+    bottom: 25px;
+    z-index: 1;
+}
+
+/* Beam */
+.beamContainer {
+    position: absolute;
+    top: 115px;
+    height: 150px;
+    width: 100px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: -2;
+    overflow: hidden;
+}
+
+.beam {
+    content: '';
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background: linear-gradient(to bottom,
+            rgb(3, 165, 17),
+            rgba(36, 249, 3, 0.1));
+}
+
+@keyframes beamIn {
+    0% {
+        transform: translateY(-300px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-500px);
+    }
+}
+
+.cardContainer {
+    transform: scale(0.5) translateX(50px);
+    padding-top: 200px;
+    transition: ease-out 0.4s;
+    opacity: 0;
+    z-index: -10;
+}
+
+.cardContainer:hover {
+    transform: scale(0.8) translateX(30px);
+}

@@ -132,14 +132,14 @@ export default function HeroSection() {
                   <DialogTrigger
                     className={`${styles.button} flex text-xs justify-center md:text-lg`}
                   >
-                    <p className={styles.box}>R</p>
-                    <p className={styles.box}>E</p>
-                    <p className={styles.box}>G</p>
-                    <p className={styles.box}>I</p>
-                    <p className={styles.box}>S</p>
-                    <p className={styles.box}>T</p>
-                    <p className={styles.box}>E</p>
-                    <p className={styles.box}>R</p>
+                    <p className={`${styles.box} py-2 px-3`}>R</p>
+                    <p className={`${styles.box} py-2 px-3`}>E</p>
+                    <p className={`${styles.box} py-2 px-3`}>G</p>
+                    <p className={`${styles.box} py-2 px-3`}>I</p>
+                    <p className={`${styles.box} py-2 px-3`}>S</p>
+                    <p className={`${styles.box} py-2 px-3`}>T</p>
+                    <p className={`${styles.box} py-2 px-3`}>E</p>
+                    <p className={`${styles.box} py-2 px-3`}>R</p>
                   </DialogTrigger>
                   <DialogContent className="w-[100%] max-w-3xl h-[90%] px-6 py-14">
                     <iframe

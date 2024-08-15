@@ -32,6 +32,11 @@ const Sponsors = () => {
             width: "180"
         },
         {
+            src: "/images/sponsors/webgurukul.png", 
+            alt: "Webgurukul",
+            width: "180"
+        },
+        {
             src: "/images/sponsors/time.png",
             alt: "TIMES",
             width: "180"
@@ -136,7 +141,7 @@ const Sponsors = () => {
                                 }}
                                 style={{
                                     display: "flex",
-                                    width: `calc(390px * 10.9)`,
+                                    width: `calc(390px * 12)`,
                                 }}
                             >
                                 {sponsorData.concat(sponsorData).map((slide, i) => (

@@ -1,3 +1,6 @@
+import Cards from './Cards'
 export default function TeamsPage() {
-    return <div>Coming soon...</div>;
+    return <div>
+        <Cards/>
+    </div>;
 }

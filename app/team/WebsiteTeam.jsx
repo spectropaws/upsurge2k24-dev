@@ -104,7 +104,7 @@ const Cards = () => {
   return (
     <StarsBackground>
       <h1
-        className={`${styles.teamName} text-white text-center font-bold md:text-6xl text-3xl pt-20 `}
+        className={`${styles.teamName} text-white text-center font-bold md:text-5xl text-3xl pt-20 `}
       >
         <span>Upsurge2k24 Website</span>
         <br />

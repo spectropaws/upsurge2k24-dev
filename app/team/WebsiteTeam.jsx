@@ -1,14 +1,15 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import Tilty from 'react-tilty';
-import Image from 'next/image';
+import { useEffect, useRef } from "react";
+import Tilty from "react-tilty";
+import Image from "next/image";
 import data from "./Details.json";
-import StarsBackground from './StarsBackground';
-import styles from './TeamCard.module.css';
+import StarsBackground from "./StarsBackground";
+import styles from "./TeamCard.module.css";
 
-import InstagramIcon from '../../../public/images/teams/insta.svg';
-import LinkedInIcon from '../../../public/images/teams/linkedin.svg';
-import GitHubIcon from '../../../public/images/teams/github.svg';
+// Import SVGs
+import InstagramIcon from "../../../public/images/cards/insta.svg";
+import LinkedInIcon from "../../../public/images/cards/linkedin.svg";
+import GitHubIcon from "../../../public/images/cards/github.svg";
 
 const Cards = () => {
   const cardRefs = useRef([]);
@@ -85,6 +86,9 @@ const Cards = () => {
     });
 
     return () => {
+      if (!$cards) return;
+      if (!$cards[0]) return;
+      console.log($cards);
       $cards.forEach((card, index) => {
         card.removeEventListener("mousemove", (e) => handleMouseMove(e, index));
         card.removeEventListener("mouseenter", () => handleMouseEnter(index));
@@ -99,29 +103,66 @@ const Cards = () => {
 
   return (
     <StarsBackground>
-      <h1 className={`${styles.teamName} text-white text-center font-bold md:text-6xl text-3xl mt-20 ml-[1.5rem]`}>
-        <span>Upsurge2k24 Website</span><br />
+      <h1
+        className={`${styles.teamName} text-white text-center font-bold md:text-6xl text-3xl pt-20 `}
+      >
+        <span>Upsurge2k24 Website</span>
+        <br />
         <span>Team</span>
       </h1>
       <div className={`${styles.cards} mb-28 mt-28 ml-[0.5rem]`}>
         {data[12].map((cardClass, index) => (
           <Tilty key={index}>
-            <div className={`${styles.card} ${styles[cardClass.name]} mx-10 ${styles.animated}`}
-              ref={(el) => (cardRefs.current[index] = el)}>
+            <div
+              className={`${styles.card} ${styles[cardClass.name]} mx-10 ${
+                styles.animated
+              }`}
+              ref={(el) => (cardRefs.current[index] = el)}
+            >
               <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
-                  <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                  <a
+                    href={cardClass.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={InstagramIcon}
+                      alt="Instagram"
+                      width={30}
+                      height={30}
+                      className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                    />
                   </a>
                 )}
                 {cardClass.linkedin && (
-                  <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                  <a
+                    href={cardClass.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={LinkedInIcon}
+                      alt="LinkedIn"
+                      width={30}
+                      height={30}
+                      className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                    />
                   </a>
                 )}
                 {cardClass.github && (
-                  <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                  <a
+                    href={cardClass.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={GitHubIcon}
+                      alt="GitHub"
+                      width={30}
+                      height={30}
+                      className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                    />
                   </a>
                 )}
               </div>

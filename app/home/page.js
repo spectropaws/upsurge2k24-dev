@@ -6,7 +6,7 @@ import Events from "./components/events/Events";
 import EventsMobile from "./components/events/EventsMobile";
 import Smackathon from "./components/smackathon/Smackathon";
 import Sponsors from "./components/Sponsors";
-import Schedule from "./Schedule";
+import Schedule from "./components/Schedule";
 import Footer from "../components/Footer";
 import MainContainer from "../components/MainContainer";
 

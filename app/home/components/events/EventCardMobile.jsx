@@ -44,7 +44,7 @@ const EventCardMobile = ({ title, description, image }) => {
       <div className="w-full h-[210px] relative z-10">
         <Image src={image} alt={title} fill objectFit='fill' className="object-cover border-b-2 border-yellow-500 " />
       </div>
-      
+
       {/* Content at the bottom */}
       <div className="w-full h-[255px] bg-blue-950 bg-opacity-40 relative z-10">
         <div className="text-left retro-font text-white">
@@ -60,7 +60,7 @@ const EventCardMobile = ({ title, description, image }) => {
               Details
             </button>
           </div>
-          
+
           {/* Random retro characters */}
           <div className="absolute inset-0 flex justify-between items-start p-2">
             <Image src={getRandomCharacter()} alt="Retro Character" width={30} height={30} className="absolute top-2 right-2" />

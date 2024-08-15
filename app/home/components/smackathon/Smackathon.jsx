@@ -121,7 +121,7 @@
 
 
 import Image from "next/image";
-import StarsBackground from "../StarsBackground";
+import StarsBackground from "@/app/components/StarsBackground";
 import Asteroids from "./Asteroids";
 import { motion } from "framer-motion";
 import styles from "../../../smackathon/components/hero.module.css";
@@ -199,7 +199,7 @@ export default function Smackathon() {
                 </Dialog>
               </motion.div>
         </motion.div>
-      
+
 
         {/* Descriptive Text Animation */}
         <motion.div
@@ -209,7 +209,7 @@ export default function Smackathon() {
           transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
         >
           <p className="text-white text-xl lg:mt-[-20px] text-center  lg:text-3xl ">
-          Unleash your potential and enjoy the thrill of Smackathon, a 24-hour live hackathon. Earn amazing 
+          Unleash your potential and enjoy the thrill of Smackathon, a 24-hour live hackathon. Earn amazing
           rewards while enhancing your skills and confidence to new heights.
           </p>
         </motion.div>
@@ -350,7 +350,7 @@ export default function Smackathon() {
 //             alt="Smackathon Logo"
 //             className="absolute top-[200px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 //           />
-              
+
 //         </div>
 //         <div className="w-[560px]">
 //             <p className="text-white text-3xl text-center">
@@ -360,7 +360,7 @@ export default function Smackathon() {
 //           </div>
 //         {/* Scattered Asteroids */}
 //         <Asteroids />
-        
+
 //       </div>
 //     </StarsBackground>
 //   );
@@ -408,7 +408,7 @@ export default function Smackathon() {
 //                           className="absolute top-[200px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 //                 /></div>
 //                 <div className="w-[560px]"><p className="text-white text-3xl text-center">Experience the thrill of winning incredible prizes that will boost your confidence and take you to unprecedented levels </p></div>
-  
+
 //             </div>
 //               <Button label="REGISTER NOW!"/>
 //               <Image height="20" width="20" src="/images/smackathon/asteroids.png" className="absolute"/>

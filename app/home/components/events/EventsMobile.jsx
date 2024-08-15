@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 import EventCardMobile from './EventCardMobile';
-import StarsBackground from '../StarsBackground';
+import StarsBackground from '@/app/components/StarsBackground';
 import events from "./eventlist";
 
 
@@ -10,7 +10,7 @@ export default function EventsMobile() {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isSwiping, setIsSwiping] = useState(false);
 
-    
+
 
     useEffect(() => {
         let interval;

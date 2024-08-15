@@ -1,35 +1,35 @@
 const events = [
     {
-        title: 'Hands on cloud computing session',
+        title: 'Coding Casino',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?',
-        image: '/images/events/image.png'
+        image: '/images/events/codingRelay.jpg'
     },
 
     {
-        title: 'Lantern Rite',
+        title: 'Cosmo Town',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?',
-        image: '/images/events/image2.jpg'
+        image: '/images/events/cosmoTown.jpg'
     },
     {
-        title: 'Unreconciled Stars',
+        title: 'Desi Daredevils',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?',
-        image: '/images/events/image3.jpeg'
+        image: '/images/events/desiDaredevils.png'
     },
     {
-        title: 'Dragonspine',
+        title: 'Fifa',
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?",
-        image: '/images/events/image.png'
+        image: '/images/events/fifa.jpg'
     },
     {
-        title: 'Hands on cloud computing session',
+        title: 'Smack Down',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?',
-        image: '/images/events/image.png'
+        image: '/images/events/smackdown.jpg'
     },
 
     {
-        title: 'Lantern Rite',
+        title: 'Talents Que',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae ipsam nam beatae, itaque possimus sapiente ea nemo non explicabo incidunt a, quas accusamus consequatur maiores aliquam ad, illum natus?',
-        image: '/images/events/image2.jpg'
+        image: '/images/events/talentsque.jpg'
     },
     {
         title: 'Unreconciled Stars',

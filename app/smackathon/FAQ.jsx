@@ -18,7 +18,7 @@ export default function FAQ() {
         },
         {
             question: "Q4. Is accomodation facility available for outsiders?",
-            answer: "Yes, accommodation is available for both local participants and outsiders at SMACKATHON. However, staying on-site is not compulsory, so participants can choose whether or not to use the accommodation facilities."
+            answer: "Yes, accomodation is available for both local participants and outsiders at SMACKATHON. But staying on-site during the entire 24 hours is compulsory for at least 2 team mates, so participants can choose whether or not to opt for accomodation facility. (Note: Only boys participants can stay at night and can opt for accomodation)"
         },
         {
             question: "Q5. What are the perks of attending Smackathon?",

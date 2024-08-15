@@ -1,4 +1,4 @@
-import StarsBackground from "./StarsBackground";
+import StarsBackground from "@/app/components/StarsBackground";
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
@@ -111,7 +111,7 @@ export default function Hero() {
                 </div>
 
                 <div ref={divRef} className={`w-[20rem] md:w-[35rem] h-[20rem] md:h-[35rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10`}>
-                    
+
                 <div ref={presentsRef} className="text-white z-10 flex flex-col items-center absolute -top-[4rem] md:-top-[2rem] left-1/2 transform -translate-x-1/2 opacity-0">
                     <h3 className="inline text-3xl md:text-5xl">YCCE Techfest</h3>
                     <h3 className="inline">Presents</h3>

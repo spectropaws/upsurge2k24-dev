@@ -6,7 +6,6 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import styles from './UFOComponent.module.css';
 import EventCardMobile from "./EventCardMobile";
-import events from "./eventlist";
 
 const UFOComponent = ({ event, className, style }) => {
     const ufoRef = useRef(null);

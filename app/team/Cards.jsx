@@ -3,28 +3,25 @@ import { useEffect, useRef } from 'react';
 import Tilty from 'react-tilty';
 import Image from 'next/image';
 import data from "./Details.json";
-import StarsBackground from './StarsBackground';
+import StarsBackground from '../components/StarsBackground';
 import styles1 from './TeamCard.module.css';
 
-import InstagramIcon from '../../public/images/teams/insta.svg';
-import LinkedInIcon from '../../public/images/teams/linkedin.svg';
-import GitHubIcon from '../../public/images/teams/github.svg';
 const Cards = () => {
   const cardRefs = useRef([]);
     const styleRef = useRef(null);
-  
+
     useEffect(() => {
       const $cards = cardRefs.current;
       const $style = styleRef.current;
       let x;
-  
+
       const handleMouseMove = (e, index) => {
         const $card = $cards[index];
         let pos = [e.offsetX, e.offsetY];
         if (e.type === "touchmove") {
           pos = [e.touches[0].clientX, e.touches[0].clientY];
         }
-  
+
         const l = pos[0];
         const t = pos[1];
         const h = $card.clientHeight;
@@ -32,7 +29,7 @@ const Cards = () => {
         const px = Math.abs(Math.floor((100 / w) * l) - 100);
         const py = Math.abs(Math.floor((100 / h) * t) - 100);
         const pa = 50 - px + (50 - py);
-  
+
         const lp = 50 + (px - 50) / 1.5;
         const tp = 50 + (py - 50) / 1.5;
         const px_spark = 50 + (px - 50) / 7;
@@ -40,30 +37,30 @@ const Cards = () => {
         const p_opc = 20 + Math.abs(pa) * 1.5;
         const ty = ((tp - 50) / 2) * -1;
         const tx = ((lp - 50) / 1.5) * 0.5;
-  
+
         const grad_pos = `background-position: ${lp}% ${tp}%;`;
         const sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`;
         const opc = `opacity: ${p_opc / 100};`;
         const tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg);`;
-  
+
         const style = `
-          .card:hover:before { ${grad_pos} }  
+          .card:hover:before { ${grad_pos} }
           .card:hover:after { ${sprk_pos} ${opc} } `;
-  
+
         $card.style.transform = tf;
         $style.innerHTML = style;
-  
+
         if (e.type === "touchmove") {
           return false;
         }
         clearTimeout(x);
       };
-  
+
       const handleMouseEnter = (index) => {
         const $card = $cards[index];
         $card.classList.remove("animated");
       };
-  
+
       const handleMouseLeave = (index) => {
         const $card = $cards[index];
         $style.innerHTML = "";
@@ -72,7 +69,7 @@ const Cards = () => {
           $card.classList.add("animated");
         }, 2500);
       };
-  
+
       $cards.forEach((card, index) => {
         card.addEventListener("mousemove", (e) => handleMouseMove(e, index));
         card.addEventListener("mouseenter", () => handleMouseEnter(index));
@@ -83,7 +80,7 @@ const Cards = () => {
         card.addEventListener("touchcancel", () => handleMouseLeave(index));
       });
       console.log(data);
-  
+
       return () => {
         $cards.forEach((card, index) => {
           card.removeEventListener("mousemove", (e) => handleMouseMove(e, index));
@@ -97,9 +94,9 @@ const Cards = () => {
       };
     }, []);
 
-  
+
   return (
-    
+
  <StarsBackground>
 
 
@@ -114,17 +111,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={20} height={20} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={20} height={20} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -145,17 +142,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -175,17 +172,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -205,17 +202,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -235,17 +232,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -265,17 +262,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -295,17 +292,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -325,17 +322,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -355,17 +352,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -374,7 +371,7 @@ const Cards = () => {
       ))}
       <style ref={styleRef}></style>
     </div>
-    
+
     {/* Art team  */}
   <h1 className={`${styles1.teamName} text-white text-center font-bold md:text-6xl text-3xl ml-[1.5rem]`}>ART TEAM</h1>
   <div className={`${styles1.cards} mb-28 mt-28 ml-[0.5rem]`}>
@@ -385,17 +382,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -415,17 +412,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -445,17 +442,17 @@ const Cards = () => {
           <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src="/images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>
@@ -465,7 +462,7 @@ const Cards = () => {
       <style ref={styleRef}></style>
     </div>
     </StarsBackground>
-    
+
   );
 };
 

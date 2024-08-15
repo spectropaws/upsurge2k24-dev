@@ -129,7 +129,7 @@ const Schedule = () => {
       <div className="mt-52 mb-72 relative h-auto flex flex-col justify-center items-center text-white">
         {currentSchedule.map((comment, index) => (
           <div
-            className={`bg-[url('/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass}`}
+            className={`bg-[url('/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass} border border-purple-500`}
             key={index}
             style={{
               ...styles.comment,

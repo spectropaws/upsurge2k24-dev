@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useRef } from 'react';
 import Tilty from 'react-tilty';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 import data from "./Details.json";
 import StarsBackground from './StarsBackground';
 import styles from './TeamCard.module.css';
+
+import InstagramIcon from '../../../public/images/teams/insta.svg';
+import LinkedInIcon from '../../../public/images/teams/linkedin.svg';
+import GitHubIcon from '../../../public/images/teams/github.svg';
 
 const Cards = () => {
   const cardRefs = useRef([]);
@@ -108,17 +111,17 @@ const Cards = () => {
               <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
                 {cardClass.instagram && (
                   <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faInstagram} size="2x" className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src={InstagramIcon} alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.linkedin && (
                   <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src={LinkedInIcon} alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
                 {cardClass.github && (
                   <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithub} size="2x" className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                    <Image src={GitHubIcon} alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
                   </a>
                 )}
               </div>

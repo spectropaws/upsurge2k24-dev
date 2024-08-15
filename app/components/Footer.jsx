@@ -14,7 +14,7 @@ export default function Footer() {
       <footer
         className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12 `}
       >
-        <motion.div ref={ref} className="absolute bottom-12 right-[475px]">
+        <motion.div ref={ref} className="absolute bottom-20 right-[475px]">
           <Image
             src="/images/unifooter/ufo-removebg-preview.png"
             width={200}
@@ -106,7 +106,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="mx-6">
-            <ul className="flex flex-col gap-7 items-center md:gap-10">
+            <ul className="flex flex-col gap-5 items-center md:gap-8">
+              <li>
+                <p>
+                  <Link className="text-4xl font-bold" href="/home">
+                    Home
+                  </Link>
+                </p>
+              </li>
               <li>
                 <p>
                   <Link className="text-4xl font-bold" href="/smackathon">
@@ -150,9 +157,9 @@ export default function Footer() {
               </p>
               <div className="flex items-center justify-between px-6 text-center md:gap-10 md:text-left md:px-0">
                 <div className="">
-                  <p>Nancy Pande</p>
+                  <p>Naincy Pande</p>
                   <p>(President Cosmos)</p>
-                  <p>983576249</p>
+                  <p>9158494481</p>
                 </div>
 
                 <div className="">
@@ -167,7 +174,15 @@ export default function Footer() {
         <p className="text-xl text-center md:pt-8 md:px-24 md:text-3xl z-10">
           © Copyrights belongs to Department Computer Science and Engineering
           <br />
-          Developed By Website Team CSE <br />
+          Developed By{" "}
+          <Link
+            href="/website-team"
+            className={styles.a}
+            rel="noopener noreferrer"
+          >
+            Website Team CSE
+          </Link>{" "}
+          <br />
           <Link
             href="https://campusfestbucket.s3.us-west-1.amazonaws.com/Upsurge/Privacy+and+policy+/privacy+policy+.pdf"
             className={styles.a}

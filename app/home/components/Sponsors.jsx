@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import StarsBackground from './StarsBackground';
+import StarsBackground from '@/app/components/StarsBackground';
 import { motion } from 'framer-motion';
 
 const Sponsors = () => {

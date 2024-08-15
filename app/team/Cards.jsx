@@ -3,12 +3,9 @@ import { useEffect, useRef } from 'react';
 import Tilty from 'react-tilty';
 import Image from 'next/image';
 import data from "./Details.json";
-import StarsBackground from './StarsBackground';
+import StarsBackground from '../components/StarsBackground';
 import styles1 from './TeamCard.module.css';
 
-import InstagramIcon from '../../public/images/teams/insta.svg';
-import LinkedInIcon from '../../public/images/teams/linkedin.svg';
-import GitHubIcon from '../../public/images/teams/github.svg';
 const Cards = () => {
   const cardRefs = useRef([]);
     const styleRef = useRef(null);

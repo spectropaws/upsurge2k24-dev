@@ -7,7 +7,7 @@ import Image from 'next/image';
 import gsap from "gsap";
 import useHorizontalScroll from './HorizontalScroll';
 import Spaceship from './Spaceship';
-import StarsBackground from "../StarsBackground";
+import StarsBackground from "@/app/components/StarsBackground";
 import UFOComponent from "./UFOComponent";
 import events from "./eventlist";
 

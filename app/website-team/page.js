@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import Tilty from 'react-tilty';
 import Image from 'next/image';
 import data from "./Details.json";
-import StarsBackground from './StarsBackground';
+import StarsBackground from '../components/StarsBackground';
 import styles from './TeamCard.module.css';
 import MainContainer from '../components/MainContainer';
 
@@ -97,7 +97,7 @@ const Cards = () => {
     return (
         <MainContainer>
             <StarsBackground>
-                <h1 className={`${styles.teamName} text-white text-center font-bold md:text-6xl text-3xl mt-20 ml-[1.5rem]`}>
+                <h1 className={`${styles.teamName} text-white text-center font-bold md:text-5xl text-3xl pt-20`}>
                     <span>Upsurge2k24 Website</span><br />
                     <span>Team</span>
                 </h1>

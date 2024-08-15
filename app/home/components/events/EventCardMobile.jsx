@@ -42,14 +42,14 @@ const EventCardMobile = ({ title, description, image }) => {
     >
       {/* Image at the top */}
       <div className="w-full h-[210px] relative z-10">
-        <Image src={image} alt={title} fill className="object-cover border-b-2 border-yellow-500 " objectFit='fill' />
+        <Image src={image} alt={title} fill objectFit='fill' className="object-cover border-b-2 border-yellow-500 " />
       </div>
 
       {/* Content at the bottom */}
-      <div className="w-full h-[230px] bg-blue-950 bg-opacity-40 relative z-10">
+      <div className="w-full h-[255px] bg-blue-950 bg-opacity-40 relative z-10">
         <div className="text-left retro-font text-white">
           <h3 className="font-bold text-2xl mb-2 px-3 pt-3 leading-5 mr-7">{title}</h3>
-          <p className="mt-2 mb-4 leading-4 text-justify text-[20px] px-3 overflow-hidden">
+          <p className="mt-2 mb-4 leading-5 text-justify text-[20px] px-3 overflow-hidden">
             {description}
           </p>
           <div className='absolute bottom-2 w-full flex justify-center items-center'>

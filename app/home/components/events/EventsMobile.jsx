@@ -50,7 +50,7 @@ export default function EventsMobile() {
     return (
         <StarsBackground>
             <div className="min-h-screen p-4">
-                <h1 className='text-white text-center mb-24'>Events</h1>
+                <h1 className='text-white text-center mb-20'>Events</h1>
                 <div
                     {...handlers}
                     className="relative w-full h-[300px]"
@@ -73,7 +73,7 @@ export default function EventsMobile() {
                     </AnimatePresence>
 
                     {/* Dots for navigation */}
-                    <div className="absolute -bottom-[170px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div className="absolute -bottom-[190px] left-1/2 transform -translate-x-1/2 flex space-x-2">
                         {events.map((_, index) => (
                             <div
                                 key={index}

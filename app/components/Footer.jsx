@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <>
       <footer
-        className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12 `}
+        className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12 overflow-hidden`}
       >
         <motion.div ref={ref} className="absolute bottom-20 right-[475px]">
           <Image

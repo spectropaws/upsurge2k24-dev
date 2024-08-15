@@ -18,7 +18,7 @@ export default function Events() {
     const spaceshipRef = useRef(null);
     const projectileRef = useRef(null);
     const bossRef = useRef(null);
-
+    const meteorContainerRef = useRef(null);
 
     const projectileDistance = 400;
     const projectileDuration = 1;
@@ -35,7 +35,7 @@ export default function Events() {
 
         timeline
             .set(projectile, { xPercent: -50, yPercent: -50, opacity: 1, x: 0, y: 0 })
-            .fromTo(projectile, {y: '20px'}, {
+            .fromTo(projectile, { y: '20px' }, {
                 duration: projectileDuration,
                 y: '20px',
                 x: projectileDistance, // Set the distance to move
@@ -55,6 +55,42 @@ export default function Events() {
             }, "<");
 
     }, [projectileDistance, projectileDuration, projectileDelayBeforeDisappearing]);
+
+    useEffect(() => {
+        const meteorContainer = meteorContainerRef.current;
+        if (!meteorContainer) return;
+
+        const createMeteor = () => {
+            const meteor = document.createElement('img');
+            meteor.src = '/svgs/home/events/asteroid.svg';
+            meteor.style.position = 'absolute';
+            meteor.style.width = '50px';
+            meteor.style.height = '50px';
+            meteor.style.opacity = '0.8';
+            meteor.style.transform = `translate(${Math.random() * 100}vw, -100vh)`;
+            meteorContainer.appendChild(meteor);
+
+            gsap.to(meteor, {
+                y: '100vh',
+                duration: Math.random() * 3 + 2, // Random duration between 2 and 5 seconds
+                ease: "power1.in",
+                onComplete: () => meteor.remove() // Remove meteor after animation
+            });
+        };        // Create multiple meteors
+        for (let i = 0; i < 20; i++) {
+            createMeteor();
+        }
+
+        // Optionally, you could add a repeating interval for continuous meteor shower
+        const intervalId = setInterval(() => {
+            createMeteor();
+        }, 500); // Create a new meteor every 500ms
+
+        // Cleanup interval on component unmount
+        return () => clearInterval(intervalId);
+
+    }, []);
+
 
     function ScrollContainer({ children, className }) {
         return (
@@ -92,12 +128,14 @@ export default function Events() {
                 </HorizontalSection>
 
                 <HorizontalSection>
-                    <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-1/2 left-1/4" alt="asteroid" />
-                    <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-1/4 left-3/4" alt="asteroid" />
-                    <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-3/4 left-1/2" alt="asteroid" />
-                    <UFOComponent event={events[6]} className="absolute top-[-100px] left-1/4" />
-                    <UFOComponent event={events[7]} className="absolute top-[200px] left-1/2" />
-                    <UFOComponent event={events[8]} className="absolute top-[100px] right-0" />
+                    <div ref={meteorContainerRef}>
+                        <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-1/2 left-1/4" alt="asteroid" />
+                        <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-1/4 left-3/4" alt="asteroid" />
+                        <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-3/4 left-1/2" alt="asteroid" />
+                        <UFOComponent event={events[6]} className="absolute top-[-100px] left-1/4" />
+                        <UFOComponent event={events[7]} className="absolute top-[200px] left-1/2" />
+                        <UFOComponent event={events[8]} className="absolute top-[100px] right-0" />
+                    </div>
                 </HorizontalSection>
 
                 <HorizontalSection className="relative overflow-hidden">

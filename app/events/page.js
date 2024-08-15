@@ -1,3 +1,5 @@
+import MainContainer from "../components/MainContainer";
+
 export default function EventsPage() {
-    return <div>Coming soon...</div>;
+    return <MainContainer>Coming soon...</MainContainer>;
 }

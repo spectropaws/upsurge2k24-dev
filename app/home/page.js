@@ -4,27 +4,34 @@ import ScreenEventEmitter from "@/app/components/ScreenEventEmitter";
 import Hero from "./components/Hero";
 import Events from "./components/events/Events";
 import EventsMobile from "./components/events/EventsMobile";
+import Smackathon from "./components/smackathon/Smackathon";
 import Sponsors from "./components/Sponsors";
-
+import Schedule from "./Schedule";
+import Footer from "../components/Footer";
+import MainContainer from "../components/MainContainer";
 
 export default function Home() {
     return (
-        <ScreenEventEmitter>
-            <div className="w-screen h-screen">
-                <Hero />
-            </div>
-           
-            <Sponsors />
-            <div className="w-full h-full hidden md:block">
-                <Events />
-            </div>
-            <div className="w-full h-full block md:hidden">
-                <EventsMobile />
-            </div>
+        <MainContainer>
+            <ScreenEventEmitter>
+                <div className="bg-black">
+                    <div className="w-screen h-screen">
+                        <Hero />
+                    </div>
+                    <Smackathon />
+                    <Sponsors />
+                    <div className="w-full h-full hidden md:block">
+                        <Events />
+                    </div>
+                    <div className="w-full h-full block md:hidden">
+                        <EventsMobile />
+                    </div>
 
-            < div className="h-screen text-black flex items-center justify-center" >
-                <h1>Next Section Content Here</h1>
-            </div >
-        </ScreenEventEmitter>
+                    <Schedule />
+
+                    <Footer />
+                </div>
+            </ScreenEventEmitter>
+        </MainContainer>
     );
 }

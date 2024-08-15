@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import dynamic from 'next/dynamic';
 import HeroSection from "./hero";
 import PrizeSection from "./PrizeSection";
@@ -13,37 +13,40 @@ import AssessmentCriteria from "./AssessmentCriteria";
 import LocateUs from './LocateUs';
 import Footer from "./Footer";
 import ScreenEventEmitter from "@/app/components/ScreenEventEmitter";
+import MainContainer from "../components/MainContainer";
 
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
 
 export default function Smackathon() {
     return (
-        <ScreenEventEmitter>
-            <div className="bg-black">
-                <HeroSection />
-                <PrizeSection />
-                <Goodies />
-            </div>
-            <div className='bg-blue-500'>
-                <Tracks />
-                <div className="w-full hidden md:block">
-                    <Timeline />
+        <MainContainer>
+            <ScreenEventEmitter>
+                <div className="bg-black">
+                    <HeroSection />
+                    <PrizeSection />
+                    <Goodies />
                 </div>
-                <div className="w-full block md:hidden">
-                    <TimelineMobile />
+                <div className='bg-blue-500'>
+                    <Tracks />
+                    <div className="w-full hidden md:block">
+                        <Timeline />
+                    </div>
+                    <div className="w-full block md:hidden">
+                        <TimelineMobile />
+                    </div>
                 </div>
-            </div>
-            <div className="bg-black">
-                <RulesandGuidelines />
-                <AssessmentCriteria />
-            </div>
-            <div className="bg-[#0D131E]">
-                <FAQ />
-                <LocateUs />
-            </div>
-            <div className='bg-[#3CBCFC] m-0 p-0 w-full -mt-[2px]'>
-                <Footer />
-            </div >
-        </ScreenEventEmitter>
+                <div className="bg-black">
+                    <RulesandGuidelines />
+                    <AssessmentCriteria />
+                </div>
+                <div className="bg-[#0D131E]">
+                    <FAQ />
+                    <LocateUs />
+                </div>
+                <div className='bg-[#3CBCFC] m-0 p-0 w-full -mt-[2px]'>
+                    <Footer />
+                </div >
+            </ScreenEventEmitter>
+        </MainContainer>
     );
 }

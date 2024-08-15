@@ -62,7 +62,7 @@ function Navbar() {
           )
         ];
       if (url) {
-        window.open(url, "_blank");
+        window.open(url, "_self");
       }
     }, 1000); //delay after click - fire dikhane ke liye
   };
@@ -72,16 +72,16 @@ function Navbar() {
   };
 
   const links = [
-    "https://www.google.com",
-    "https://www.youtube.com",
-    "https://music.yt.kcom",
-    "https://www.bing.com",
-    "https://www.reddit.com",
+    "/home",
+    "/smackathon",
+    "/schedule",
+    "/events",
+    "/team",
     "",
   ];
 
   return (
-    <div className="relative">
+    <div className="fixed top-0 left-0 w-full z-50">
       {/* Menu Toggle Button */}
       <button className="fixed top-5 left-5 z-20" onClick={handleMenuToggle}>
         <Image

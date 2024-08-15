@@ -36,55 +36,55 @@ const RulesAndGuidelines = () => {
     const rules = [
         {
             content: "Team must consist of minimum 3 and a maximum of 5 members.",
-            icon: "/images/pacman/blue.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/blue.svg",
         },
         {
             content: "Team access pass will be distributed to the team upon registration, which will be used for further references.",
-            icon: "/images/pacman/green.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/green.svg",
         },
         {
             content: "The ideas presented by the teams should be original and not protected by means of patents, copyrights, or technical publications by anyone.",
-            icon: "/images/pacman/lemon.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/lemon.svg",
         },
         {
             content: "All official communication will be conducted through the Smackathon email (smackathon@upsurge2k24.tech). Participants must monitor all folders in their email account.",
-            icon: "/images/pacman/pink.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/pink.svg",
         },
         {
             content: "Registrations must be completed through the Upsurge 2k24 website by 21st August 2024 to secure a spot.",
-            icon: "/images/pacman/red.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/red.svg",
         },
         {
             content: "No responsibility will be held by the Smackathon team for any late, loss, or mis-directed entries.",
-            icon: "/images/pacman/skyBlue.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/skyBlue.svg",
         },
         {
             content: "Problem statements will be provided on the day the Hackathon starts.",
-            icon: "/images/pacman/teal.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/teal.svg",
         },
         {
             content: "The team must commit to the given Git repository every hour during the course of Hackathon.",
-            icon: "/images/pacman/yellow.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/yellow.svg",
         },
         {
             content: "A minimum of 2 members must be present at the allotted table for the given team at all times during Smackathon.",
-            icon: "/images/pacman/red.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/red.svg",
         },
         {
             content: "Participants must not engage in any malicious or harmful activities. Any damage to college property will lead to strict disciplinary action and disqualification.",
-            icon: "/images/pacman/green.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/green.svg",
         },
         {
             content: "Meals and rest areas will be provided on site only if  food coupon and accomodation is opted for. Only 1 accomodation ticket will be provided for each team which will include 2 beds.",
-            icon: "/images/pacman/blue.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/blue.svg",
         },
         {
             content: "According to YCCE Policy, no female participants are allowed to stay overnight. After 8 pm, they must leave the campus but can rejoin at 6 am the next day. Those from outside Nagpur will stay at YCCE girls hostel, and the organizing team will manage their accomodation.",
-            icon: "/images/pacman/teal.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/teal.svg",
         },
         {
             content: "The rules and guidelines are subjected to change as per the Smackathon organising team.",
-            icon: "/images/pacman/pink.svg",
+            icon: "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/pink.svg",
         },
     ];
 
@@ -97,7 +97,7 @@ const RulesAndGuidelines = () => {
             ref={ref}
         >
                 <div className='flex justify-center mb-10 md:mb-16'><PacmanHeading></PacmanHeading></div>
-            <div className='w-full md:block hidden mb-24'><Image src={"/images/pacman/downwalls.svg"} className='scale-y-[-1] scale-x-[-1] w-full' width={500} height={500}></Image></div>
+            <div className='w-full md:block hidden mb-24'><Image src={"https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/downwalls.svg"} className='scale-y-[-1] scale-x-[-1] w-full' width={500} height={500}></Image></div>
             <div className='w-[90%]'>
                 <h1 className='text-center text-3xl md:text-5xl mb-8 md:mb-16 mt-24 md:mt-0'>
                     Rules and Guidelines
@@ -115,7 +115,7 @@ const RulesAndGuidelines = () => {
                         animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
                         transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }} // Smooth fade-in and sliding effect
                     >
-                        <img src="/images/pacman/pacmanGameplay.gif" className='w-full hidden md:block' alt="Pacman Gameplay" />
+                        <img src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/pacman/pacmanGameplay.gif" className='w-full hidden md:block' alt="Pacman Gameplay" />
                     </motion.div>
                     <motion.div
                         className='w-full md:w-3/5 md:ps-12 mt-4 md:mt-0'

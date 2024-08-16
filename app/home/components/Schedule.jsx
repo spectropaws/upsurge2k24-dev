@@ -17,43 +17,50 @@ const styles = {
 
 const schedule1 = [
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Inaugration",
     time: "10:00 AM",
     comment: "Stage (CSE Department)",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
-    name: "Latent Show",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
+    name: "Talentesque",
     time: "11:00 AM",
     comment: "Stage (CSE Department)",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Desi Daredevil",
     time: "11:00 AM",
     comment: "In front of CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Coding Casino",
     time: "11:00 AM",
     comment: "LAB 3-4 CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
-    name: "Sorts -  FIFA, Smackdown",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
+    name: "Sports -  FIFA, Smackdown",
     time: "11:00 AM",
     comment: "LAB 5-6 CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Data Science Seminar",
     time: "1:00 PM",
     comment: "LAB 1 CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "FlashMob",
     time: "3:00 PM",
     comment: "In front of CSE Department",
@@ -62,31 +69,36 @@ const schedule1 = [
 
 const schedule2 = [
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Cosmo Town",
     time: "10:00 AM",
     comment: "CSE Front",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
-    name: "Cloud Hands on session ",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
+    name: "Cloud Hands on Session ",
     time: "11:00 AM",
     comment: "LAB 1 CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Desi Daredevil Final Round",
     time: "3:00 PM",
     comment: "In front of CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Coding Relay",
     time: "12:00 PM",
     comment: "LAB 3-4 CSE Department",
   },
   {
-    avatarUrl: "/images/navbar/t2.png",
+    avatarUrl:
+      "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Sports -  FIFA, Smackdown",
     time: "11:00 AM",
     comment: "LAB 5-6 CSE Department",
@@ -98,6 +110,7 @@ const Schedule = () => {
   const [buttonText, setButtonText] = useState("Day 1");
   const currentSchedule = isSchedule1 ? schedule1 : schedule2;
   const currentClass = isSchedule1 ? "slideUp1" : "slideUp2";
+  const [selectedValue, setSelectedValue] = useState("value-2");
 
   const handleClick = () => {
     setIsSchedule1(!isSchedule1);
@@ -106,54 +119,88 @@ const Schedule = () => {
 
   return (
     <>
-     <StarsBackground>
-      <div className="flex justify-center">
-        <button
-          class="mt-20 group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 "
-          onClick={handleClick}
-        >
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            {buttonText}
-          </span>
-          <div class="hidden group-hover:block">
-            <div class="group absolute -top-12 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center rounded-sm text-center text-sm text-slate-300 before:-top-2">
-              <div class="rounded-sm bg-black py-1 px-2">
-                <p class="whitespace-nowrap">{`This is ${buttonText} Schedule`}</p>
-              </div>
-              <div class="h-0 w-fit border-l-8 border-r-8 border-t-8 border-transparent border-t-black"></div>
-            </div>
-          </div>
-        </button>
-      </div>
+      <StarsBackground>
+        <h1 className="text-white text-center text-3xl md:text-5xl md:mb-10 mt-48">
+          Schedule
+        </h1>
+        <div className="flex justify-center">
+          <div className="relative flex items-center my-14 bg-white text-black rounded-xl border border-fuchsia-600 overflow-hidden w-[150px]">
+            <input
+              type="radio"
+              id="value-1"
+              name="value-radio"
+              value="value-1"
+              checked={selectedValue === "value-1"}
+              onChange={() => setSelectedValue("value-1")}
+              onClick={handleClick}
+              className="hidden"
+            />
+            <input
+              type="radio"
+              id="value-2"
+              name="value-radio"
+              value="value-2"
+              checked={selectedValue === "value-2"}
+              onChange={() => setSelectedValue("value-2")}
+              onClick={handleClick}
+              className="hidden"
+            />
 
-      <div className="mt-52 mb-72 relative h-auto flex flex-col justify-center items-center text-white">
-        {currentSchedule.map((comment, index) => (
-          <div
-            className={`bg-[url('/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass} border border-purple-500`}
-            key={index}
-            style={{
-              ...styles.comment,
-              animationDelay: `${index * 3}s`,
-            }}
-          >
-            <div className="flex items-center">
-              <img
-                src={`${comment.avatarUrl}`}
-                alt={`${comment.name}'s avatar`}
-                className="w-16 rounded-full"
-              />
-            </div>
-            <div className="flex flex-col justify-center my-10 ml-2">
-              <p>Event: {comment.name}</p>
-              <p>Time: {comment.time}</p>
-              <p>
-                Venue: <span className="text-justify">{comment.comment}</span>
-              </p>
-            </div>
+            <span
+              className={`absolute top-0 left-0 h-full transition-transform duration-150 ease-in-out bg-neutral-800 z-0 ${
+                selectedValue === "value-1"
+                  ? "w-1/2 translate-x-0"
+                  : "w-1/2 translate-x-full"
+              }`}
+            ></span>
+
+            <label
+              htmlFor="value-1"
+              className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
+                selectedValue === "value-1" ? "text-white" : "text-black"
+              }`}
+            >
+              Day 1
+            </label>
+            <label
+              htmlFor="value-2"
+              className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
+                selectedValue === "value-2" ? "text-white" : "text-black"
+              }`}
+            >
+              Day 2
+            </label>
           </div>
-        ))}
-      </div>
-     </StarsBackground>
+        </div>
+
+        <div className="mt-52 mb-72 relative h-auto flex flex-col justify-center items-center text-white md:scale-110">
+          {currentSchedule.map((comment, index) => (
+            <div
+              className={`bg-[url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass} border border-purple-500`}
+              key={index}
+              style={{
+                ...styles.comment,
+                animationDelay: `${index * 3}s`,
+              }}
+            >
+              <div className="flex items-center">
+                <img
+                  src={`${comment.avatarUrl}`}
+                  alt={`${comment.name}'s avatar`}
+                  className="w-16 rounded-full"
+                />
+              </div>
+              <div className="flex flex-col justify-center my-10 ml-2">
+                <p>Event: {comment.name}</p>
+                <p>Time: {comment.time}</p>
+                <p>
+                  Venue: <span className="text-justify">{comment.comment}</span>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </StarsBackground>
     </>
   );
 };

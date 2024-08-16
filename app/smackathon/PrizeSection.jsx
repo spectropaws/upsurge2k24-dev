@@ -48,7 +48,7 @@ const Prize = () => {
             <a
               href="https://drive.google.com/file/d/1I5dP6EDHEMmjUUjzGsfRF7d3afzNfZg4/view?usp=sharing"
               target="_blank"
-              className="text-sm font-semibold bg-[url(/images/prize/btn.png)] px-4 py-5 bg-cover bg-center md:px-7 md:py-7 md:text-lg active:translate-y-1 transition-all duration-100"
+              className="text-sm font-semibold bg-[url(https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/btn.png)] px-4 py-5 bg-cover bg-center md:px-7 md:py-7 md:text-lg active:translate-y-1 transition-all duration-100"
               download
             >
               Download Brochure
@@ -58,14 +58,14 @@ const Prize = () => {
       </div>
       <div
         ref={divRef}
-        className="bg-[url('/images/prize/new-prize-bg.png')] relative w-full h-full lg:h-[150vh] bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
+        className="bg-[url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/new-prize-bg.png')] relative w-full h-full lg:h-[150vh] bg-center bg-no-repeat flex flex-col items-center overflow-hidden"
       >
         <motion.div
           animate={controls}
           className="absolute -bottom-96 transform hidden lg:block -translate-x-1/2 w-full h-96 lg:-bottom-80"
         >
           <img
-            src="/images/prize/minecraft-rise.png"
+            src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/minecraft-rise.png"
             alt="Animated"
             className="w-full h-full bottom-0 object-cover object-center"
           />
@@ -91,7 +91,7 @@ const Prize = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <Image
-                  src="/images/prize/second-prize.png"
+                  src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/second-prize.png"
                   width={500}
                   height={500}
                   alt="Second Prize"
@@ -114,7 +114,7 @@ const Prize = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <Image
-                  src="/images/prize/first-prize.png"
+                  src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/first-prize.png"
                   width={500}
                   height={500}
                   alt="First Prize"
@@ -136,7 +136,7 @@ const Prize = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <Image
-                  src="/images/prize/third-prize.png"
+                  src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/prize/third-prize.png"
                   width={500}
                   height={500}
                   alt="Third Prize"

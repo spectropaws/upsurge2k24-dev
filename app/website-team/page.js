@@ -108,20 +108,20 @@ const Cards = () => {
                         <Tilty key={index}>
                             <div className={`${styles.card} ${styles[cardClass.name]} mx-10 ${styles.animated}`}
                                 ref={(el) => (cardRefs.current[index] = el)}>
-                                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[11px]">
                                     {cardClass.instagram && (
                                         <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
-                                            <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                                            <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]' />
                                         </a>
                                     )}
                                     {cardClass.linkedin && (
                                         <a href={cardClass.linkedin} target="_blank" rel="noopener noreferrer">
-                                            <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                                            <Image src="/images/teams/linkedin.svg" alt="LinkedIn" width={30} height={30} className='li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]' />
                                         </a>
                                     )}
                                     {cardClass.github && (
                                         <a href={cardClass.github} target="_blank" rel="noopener noreferrer">
-                                            <Image src="images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]' />
+                                            <Image src="images/teams/github.svg" alt="GitHub" width={30} height={30} className='git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]' />
                                         </a>
                                     )}
                                 </div>

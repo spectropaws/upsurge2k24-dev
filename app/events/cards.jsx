@@ -4,10 +4,10 @@ import Image from 'next/image';
 const EventCard = ({ poster, title, description, pokemon, isPosterLeft }) => {
     return (
         <div
-            className={`relative flex flex-col md:flex-row items-center w-full my-8 p-4 border border-gray-300 rounded-lg shadow-md ${isPosterLeft ? 'flex-row' : 'flex-row-reverse'}`}
+            className="relative flex flex-col md:flex-row items-center w-full my-8 p-4 border border-gray-300 rounded-lg shadow-md"
             style={{ backgroundColor: '#a2d5f2' }} // Soft pastel blue background color
         >
-            <div className="w-full md:w-1/2 p-2">
+            <div className="w-full md:w-1/2 p-2 md:order-1">
                 <Image
                     src={poster}
                     alt="Event Poster"
@@ -17,7 +17,7 @@ const EventCard = ({ poster, title, description, pokemon, isPosterLeft }) => {
                     className="rounded-lg object-cover"
                 />
             </div>
-            <div className="w-full md:w-1/2 p-2 relative">
+            <div className={`w-full md:w-1/2 p-2 relative ${isPosterLeft && 'order-2'}`}>
                 <h3 className="mb-2 text-3xl font-semibold text-gray-800">{title}</h3>
                 <p className="mb-4 text-xl leading-6 text-gray-600 text-justify" style={{ whiteSpace: 'pre-line' }}>{description}</p>
                 <button className="self-start px-6 py-2 mt-4 text-white bg-[#2E7586] hover:bg-[#237C47] rounded">

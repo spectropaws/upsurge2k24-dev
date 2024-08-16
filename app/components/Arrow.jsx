@@ -1,19 +1,22 @@
-import {useState} from "react";
+import { useState, useRef, useCallback } from "react";
 import { useFrame } from '@react-three/fiber';
-import { Box } from '@react-three/drei';
-import { useRef } from 'react';
 
 function Arrow() {
     const arrowRef = useRef();
-const [lastUpdateTime, setLastUpdateTime] = useState(0);
+    const [lastUpdateTime, setLastUpdateTime] = useState(0);
+
+    const updateArrowState = useCallback((currentTime) => {
+        if (arrowRef.current) {
+            arrowRef.current.rotation.y += 0.02;
+            arrowRef.current.position.y = 22 + Math.sin(currentTime * 3) * 2.8;
+        }
+        setLastUpdateTime(currentTime);
+    }, []);
+
     useFrame(({ clock }) => {
         const currentTime = clock.getElapsedTime();
         if (currentTime - lastUpdateTime >= 0.016) { // 60 FPS: 1 / 60 = ~0.016
-            if (arrowRef.current) {
-                arrowRef.current.rotation.y += 0.02;
-                arrowRef.current.position.y = 22 + Math.sin(currentTime * 3) * 2.8;
-            }
-            setLastUpdateTime(currentTime);
+            updateArrowState(currentTime);
         }
     });
 

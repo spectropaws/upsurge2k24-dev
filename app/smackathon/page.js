@@ -13,14 +13,14 @@ import AssessmentCriteria from "./AssessmentCriteria";
 import LocateUs from './LocateUs';
 import Footer from "./Footer";
 import ScreenEventEmitter from "@/app/components/ScreenEventEmitter";
-import MainContainer from "../components/MainContainer";
+import Navbar from "../components/Navbar";
 
 const FAQ = dynamic(() => import('./FAQ'), { ssr: false });
 
 export default function Smackathon() {
     return (
-        <MainContainer>
             <ScreenEventEmitter>
+                <Navbar />
                 <div className="bg-black">
                     <HeroSection />
                     <PrizeSection />
@@ -47,6 +47,5 @@ export default function Smackathon() {
                     <Footer />
                 </div >
             </ScreenEventEmitter>
-        </MainContainer>
     );
 }

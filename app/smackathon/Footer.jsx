@@ -66,7 +66,7 @@ export default function Footer() {
               <Link href="/events" className={styles.link_events}>
                 <p>Events</p>
               </Link>
-              <Link href="/teams" className={styles.link_team}>
+              <Link href="/team" className={styles.link_team}>
                 <p>Team</p>
               </Link>
             </div>

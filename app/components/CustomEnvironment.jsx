@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 const Stars = ({ count }) => {
-    const stars = Array.from({ length: count }).map(() => (
-        <mesh key={Math.random()} position={[
-        Math.random() * 200 - 100,
-        Math.random() * 200 - 100,
-        Math.random() * 200 - 100,
-      ]}>
-            <sphereGeometry args={[0.3, 8, 8]} />
-            <meshStandardMaterial color="white" />
-        </mesh>
-    ));
+    const stars = useMemo(() => {
+        return Array.from({ length: count }).map(() => (
+            <mesh key={Math.random()} position={[
+                Math.random() * 200 - 100,
+                Math.random() * 200 - 100,
+                Math.random() * 200 - 100,
+            ]}>
+                <sphereGeometry args={[0.3, 8, 8]} />
+                <meshStandardMaterial color="white" />
+            </mesh>
+        ));
+    }, [count]);
 
     return <>{stars}</>;
 };

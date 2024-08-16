@@ -3,6 +3,6 @@ import EventCards from "./cards";
 
 export default function EventsPage() {
     return <MainContainer>
-        <EventCards></EventCards>
+            <EventCards></EventCards>
     </MainContainer>;
 }

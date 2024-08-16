@@ -118,14 +118,14 @@ export default function Events() {
 
                     <Image width={500} height={500} src="/images/home/events/red_planet-transparent.png" className='absolute bottom-0 left-1/4 translate-y-[50%]' alt="red planet" />
                     <UFOComponent event={events[0]} className="absolute top-[-100px] left-0" />
-                    <UFOComponent event={events[1]} className="absolute top-[100px] right-0 translate-x-[-50%]" />
+                    <UFOComponent event={events[1]} className="absolute top-[45px] right-0 translate-x-[-50%]" />
                 </HorizontalSection>
 
                 <HorizontalSection className="relative">
                     <Image width={500} height={500} src="/images/home/events/blue_planet-transparent.png" className='absolute -top-[30%] left-1/2' alt="red planet" />
-                    <UFOComponent event={events[2]} className="absolute top-[-100px] left-1/4" />
-                    <UFOComponent event={events[3]} className="absolute top-[200px] left-1/2" />
-                    <UFOComponent event={events[4]} className="absolute top-[100px] left-3/4" />
+                    <UFOComponent event={events[2]} className="absolute top-[-100px] left-0" />
+                    <UFOComponent event={events[3]} className="absolute top-[45px] left-1/4" />
+                    <UFOComponent event={events[4]} className="absolute top-[45px] left-1/2 translate-x-[50%]" />
                 </HorizontalSection>
 
                 <HorizontalSection>
@@ -134,8 +134,8 @@ export default function Events() {
                         <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-1/4 left-3/4 translate-x-[-100%]" alt="asteroid" />
                         <Image width={100} height={100} src="/svgs/home/events/asteroid.svg" className="absolute top-3/4 left-1/2" alt="asteroid" />
                         <UFOComponent event={events[5]} className="absolute top-[-100px] left-0" />
-                        <UFOComponent event={events[6]} className="absolute top-[200px] left-1/4" />
-                        <UFOComponent event={events[7]} className="absolute top-[100px] right-0 translate-x-[-50%]" />
+                        <UFOComponent event={events[6]} className="absolute top-[45px] left-1/4" />
+                        <UFOComponent event={events[7]} className="absolute top-0 right-0 translate-x-[-50%]" />
                     </div>
                 </HorizontalSection>
 
@@ -145,7 +145,7 @@ export default function Events() {
 
                     <Image width={500} height={500} src="/svgs/home/events/boss.svg" className='absolute top-1/2 left-[100%] translate-y-[-50%] transform translate-x-[-100%]' alt="boss" ref={bossRef} />
 
-                    <UFOComponent event={events[8]} className="absolute top-[-100px] left-1/4" />
+                    <UFOComponent event={events[8]} className="absolute top-[-100px] left-0" />
                 </HorizontalSection>
             </ScrollContainer>
         </div >

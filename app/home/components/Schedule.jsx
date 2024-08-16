@@ -74,7 +74,7 @@ const schedule2 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Cosmo Town",
     time: "10:00 AM",
-    comment: "CSE Front",
+    comment: "In front of CSE Department",
   },
   {
     avatarUrl:

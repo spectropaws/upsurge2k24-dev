@@ -36,7 +36,7 @@ const schedule1 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Desi Daredevil",
     time: "11:00 AM",
-    comment: "In front of CSE Department",
+    comment: "In front of CSE Dept.",
   },
   {
     avatarUrl:
@@ -64,7 +64,7 @@ const schedule1 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "FlashMob",
     time: "3:00 PM",
-    comment: "In front of CSE Department",
+    comment: "In front of CSE Dept.",
   },
 ];
 
@@ -74,7 +74,7 @@ const schedule2 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Cosmo Town",
     time: "10:00 AM",
-    comment: "In front of CSE Department",
+    comment: "In front of CSE Dept.",
   },
   {
     avatarUrl:
@@ -88,7 +88,7 @@ const schedule2 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Desi Daredevil Final Round",
     time: "3:00 PM",
-    comment: "In front of CSE Department",
+    comment: "In front of CSE Dept.",
   },
   {
     avatarUrl:

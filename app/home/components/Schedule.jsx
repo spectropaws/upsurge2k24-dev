@@ -108,15 +108,15 @@ const schedule2 = [
 
 const Schedule = () => {
   const [isSchedule1, setIsSchedule1] = useState(true);
-  const [buttonText, setButtonText] = useState("Day 1");
+  const [selectedValue, setSelectedValue] = useState("value-1");
+
+  const handleChange = (value) => {
+    setSelectedValue(value);
+    setIsSchedule1(value === "value-1");
+  };
+
   const currentSchedule = isSchedule1 ? schedule1 : schedule2;
   const currentClass = isSchedule1 ? "slideUp1" : "slideUp2";
-  const [selectedValue, setSelectedValue] = useState("value-2");
-
-  const handleClick = () => {
-    setIsSchedule1(!isSchedule1);
-    setButtonText(isSchedule1 ? "Day 2" : "Day 1");
-  };
 
   return (
     <>
@@ -132,8 +132,7 @@ const Schedule = () => {
               name="value-radio"
               value="value-1"
               checked={selectedValue === "value-1"}
-              onChange={() => setSelectedValue("value-1")}
-              onClick={handleClick}
+              onChange={() => handleChange("value-1")}
               className="hidden"
             />
             <input
@@ -142,23 +141,22 @@ const Schedule = () => {
               name="value-radio"
               value="value-2"
               checked={selectedValue === "value-2"}
-              onChange={() => setSelectedValue("value-2")}
-              onClick={handleClick}
+              onChange={() => handleChange("value-2")}
               className="hidden"
             />
 
             <span
               className={`absolute top-0 left-0 h-full transition-transform duration-150 ease-in-out bg-neutral-800 z-0 ${
                 selectedValue === "value-1"
-                  ? "w-1/2 translate-x-0"
-                  : "w-1/2 translate-x-full"
+                  ? "w-1/2 translate-x-full"
+                  : "w-1/2 translate-x-0"
               }`}
             ></span>
 
             <label
               htmlFor="value-1"
               className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
-                selectedValue === "value-1" ? "text-white" : "text-black"
+                selectedValue === "value-1" ? "text-black" : "text-white"
               }`}
             >
               <p>Day 1</p>
@@ -166,7 +164,7 @@ const Schedule = () => {
             <label
               htmlFor="value-2"
               className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
-                selectedValue === "value-2" ? "text-white" : "text-black"
+                selectedValue === "value-2" ? "text-black" : "text-white"
               }`}
             >
               <p>Day 2</p>

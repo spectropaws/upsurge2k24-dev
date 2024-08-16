@@ -12,16 +12,16 @@ const events = [
         detailsLink:"/events/#cosmotown"
     },
     {
-        title: 'Desi Daredevils',
-        description: '"Desi Daredevils" offers an exhilarating three-stage game, designed for teams of four. Bring along your best friends as you explore the arena, enjoy mouthwatering food, and take on thrilling challenges.join us on August 23rd, 2024!',
-        image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/desiDaredevils.png',
-        detailsLink:"/events/#desiDaredevils"
-    },
-    {
         title: 'Coding Relay',
         description: 'Get ready for the high-energy CODING RELAY at UPSURGE 2K24! Kick off with a Debugging Quiz then, race against time in the Coding Relay. With a prize pool of ₹2400, bring your laptops and join us on August 24th, 2024, at the CSE Department!',
         image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/codingRelay.png',
         detailsLink:"/events/#codingRelay"
+    },
+    {
+        title: 'Desi Daredevils',
+        description: '"Desi Daredevils" offers an exhilarating three-stage game, designed for teams of four. Bring along your best friends as you explore the arena, enjoy mouthwatering food, and take on thrilling challenges.join us on August 23rd, 2024!',
+        image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/desiDaredevils.png',
+        detailsLink:"/events/#desiDaredevils"
     },
     {
         title: 'Coding Casino',

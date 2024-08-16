@@ -22,12 +22,13 @@ const EventCard = ({ poster, title, description, pokemon, isPosterLeft, register
                 <h3 className="mb-2 text-3xl font-semibold text-gray-800">{title}</h3>
                 <p className="mb-4 text-xl leading-6 text-gray-600 text-justify" style={{ whiteSpace: 'pre-line' }}>{description}</p>
                 <Link href={registerLink} passHref target='_blank'>
-                    <button
-                        className="self-start px-6 py-2 mt-4 text-xl text-white bg-[#2E7586] hover:bg-[#237C47] rounded"
-                        style={{ fontFamily: 'var(--font-dotGothic)' }} // Apply the font directly
-                    >
-                        Register
-                    </button>
+                    <p>
+                        <button
+                            className="self-start px-6 py-2 mt-4 text-white bg-[#2E7586] hover:bg-[#237C47] rounded"
+                        >
+                            Register
+                        </button>
+                    </p>
                 </Link>
                 <div className="absolute -right-10 -bottom-5 w-32 h-32">
                     <Image
@@ -47,7 +48,7 @@ const EventCards = () => {
         {
             poster: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/cosmoTown.png',
             title: 'Cosmotown',
-            id:"cosmotown",
+            id: "cosmotown",
             description: "Cosmotown is a thrilling minigame festival happening on August 24th from 10 AM to 3:30 PM! Explore over 10 diverse games, collecting stamps on your Cosmo-Passport as you progress. Win prizes and bid on rewards in the 4 PM auction. Pre-register to receive double CosmoCoins, giving you a competitive edge. Entry fee is just Rs 50, making it an affordable and fun-filled experience. Don't miss out on the excitement and prizes worth Rs 2500! Come along and see if you have what it takes to conquer Cosmotown!",
             pokemon: '/images/events/char2.png',
             isPosterLeft: true,
@@ -56,7 +57,7 @@ const EventCards = () => {
         {
             poster: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/talentsque.png',
             title: 'Talentesque',
-            id:"talentsque",
+            id: "talentsque",
             description: "Calling all talented individuals! Join TALENTESQUE, a spectacular talent show, on August 23rd, 2024, at 12:00 noon. Whether you're a singer, dancer, musician, magician, comedian, or have any other hidden talent, we invite you to take center stage. Showcase your unique talent, compete for prizes worth Rs 5000/, and enjoy an unforgettable experience. Entry fees: Rs 49/ (solo), Rs 99/ (duo), Rs 149/ (group). Register now and unleash your inner star!",
             pokemon: '/images/events/char1.png',
             isPosterLeft: false,
@@ -83,7 +84,7 @@ const EventCards = () => {
         {
             poster: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/flashmob.png',
             title: 'Flashmob',
-            id:"flashmob",
+            id: "flashmob",
             description: "Get ready for an unforgettable flashmob on August 23rd, 2024, at 3 PM in front of the CSE Department! This high-energy event will feature electrifying music, vibrant energy, and spontaneous dance moves. Whether you're a seasoned dancer or just looking for fun, this is your chance to be part of something extraordinary. Celebrate the CSE spirit, connect with fellow students, and create an unforgettable moment. Gather friends, get in the groove, and join us for an afternoon of pure joy. Don't just watch – be part of it and help light up the campus with enthusiasm!",
             pokemon: '/images/events/char7.png',
             isPosterLeft: true,
@@ -92,7 +93,7 @@ const EventCards = () => {
         {
             poster: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/fifa.png',
             title: 'FIFA',
-            id:"fifa",
+            id: "fifa",
             description: "Get ready for the FIFA FEVER CUP, an electrifying 1v1 football gaming tournament that will ignite your competitive spirit! Face off in a thrilling derby showdown and showcase your skills, tactics, and formations. With 6-minute halves and a single elimination format, every second counts. For just ₹49, you could win the ₹1000 first prize! The event will be held at the CSE Department, so mark your calendars, gear up, and bring your A-game to outmaneuver and outscore your opponents. Don’t miss this chance to prove your mettle, create unforgettable memories, and claim your victory!",
             pokemon: '/images/events/char9.png',
             isPosterLeft: false,
@@ -101,7 +102,7 @@ const EventCards = () => {
         {
             poster: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/smackdown.png',
             title: 'WWE Smackdown',
-            id:"smackdown",
+            id: "smackdown",
             description: "Step into the golden age of WWE with the Smackdown Showdown Championship, a nostalgic gaming tournament on the classic PS2 platform. Relive iconic wrestling moments and test your skills in Survival Rounds, Elimination Chambers, and Single Match showdowns. Join us on August 23rd and 24th at the CSE Department for intense action and friendly competition. For just ₹49, compete for a chance to win prizes of ₹1000 or ₹500 and claim the title of Smackdown Showdown Champion. Don’t miss this chance to relive WWE's glory days and prove yourself as a wrestling gaming legend!",
             pokemon: '/images/events/char10.png',
             isPosterLeft: true,
@@ -138,7 +139,7 @@ const EventCards = () => {
                 <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
                 {/* Event cards content */}
                 <div className="relative z-10">
-                <h1 className="font-bold text-white text-center m-10 md:mb-24 relative z-10">Events</h1>
+                    <h1 className="font-bold text-white text-center m-10 md:mb-24 relative z-10">Events</h1>
                     {events.map((event, index) => (
                         <EventCard
                             key={index}

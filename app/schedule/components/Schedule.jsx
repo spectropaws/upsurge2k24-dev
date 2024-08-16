@@ -1,52 +1,53 @@
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Schedule() {
   return (
     <div className=" w-full">
-      <p className="bg-black text-white text-9xl text-center pt-20">Schedule</p>
+      <p className="bg-[#090A0F] text-white text-9xl text-center pt-20">
+        Schedule
+      </p>
       <div className="relative">
-      
         <Image
-          src="/svgs/schedule/Lpbg.svg"
+          src="/svgs/schedule/Lpbg-new.svg"
           width={1000}
           height={1000}
           className=" w-full h-full -mt-2"
         />
         <motion.div
-      animate={{
-        y: [0, -130, 0], // Move up by 20px and then back to original position
-      }}
-      transition={{
-        duration: 6, // Duration for one cycle of the animation
-        ease: "easeInOut", // Easing function for smooth animation
-        repeat: Infinity, // Repeat animation infinitely
-      }}
-      className="absolute top-[100px] left-[100px]"
-    >
-      <Image 
-        src="/svgs/schedule/balloon.svg"
-        height={250}
-        width={250}
-        alt="Balloon"
-      />
-    </motion.div>
+          animate={{
+            y: [0, -130, 0], // Move up by 20px and then back to original position
+          }}
+          transition={{
+            duration: 6, // Duration for one cycle of the animation
+            ease: "easeInOut", // Easing function for smooth animation
+            repeat: Infinity, // Repeat animation infinitely
+          }}
+          className="absolute top-[100px] left-[100px]"
+        >
+          <Image
+            src="/svgs/schedule/balloon.svg"
+            height={250}
+            width={250}
+            alt="Balloon"
+          />
+        </motion.div>
 
-    <Image 
-        src="/images/schedule/olive.png"
-        height={150}
-        width={150}
-        alt='olive'
-        className='absolute right-[20px] top-[550px]'
-     />
+        <Image
+          src="/images/schedule/olive.png"
+          height={150}
+          width={150}
+          alt="olive"
+          className="absolute right-[20px] top-[550px]"
+        />
 
-    <Image 
-        src="/svgs/schedule/bottomChar.svg"
-        height={230}
-        width={230}
-        alt='bottomChar'
-        className='absolute left-[50px] top-[2340px]'
-     />
+        <Image
+          src="/svgs/schedule/bottomChar.svg"
+          height={230}
+          width={230}
+          alt="bottomChar"
+          className="absolute left-[50px] top-[2340px]"
+        />
 
         <p className="text-white absolute left-1/2 translate-x-[-50%] top-[250px] text-5xl">
           Day 1 - 23rd August
@@ -72,7 +73,7 @@ export default function Schedule() {
         <p className="text-white absolute text-center left-[730px] top-[1350px] text-3xl">
           Flashmob <br /> 3:00 PM
         </p>
-        
+
         <p className="text-white absolute left-1/2 translate-x-[-50%] top-[1773px] text-5xl">
           Day 2 - 24th August
         </p>

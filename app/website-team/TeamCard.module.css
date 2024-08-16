@@ -13,7 +13,8 @@
 }
 
 .teamName {
-  text-shadow: 0 0 3px #ffffff, 0 0 8px #ffffff, 0 0 18px #ffffff, 0 0 38px #ffffff, 0 0 78px #ffffff;
+  text-shadow: 
+  0 0 0px #fff, 0 0 2px #fff, 0 0 0px #fff, 0 0 40px #fff, 0 0 16px #fff;
   text-align: center;
   color: #fff;
   margin-bottom: 60px;

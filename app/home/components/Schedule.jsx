@@ -125,7 +125,7 @@ const Schedule = () => {
           Schedule
         </h1>
         <div className="flex justify-center">
-          <div className="relative flex items-center my-14 bg-white text-black rounded-xl border border-fuchsia-600 overflow-hidden w-[150px]">
+          <div className="relative flex items-center my-14 bg-white text-black rounded-xl border border-fuchsia-600 overflow-hidden w-[180px]">
             <input
               type="radio"
               id="value-1"
@@ -161,7 +161,7 @@ const Schedule = () => {
                 selectedValue === "value-1" ? "text-white" : "text-black"
               }`}
             >
-              Day 1
+              <p>Day 1</p>
             </label>
             <label
               htmlFor="value-2"
@@ -169,7 +169,7 @@ const Schedule = () => {
                 selectedValue === "value-2" ? "text-white" : "text-black"
               }`}
             >
-              Day 2
+              <p>Day 2</p>
             </label>
           </div>
         </div>
@@ -187,7 +187,7 @@ const Schedule = () => {
             alt="Large Planet"
             width={320}
             height={320}
-            className="hidden -top-1/4 right-1/4 md:block md:absolute"
+            className="hidden -top-1/4 right-[20%] md:block md:absolute"
           />
           {currentSchedule.map((comment, index) => (
             <div

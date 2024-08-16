@@ -288,12 +288,12 @@
 .card.RitikaAnantwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("../../public/images/teams/Ritika.png");
+  background-image: url("/images/teams/Ritika.png");
 }
 .card.PoojaNandguruwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("../../public/images/teams/Pooja.png");
+  background-image: url("/images/teams/Pooja.png");
 }
 .card.SanchiDhoke {
   --color1: rgb(176, 132, 150);

@@ -91,7 +91,7 @@ export default function Schedule() {
           Coding <br /> Relay <br /> 12:00 PM
         </p>
         <p className="text-white absolute text-center left-[900px] top-[2390px] text-3xl">
-          Desi <br /> Daredevils <br /> Final Round <br /> 11:00 AM
+          Desi <br /> Daredevils <br /> Final Round <br /> 3:00 PM
         </p>
       </div>
     </div>

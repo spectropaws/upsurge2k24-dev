@@ -1,25 +1,22 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Start() {
   const [selectedOption, setSelectedOption] = useState(0); // Start with the first option
   const router = useRouter();
-  const audioRef = useRef(null);
-  const audioPlayedRef = useRef(false); // Track if the audio has played
 
   const options = [
     { label: "HOME", path: "/home" },
     { label: "SMACKATHON", path: "/smackathon" },
-    { label: "TEAM", path: "/team" },
     { label: "SCHEDULE", path: "/schedule" },
     { label: "EVENTS", path: "/events" },
+    { label: "TEAM", path: "/team" },
   ];
 
   useEffect(() => {
 
     const handleKeyDown = (event) => {
-      console.log(`Key pressed: ${event.key}`); // Debugging key events
       if (event.key === "ArrowUp") {
         setSelectedOption((prevOption) =>
           (prevOption - 1 + options.length) % options.length
@@ -41,7 +38,7 @@ export default function Start() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [router, options, selectedOption]);
+  }, [router, selectedOption]);
 
   const handleMouseEnter = (index) => {
     setSelectedOption(index);
@@ -58,6 +55,7 @@ export default function Start() {
       <img
         src="/images/startScreen/contra.png"
         className="absolute h-1/2 bottom-[6rem] right-6"
+        alt="Contra Logo"
       />
       <img src="/images/startScreen/upsurgeLogo.png" className="absolute h-96 top-0 left-1/2 w-[60%] transform -translate-x-1/2" />
       <img src="/images/startScreen/fire.svg" className="absolute bottom-0 -mt-[2px]" />
@@ -73,7 +71,7 @@ export default function Start() {
               src="/images/startScreen/contraSwitch.png"
               className={`h-14 w-14 z-10 ${selectedOption === index ? 'block' : 'invisible'}`}
             />
-            <h1 className="text-2xl text-[#808382]" style={option.label == "SMACKATHON" ? { textShadow: "0 0 30px white", color: "white" } : {}}>{option.label}</h1>
+            <h1 className="text-2xl text-[#808382]">{option.label}</h1>
           </div>
         ))}
       </div>

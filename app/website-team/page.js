@@ -82,6 +82,8 @@ const Cards = () => {
         });
 
         return () => {
+            if (!$cards) return;
+            if (!$cards[0]) return;
             $cards.forEach((card, index) => {
                 card.removeEventListener("mousemove", (e) => handleMouseMove(e, index));
                 card.removeEventListener("mouseenter", () => handleMouseEnter(index));

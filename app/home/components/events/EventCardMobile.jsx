@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Array of retro game character images
 const retroCharacters = [
@@ -31,7 +32,7 @@ const getRandomCharacter = () => {
   return retroCharacters[Math.floor(Math.random() * retroCharacters.length)];
 };
 
-const EventCardMobile = ({ title, description, image }) => {
+const EventCardMobile = ({ title, description, image, detailsLink }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -52,13 +53,16 @@ const EventCardMobile = ({ title, description, image }) => {
           <p className="mt-2 mb-4 leading-5 text-justify text-[20px] px-3 overflow-hidden">
             {description}
           </p>
-          <div className='absolute bottom-2 w-full flex justify-center items-center'>
-            <button
-              onClick={() => alert('Details Button Clicked!')} // Replace with actual handler
-              className="px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-colors duration-300"
-            >
-              Details
-            </button>
+          <div className='absolute bottom-2 w-full flex justify-center items-center z-10'>
+            <Link href={detailsLink}>
+              <p>
+                <button
+                  className="px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-colors duration-300"
+                >
+                  Details
+                </button>
+              </p>
+            </Link>
           </div>
 
           {/* Random retro characters */}

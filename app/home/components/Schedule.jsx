@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import StarsBackground from "@/app/components/StarsBackground";
 import "./Schedule.css";
 
@@ -73,7 +74,7 @@ const schedule2 = [
       "https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/t2.png",
     name: "Cosmo Town",
     time: "10:00 AM",
-    comment: "CSE Front",
+    comment: "In front of CSE Department",
   },
   {
     avatarUrl:
@@ -107,15 +108,15 @@ const schedule2 = [
 
 const Schedule = () => {
   const [isSchedule1, setIsSchedule1] = useState(true);
-  const [buttonText, setButtonText] = useState("Day 1");
+  const [selectedValue, setSelectedValue] = useState("value-1");
+
+  const handleChange = (value) => {
+    setSelectedValue(value);
+    setIsSchedule1(value === "value-1");
+  };
+
   const currentSchedule = isSchedule1 ? schedule1 : schedule2;
   const currentClass = isSchedule1 ? "slideUp1" : "slideUp2";
-  const [selectedValue, setSelectedValue] = useState("value-2");
-
-  const handleClick = () => {
-    setIsSchedule1(!isSchedule1);
-    setButtonText(isSchedule1 ? "Day 2" : "Day 1");
-  };
 
   return (
     <>
@@ -124,15 +125,14 @@ const Schedule = () => {
           Schedule
         </h1>
         <div className="flex justify-center">
-          <div className="relative flex items-center my-14 bg-white text-black rounded-xl border border-fuchsia-600 overflow-hidden w-[150px]">
+          <div className="relative flex items-center my-14 bg-white text-black rounded-xl border border-fuchsia-600 overflow-hidden w-[180px]">
             <input
               type="radio"
               id="value-1"
               name="value-radio"
               value="value-1"
               checked={selectedValue === "value-1"}
-              onChange={() => setSelectedValue("value-1")}
-              onClick={handleClick}
+              onChange={() => handleChange("value-1")}
               className="hidden"
             />
             <input
@@ -141,39 +141,52 @@ const Schedule = () => {
               name="value-radio"
               value="value-2"
               checked={selectedValue === "value-2"}
-              onChange={() => setSelectedValue("value-2")}
-              onClick={handleClick}
+              onChange={() => handleChange("value-2")}
               className="hidden"
             />
 
             <span
               className={`absolute top-0 left-0 h-full transition-transform duration-150 ease-in-out bg-neutral-800 z-0 ${
                 selectedValue === "value-1"
-                  ? "w-1/2 translate-x-0"
-                  : "w-1/2 translate-x-full"
+                  ? "w-1/2 translate-x-full"
+                  : "w-1/2 translate-x-0"
               }`}
             ></span>
 
             <label
               htmlFor="value-1"
               className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
-                selectedValue === "value-1" ? "text-white" : "text-black"
+                selectedValue === "value-1" ? "text-black" : "text-white"
               }`}
             >
-              Day 1
+              <p>Day 1</p>
             </label>
             <label
               htmlFor="value-2"
               className={`w-1/2 p-2 cursor-pointer flex items-center justify-center z-10 font-semibold text-sm ${
-                selectedValue === "value-2" ? "text-white" : "text-black"
+                selectedValue === "value-2" ? "text-black" : "text-white"
               }`}
             >
-              Day 2
+              <p>Day 2</p>
             </label>
           </div>
         </div>
 
         <div className="mt-52 mb-72 relative h-auto flex flex-col justify-center items-center text-white md:scale-110">
+          <Image
+            width={80}
+            height={80}
+            src="/svgs/home/events/asteroid.svg"
+            className="hidden -top-40 left-1/4 md:block md:absolute"
+            alt="asteroid"
+          />
+          <Image
+            src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/planet3.png"
+            alt="Large Planet"
+            width={320}
+            height={320}
+            className="hidden -top-1/4 right-[20%] md:block md:absolute"
+          />
           {currentSchedule.map((comment, index) => (
             <div
               className={`bg-[url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass} border border-purple-500`}

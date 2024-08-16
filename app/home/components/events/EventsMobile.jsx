@@ -68,6 +68,7 @@ export default function EventsMobile() {
                                 title={events[currentEventIndex].title}
                                 description={events[currentEventIndex].description}
                                 image={events[currentEventIndex].image}
+                                detailsLink={events[currentEventIndex].detailsLink}
                             />
                         </motion.div>
                     </AnimatePresence>

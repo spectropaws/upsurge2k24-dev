@@ -7,7 +7,6 @@ import EventsMobile from "./components/events/EventsMobile";
 import Smackathon from "./components/smackathon/Smackathon";
 import Sponsors from "./components/Sponsors";
 import Schedule from "./components/Schedule";
-import Footer from "../components/Footer";
 import MainContainer from "../components/MainContainer";
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
 
                     <Schedule />
 
-                    <Footer />
                 </div>
             </ScreenEventEmitter>
         </MainContainer>

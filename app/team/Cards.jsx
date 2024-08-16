@@ -117,7 +117,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[10px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -127,9 +127,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -144,7 +144,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -159,7 +159,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -187,7 +187,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -197,9 +197,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -214,7 +214,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -229,7 +229,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -256,7 +256,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -266,9 +266,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -283,7 +283,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -298,7 +298,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -325,7 +325,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -335,9 +335,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -352,7 +352,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -367,7 +367,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -394,7 +394,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -404,9 +404,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -421,7 +421,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -436,7 +436,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -463,7 +463,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -473,9 +473,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -490,7 +490,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -505,7 +505,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -532,7 +532,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -542,9 +542,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -559,7 +559,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -574,7 +574,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -601,7 +601,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -611,9 +611,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -628,7 +628,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -643,7 +643,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -670,7 +670,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -680,9 +680,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -697,7 +697,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -712,7 +712,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -739,7 +739,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -749,9 +749,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -766,7 +766,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -781,7 +781,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -808,7 +808,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -818,9 +818,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -835,7 +835,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -850,7 +850,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -877,7 +877,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center items-center gap-[1rem] md:mb-[10px] lg:mb-[15px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -887,9 +887,9 @@ const Cards = () => {
                       <Image
                         src={InstagramIcon}
                         alt="Instagram"
-                        width={20}
-                        height={20}
-                        className="ig md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        width={30}
+                        height={30}
+                        className="ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -904,7 +904,7 @@ const Cards = () => {
                         alt="LinkedIn"
                         width={30}
                         height={30}
-                        className="li md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="li md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}
@@ -919,7 +919,7 @@ const Cards = () => {
                         alt="GitHub"
                         width={30}
                         height={30}
-                        className="git md:h-[23px] md:w-[23px] lg:h-[30px] lg:w-[30px]"
+                        className="git md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]"
                       />
                     </a>
                   )}

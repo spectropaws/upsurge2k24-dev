@@ -9,10 +9,11 @@ export default function Schedule() {
       </p>
       <div className="relative">
         <Image
-          src="/svgs/schedule/Lpbg-new.svg"
+          src="/svgs/schedule/Lpbg.svg"
           width={1000}
           height={1000}
           className=" w-full h-full -mt-2"
+          alt="background"
         />
         <motion.div
           animate={{

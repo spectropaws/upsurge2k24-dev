@@ -5,17 +5,18 @@ import { motion } from 'framer-motion';
 
 export default function ScheduleMobile() {
   return (
-    
+
     <div className=" w-full bg-[#090A0F]">
       <p className="bg-[#090A0F] text-white text-6xl text-center pt-[30px] h-[150px]">Schedule</p>
       <div className="relative">
-      <Image 
+      <Image
         src="/svgs/schedule/Sbg.svg"
         height={1000}
         width={1000}
-        className='w-full h-full '
+        className='w-full h-full'
+        alt="background"
       />
-{/* 
+{/*
 <motion.div
       animate={{
         y: [0, -40, 0], // Move up by 20px and then back to original position
@@ -27,7 +28,7 @@ export default function ScheduleMobile() {
       }}
       className="absolute top-[-2rem]"
     >
-      <Image 
+      <Image
         src="/svgs/schedule/balloon.svg"
         height={150}
         width={150}
@@ -46,7 +47,7 @@ export default function ScheduleMobile() {
       }}
       className="absolute top-[137rem]"
     >
-      <Image 
+      <Image
         src="/svgs/schedule/balloon.svg"
         height={150}
         width={150}
@@ -54,7 +55,7 @@ export default function ScheduleMobile() {
       />
     </motion.div> */}
 
-      
+
     </div>
     </div>
   )
@@ -77,10 +78,10 @@ export default function ScheduleMobile() {
 
 // export default function ScheduleMobile() {
 //   return (
-    
+
 //     <div className='relative bg-black'>
 //       <div className=' h-[150px] mb-[50px]'><h1 className='text-white pt-[50px] text-center'>Schedule</h1></div>
-//       <Image 
+//       <Image
 //         src="/svgs/schedule/Sbg.svg"
 //         height={1000}
 //         width={1000}
@@ -98,7 +99,7 @@ export default function ScheduleMobile() {
 //       }}
 //       className="absolute top-[130px]"
 //     >
-//       <Image 
+//       <Image
 //         src="/svgs/schedule/balloon.svg"
 //         height={150}
 //         width={150}
@@ -117,7 +118,7 @@ export default function ScheduleMobile() {
 //       }}
 //       className="absolute top-[2430px]"
 //     >
-//       <Image 
+//       <Image
 //         src="/svgs/schedule/balloon.svg"
 //         height={150}
 //         width={150}
@@ -125,42 +126,42 @@ export default function ScheduleMobile() {
 //       />
 //     </motion.div>
 
-//      <Image 
+//      <Image
 //         src="/images/schedule/fat.png"
 //         height={150}
 //         width={150}
 //         alt='fat'
 //         className='absolute right-[10px] top-[1930px]'
 //      />
-//      <Image 
+//      <Image
 //         src="/svgs/schedule/bottomChar.svg"
 //         height={150}
 //         width={150}
 //         alt='bottomChar'
 //         className='absolute left-[-10px] top-[3910px]'
 //      />
-//      <Image 
+//      <Image
 //         src="/images/schedule/olive.png"
 //         height={90}
 //         width={90}
 //         alt='olive'
 //         className='absolute right-[10px] top-[427px]'
 //      />
-//      <Image 
+//      <Image
 //         src="/images/schedule/popeye.png"
 //         height={120}
 //         width={120}
 //         alt='popeye'
 //         className='absolute right-0 top-[1627px]'
 //      />
-//      <Image 
+//      <Image
 //         src="/images/schedule/olive.png"
 //         height={90}
 //         width={90}
 //         alt='olive'
 //         className='absolute right-[2px] top-[2722px]'
 //      />
-//      <Image 
+//      <Image
 //         src="/images/schedule/fat.png"
 //         height={150}
 //         width={150}
@@ -184,7 +185,7 @@ export default function ScheduleMobile() {
 //       <p className='text-white text-center absolute left-[140px] top-[2680px] text-2xl'>Cosmo Town <br/>10:00 AM</p>
 //       <p className='text-white text-center absolute left-[132px] top-[2970px] text-2xl'>Cloud Hands- <br/> on  Session <br/>11:00 AM</p>
 //       <p className='text-white text-center absolute left-[145px] top-[3270px] text-2xl'>FIFA & <br/> Smackdown <br/>11:00 AM</p>
-//       <p className='text-white text-center absolute left-[130px] top-[3600px] text-2xl'>Coding Relay <br/>12:00 PM</p>      
+//       <p className='text-white text-center absolute left-[130px] top-[3600px] text-2xl'>Coding Relay <br/>12:00 PM</p>
 //       <p className='text-white text-center absolute left-[135px] top-[3865px] text-2xl'>Desi <br/> Daredevils <br/>Final Round <br/>3:00 PM</p>
 //     </div>
 //   )

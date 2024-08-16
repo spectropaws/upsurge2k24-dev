@@ -14,7 +14,7 @@ export default function TeamsPage() {
 
     return (
         <MainContainer>
-            <div className='w-screen h-screen bg-black text-white flex justify-center items-center'><h1>Revealing on Monday</h1></div>
+            <div className='w-screen h-screen bg-black text-white flex justify-center items-center'><h1>Revealing Soon...</h1></div>
         </MainContainer>
     );
 }

@@ -150,5 +150,5 @@
 }
 
 .cardContainer:hover {
-    transform: scale(0.8) translateX(30px);
+    transform: scale(1.25) translateX(30px);
 }

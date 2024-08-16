@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useMemo, useCallback } from "react";
 import { useThree, useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 import { motion } from 'framer-motion-3d';
@@ -18,26 +18,23 @@ export default function AnimatedCamera() {
     const groupControls = useAnimation();
     const objectControls = useAnimation();
 
+    const vector = useMemo(() => new Vector3(), []);
+
+    const handleEscape = useCallback((e) => {
+        if (e.key === "Escape") setIsZoomed(false);
+    }, []);
+
+    const handleMessage = useCallback((e) => {
+        if (e.data === "screenClick") setIsZoomed(true);
+        else if (e.data === "escapeZoom") setIsZoomed(false);
+    }, []);
+
+    const handleControllerClick = useCallback(() => {
+        setIsZoomed((prevZoomed) => !prevZoomed);
+    }, []);
 
     // set isZoomed state based on event listener
     useEffect(() => {
-        
-        const handleEscape = (e) => {
-            if (e.key == "Escape")
-                setIsZoomed(false);
-        };
-
-        const handleMessage = (e) => {
-            if (e.data == "screenClick")
-                setIsZoomed(true);
-            else if (e.data == "escapeZoom")
-                setIsZoomed(false);
-        };
-
-        const handleControllerClick = () => {
-            setIsZoomed((prevZoomed) => !prevZoomed);
-        };
-
         window.addEventListener('controllerClick', handleControllerClick);
         window.addEventListener("keydown", handleEscape);
         window.addEventListener('message', handleMessage);
@@ -47,7 +44,7 @@ export default function AnimatedCamera() {
             window.removeEventListener("keydown", handleEscape);
             window.removeEventListener('message', handleMessage);
         };
-    }, []);
+    }, [handleControllerClick, handleEscape, handleMessage]);
 
     // Zoom in or out based on state
     useEffect(() => {
@@ -101,7 +98,6 @@ export default function AnimatedCamera() {
         }
     }, [hasLerped, prevRotationY, groupControls]);
 
-
     useEffect(() => {
         if (transitionComplete) {
             groupControls.start({
@@ -113,9 +109,8 @@ export default function AnimatedCamera() {
 
     useFrame(() => {
         if (invisibleObjectRef.current) {
-            const worldPosition = new Vector3();
-            invisibleObjectRef.current.getWorldPosition(worldPosition);
-            camera.position.copy(worldPosition);
+            invisibleObjectRef.current.getWorldPosition(vector);
+            camera.position.copy(vector);
             camera.lookAt(0, 0, 0);
         }
     });

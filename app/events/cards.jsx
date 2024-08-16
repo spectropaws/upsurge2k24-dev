@@ -4,10 +4,10 @@ import Image from 'next/image';
 const EventCard = ({ poster, title, description, pokemon, isPosterLeft }) => {
     return (
         <div
-            className={`relative flex items-center w-[70%] mx-auto my-8 p-4 border border-gray-300 rounded-lg shadow-md ${isPosterLeft ? 'flex-row' : 'flex-row-reverse'}`}
+            className={`relative flex flex-col md:flex-row items-center w-full my-8 p-4 border border-gray-300 rounded-lg shadow-md ${isPosterLeft ? 'flex-row' : 'flex-row-reverse'}`}
             style={{ backgroundColor: '#a2d5f2' }} // Soft pastel blue background color
         >
-            <div className="w-1/2 p-2">
+            <div className="w-full md:w-1/2 p-2">
                 <Image
                     src={poster}
                     alt="Event Poster"
@@ -17,11 +17,11 @@ const EventCard = ({ poster, title, description, pokemon, isPosterLeft }) => {
                     className="rounded-lg object-cover"
                 />
             </div>
-            <div className="w-1/2 p-2 relative">
+            <div className="w-full md:w-1/2 p-2 relative">
                 <h3 className="mb-2 text-3xl font-semibold text-gray-800">{title}</h3>
                 <p className="mb-4 text-xl leading-6 text-gray-600 text-justify" style={{ whiteSpace: 'pre-line' }}>{description}</p>
-                <button className="self-start px-6 py-2 mt-4 text-white bg-blue-600 rounded hover:bg-blue-700">
-                    Register
+                <button className="self-start px-6 py-2 mt-4 text-white bg-[#2E7586] hover:bg-[#237C47] rounded">
+                    <p>Register</p>
                 </button>
                 <div className="absolute -right-10 -bottom-5 w-32 h-32">
                     <Image
@@ -95,12 +95,12 @@ const EventCards = () => {
             pokemon: '/images/events/char8.png',
             isPosterLeft: false,
         }
-        
+
     ];
 
     return (
-        <div className="relative h-screen overflow-y-auto bg-gray-900">
-            <div className="event-cards-container relative py-16 bg-fixed bg-cover bg-center"
+        <div className="relative min-h-screen overflow-hidden bg-gray-900">
+            <div className="event-cards-container relative py-16 bg-fixed bg-cover bg-center px-8 md:px-[15%]"
                 style={{
                     backgroundImage: "url('/images/events/eventbg.jpg')",
                 }}>
@@ -108,7 +108,7 @@ const EventCards = () => {
                 <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
                 {/* Event cards content */}
                 <div className="relative z-10">
-                <h1 className="font-bold text-white text-center mt-10 mb-24 relative z-10">Events</h1>
+                <h1 className="font-bold text-white text-center m-10 md:mb-24 relative z-10">Events</h1>
                     {events.map((event, index) => (
                         <EventCard
                             key={index}
@@ -121,6 +121,7 @@ const EventCards = () => {
                     ))}
                 </div>
             </div>
+            <div className="absolute inset-x-0 bottom-0 h-[20vh] bg-gradient-to-t from-[#090A0F] to-transparent"></div>
         </div>
     );
 };

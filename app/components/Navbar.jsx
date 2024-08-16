@@ -94,7 +94,7 @@ function Navbar() {
 
       {/* Animated Menu */}
       <motion.section
-        className="fixed top-0 left-0 w-full bg-black bg-opacity-60 z-10"
+        className="fixed top-0 left-0 w-full bg-black bg-opacity-80 z-10"
         initial={{ opacity: 0, y: "-100%" }}
         animate={{ opacity: menuVisible ? 1 : 0, y: menuVisible ? 0 : "-100%" }}
         transition={{ duration: 0.5 }}

@@ -77,7 +77,7 @@ function Navbar() {
     "/schedule",
     "/events",
     "/team",
-    "",
+    "/startScreen",
   ];
 
   return (
@@ -85,7 +85,7 @@ function Navbar() {
       {/* Menu Toggle Button */}
       <button className="fixed top-5 left-5 z-20" onClick={handleMenuToggle}>
         <Image
-          src={`/images/navbar/${menuVisible ? "close" : "menu"}.png`}
+          src={`https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/${menuVisible ? "close" : "menu"}.png`}
           width={50}
           height={50}
           alt={menuVisible ? "close icon" : "menu icon"}
@@ -118,7 +118,7 @@ function Navbar() {
                     transition={{ duration: 0.5 }}
                   >
                     <Image
-                      src="/images/navbar/plane.png"
+                      src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/plane.png"
                       width={50}
                       height={50}
                       alt="plane icon"
@@ -139,7 +139,7 @@ function Navbar() {
                     style={{ transformOrigin: "center" }}
                   >
                     <Image
-                      src="/images/navbar/laser-bullet.png"
+                      src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/laser-bullet.png"
                       width={50}
                       height={50}
                       alt="fire icon"
@@ -158,7 +158,7 @@ function Navbar() {
                     onClick={(event) => handleButtonClick(buttonName, event)}
                   >
                     <Image
-                      src={`/images/navbar/${buttonName}.png`}
+                      src={`https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/${buttonName}.png`}
                       width={200}
                       height={103}
                       alt={`${buttonName} icon`}

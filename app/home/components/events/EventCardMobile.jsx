@@ -54,13 +54,15 @@ const EventCardMobile = ({ title, description, image, detailsLink }) => {
             {description}
           </p>
           <div className='absolute bottom-2 w-full flex justify-center items-center z-10'>
-            <a href={detailsLink}>
-              <button
-                className="px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-colors duration-300"
-              >
-                Details
-              </button>
-            </a>
+            <Link href={detailsLink}>
+              <p>
+                <button
+                  className="px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-colors duration-300"
+                >
+                  Details
+                </button>
+              </p>
+            </Link>
           </div>
 
           {/* Random retro characters */}

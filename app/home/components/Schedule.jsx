@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import StarsBackground from "@/app/components/StarsBackground";
 import "./Schedule.css";
 
@@ -174,6 +175,20 @@ const Schedule = () => {
         </div>
 
         <div className="mt-52 mb-72 relative h-auto flex flex-col justify-center items-center text-white md:scale-110">
+          <Image
+            width={80}
+            height={80}
+            src="/svgs/home/events/asteroid.svg"
+            className="hidden -top-40 left-1/4 md:block md:absolute"
+            alt="asteroid"
+          />
+          <Image
+            src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/sponsors/planet3.png"
+            alt="Large Planet"
+            width={320}
+            height={320}
+            className="hidden -top-1/4 right-1/4 md:block md:absolute"
+          />
           {currentSchedule.map((comment, index) => (
             <div
               className={`bg-[url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/images/navbar/schedule.gif')] bg-cover h-24 md:h-28 ${currentClass} border border-purple-500`}

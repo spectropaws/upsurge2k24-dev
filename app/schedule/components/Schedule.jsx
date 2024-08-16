@@ -9,7 +9,7 @@ export default function Schedule() {
       </p>
       <div className="relative">
         <Image
-          src="/svgs/schedule/Lpbg.svg"
+          src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/svgs/schedule/Lpbg.svg"
           width={1000}
           height={1000}
           className=" w-full h-full -mt-2"

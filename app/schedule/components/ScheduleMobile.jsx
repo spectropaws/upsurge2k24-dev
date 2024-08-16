@@ -10,7 +10,7 @@ export default function ScheduleMobile() {
       <p className="bg-[#090A0F] text-white text-6xl text-center pt-[30px] h-[150px]">Schedule</p>
       <div className="relative">
       <Image
-        src="/svgs/schedule/Sbg.svg"
+        src="https://upsurge2k24.s3.ap-south-1.amazonaws.com/svgs/schedule/Sbg.svg"
         height={1000}
         width={1000}
         className='w-full h-full'

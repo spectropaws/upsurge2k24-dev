@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,12 +23,14 @@ const EventCard = ({ poster, title, description, pokemon, isPosterLeft, register
             <div className={`w-full md:w-1/2 p-2 relative ${isPosterLeft && 'order-2'}`}>
                 <h3 className="mb-2 text-3xl font-semibold text-gray-800">{title}</h3>
                 <p className="mb-4 text-xl leading-6 text-gray-600 text-justify" style={{ whiteSpace: 'pre-line' }}>{description}</p>
-                <Link href={registerLink} passHref target='_blank'>
+                <Link href={registerLink} passHref target='_blank' onClick={(e) => {
+                    if (!registerLink) e.preventDefault();
+                }}>
                     <p>
                         <button
                             className="self-start px-6 py-2 mt-4 text-white bg-[#2E7586] hover:bg-[#237C47] rounded"
                         >
-                            Register
+                            {registerLink ? 'Register' : 'Join us'}
                         </button>
                     </p>
                 </Link>

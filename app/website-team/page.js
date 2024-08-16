@@ -108,7 +108,7 @@ const Cards = () => {
                         <Tilty key={index}>
                             <div className={`${styles.card} ${styles[cardClass.name]} mx-10 ${styles.animated}`}
                                 ref={(el) => (cardRefs.current[index] = el)}>
-                                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[11px]">
+                                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                                     {cardClass.instagram && (
                                         <a href={cardClass.instagram} target="_blank" rel="noopener noreferrer">
                                             <Image src="/images/teams/insta.svg" alt="Instagram" width={30} height={30} className='ig md:h-[15px] md:w-[15px] lg:h-[25px] lg:w-[25px]' />

@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="w-full h-[662px] bg-[url(/images/unifooter/transition.png)] bg-cover bg-center"></div>
+      <div className="w-full h-[662px] bg-[url(/images/unifooter/transition.png)] bg-cover bg-center -mt-2"></div>
       <footer
         className={`${styles.unifooter} relative py-8 w-full flex flex-col gap-12 items-center justify-center text-white md:p-12`}
       >

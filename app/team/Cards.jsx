@@ -1,33 +1,33 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import styles1 from "./TeamCard.module.css";
 import Tilty from "react-tilty";
 import data from "./Details.json";
 import StarsBackground from "./StarsBackground";
 import Image from "next/image";
+import { debounce } from 'lodash';
 import InstagramIcon from "../../public/images/teams/insta.svg";
 import LinkedInIcon from "../../public/images/teams/linkedin.svg";
 import GitHubIcon from "../../public/images/teams/github.svg";
+
 const Cards = () => {
   const cardRefs = useRef([]);
   const styleRef = useRef(null);
 
-  useEffect(() => {
-    const $cards = cardRefs.current;
-    const $style = styleRef.current;
-    let x;
+  const handleMouseMove = useCallback(
+    debounce((e, index) => {
+      const $card = cardRefs.current[index];
+      const mediaQuery = window.matchMedia("(max-width: 767px)");
 
-    const handleMouseMove = (e, index) => {
-      const $card = $cards[index];
+      if (mediaQuery.matches) return;
+
       let pos = [e.offsetX, e.offsetY];
       if (e.type === "touchmove") {
         pos = [e.touches[0].clientX, e.touches[0].clientY];
       }
 
-      const l = pos[0];
-      const t = pos[1];
-      const h = $card.clientHeight;
-      const w = $card.clientWidth;
+      const [l, t] = pos;
+      const { clientHeight: h, clientWidth: w } = $card;
       const px = Math.abs(Math.floor((100 / w) * l) - 100);
       const py = Math.abs(Math.floor((100 / h) * t) - 100);
       const pa = 50 - px + (50 - py);
@@ -40,37 +40,37 @@ const Cards = () => {
       const ty = ((tp - 50) / 2) * -1;
       const tx = ((lp - 50) / 1.5) * 0.5;
 
-      const grad_pos = `background-position: ${lp}% ${tp}%;`;
-      const sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`;
-      const opc = `opacity: ${p_opc / 100};`;
-      const tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg);`;
-
       const style = `
-          .card:hover:before { ${grad_pos} }  
-          .card:hover:after { ${sprk_pos} ${opc} } `;
+        .card:hover:before { background-position: ${lp}% ${tp}%; }
+        .card:hover:after { background-position: ${px_spark}% ${py_spark}%; opacity: ${p_opc / 100}; }
+      `;
 
-      $card.style.transform = tf;
-      $style.innerHTML = style;
+      $card.style.transform = `rotateX(${ty}deg) rotateY(${tx}deg)`;
+      styleRef.current.innerHTML = style;
 
-      if (e.type === "touchmove") {
-        return false;
-      }
-      clearTimeout(x);
-    };
+    }, 10),
+    []
+  );
 
-    const handleMouseEnter = (index) => {
-      const $card = $cards[index];
-      $card.classList.remove("animated");
-    };
+  const handleMouseEnter = useCallback((index) => {
+    const $card = cardRefs.current[index];
+    $card.classList.remove("animated");
+  }, []);
 
-    const handleMouseLeave = (index) => {
-      const $card = $cards[index];
-      $style.innerHTML = "";
-      $card.removeAttribute("style");
-      x = setTimeout(() => {
-        $card.classList.add("animated");
-      }, 2500);
-    };
+  const handleMouseLeave = useCallback((index) => {
+    const $card = cardRefs.current[index];
+    styleRef.current.innerHTML = "";
+    $card.removeAttribute("style");
+    setTimeout(() => {
+      $card.classList.add("animated");
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    if (mediaQuery.matches) return;
+
+    const $cards = cardRefs.current;
 
     $cards.forEach((card, index) => {
       card.addEventListener("mousemove", (e) => handleMouseMove(e, index));
@@ -85,7 +85,6 @@ const Cards = () => {
     return () => {
       if (!$cards) return;
       if (!$cards[0]) return;
-      console.log($cards);
       $cards.forEach((card, index) => {
         card.removeEventListener("mousemove", (e) => handleMouseMove(e, index));
         card.removeEventListener("mouseenter", () => handleMouseEnter(index));
@@ -96,7 +95,7 @@ const Cards = () => {
         card.removeEventListener("touchcancel", () => handleMouseLeave(index));
       });
     };
-  }, []);
+  }, [handleMouseMove, handleMouseEnter, handleMouseLeave]);
 
   return (
     <div className="bg-black">

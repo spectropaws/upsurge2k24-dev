@@ -301,7 +301,12 @@
 .card.RitikaAnantwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ritika.png");
+  background-image: url("/images/teams/Ritika.png");
+}
+.card.PoojaNandguruwar {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Pooja.png");
 }
 .card.SanchiDhoke {
   --color1: rgb(176, 132, 150);

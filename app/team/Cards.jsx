@@ -116,7 +116,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[10px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -186,7 +186,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -255,7 +255,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -324,7 +324,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -393,7 +393,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -462,7 +462,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -531,7 +531,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -600,7 +600,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -669,7 +669,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -738,7 +738,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -807,7 +807,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}
@@ -876,7 +876,7 @@ const Cards = () => {
                 }`}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[13px]">
+                <div className="socials flex z-10 justify-center mb-4 items-center gap-[1rem] md:mb-[6px] lg:mb-[15px]">
                   {cardClass.instagram && (
                     <a
                       href={cardClass.instagram}

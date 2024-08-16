@@ -71,6 +71,7 @@ const UFOComponent = ({ event, className, style }) => {
                         title={event.title}
                         description={event.description}
                         image={event.image}
+                        detailsLink={event.detailsLink}
                     />
                 </div>
             </div>

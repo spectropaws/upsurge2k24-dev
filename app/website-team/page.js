@@ -104,7 +104,7 @@ const Cards = () => {
                     <span>Team</span>
                 </h1>
                 <div className={`${styles.cards} mb-28 mt-28 ml-[0.5rem]`}>
-                    {data[12].map((cardClass, index) => (
+                    {data[0].map((cardClass, index) => (
                         <Tilty key={index}>
                             <div className={`${styles.card} ${styles[cardClass.name]} mx-10 ${styles.animated}`}
                                 ref={(el) => (cardRefs.current[index] = el)}>

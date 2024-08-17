@@ -169,7 +169,6 @@
   transition: box-shadow 0.1s ease-out;
 }
 
-
 /* Core team  */
 .card.naincy {
   --color1: rgb(176, 132, 150);
@@ -186,7 +185,7 @@
 .card.hardik {
   --color1: #54a29e;
   --color2: #a79d66;
-  background-image: url('https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Hardik_Tajne.png');
+  background-image: url('/images/teams/Hardik.png');
 }
 
 .card.kartik {
@@ -343,12 +342,12 @@
 .card.KrishnaBobade {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Krishna.png");
+  background-image: url("/images/teams/Krishna.png");
 }
 .card.PranjalHatwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Pranjal.png");
+  background-image: url("/images/teams/Pranjal.png");
 }
 .card.KaranKangali {
   --color1: rgb(176, 132, 150);
@@ -375,6 +374,11 @@
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Gurudatta.png");
 }
+.card.AnshuVairagade {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Anshu.png");
+}
 
 /* Cultural team */
 .card.VaidehiNarkhede {
@@ -396,6 +400,11 @@
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Ayush.png");
+}
+.card.RiddhiNahate {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Riddhi.png");
 }
 
 /* Sponsorship Team */
@@ -439,6 +448,8 @@
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vinit.png");
 }
+
+/* Publicity Team */
 .card.OmRusia {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
@@ -453,6 +464,11 @@
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Dhruv.png");
+}
+.card.VaishnaviAsare {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Vaishnavi.png");
 }
 .card.ShashankMankar {
   --color1: rgb(176, 132, 150);
@@ -502,15 +518,26 @@
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Rayee.png");
 }
 /* Art team */
+
+.card.SanskrutiBhoyar {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Sanskruti.png");
+}
 .card.SharwariHatwar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sharwari.png");
 }
+.card.AlokRoy {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Alok.png");
+}
 .card.MrunalJagtap {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
-  background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Mrunal.png");
+  background-image: url("/images/teams/Mrunal.png");
 }
 .card.NishitaDande {
   --color1: rgb(176, 132, 150);
@@ -523,6 +550,11 @@
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Vipin.png");
 }
+.card.SanskarSawane {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Sanskar.png");
+}
 .card.VedantRaut {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
@@ -533,17 +565,28 @@
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Sujal.png");
 }
+
+/* Social media Team  */
 .card.YatharthHadke {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Yatharth.png");
+}
+.card.AshaySherekar {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Ashay.png");
+}
+.card.SahilRamteke {
+  --color1: rgb(176, 132, 150);
+  --color2: #ddccaa;
+  background-image: url("/images/teams/Sahil.png");
 }
 .card.KrushnangiManekar {
   --color1: rgb(176, 132, 150);
   --color2: #ddccaa;
   background-image: url("https://upsurge2k24.s3.ap-south-1.amazonaws.com/teams/Krushnangi.png");
 }
-
   @keyframes holoSparkle {
     0%, 100% {
       opacity: .85; background-position: 50% 50%; filter: brightness(1.3) contrast(1.3);

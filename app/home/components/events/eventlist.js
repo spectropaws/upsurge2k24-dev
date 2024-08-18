@@ -54,6 +54,18 @@ const events = [
         image: 'https://upsurge2k24.s3.ap-south-1.amazonaws.com/events/dataScience.png',
         detailsLink:"/events/#dataScience"
     },
+    {
+        title: 'Data Engineering Seminar',
+        description: "Boost your data skills with insights from international expert Mr. Ashutosh Shukla at our upcoming Data Engineering seminar. Don't miss this opportunity to learn from the best!",
+        image: '/images/events/dataEngineering.png',
+        detailsLink:"/events/#dataEngineering"
+    },
+    {
+        title: 'Android Development Workshop',
+        description: "Join us for an exciting hands-on Android development workshop led by Dildarkhan Pathan on 24th August. Dive into cutting-edge techniques and bring your app ideas to life!",
+        image: '/images/events/android.png',
+        detailsLink:"/events/#android"
+    },
 ];
 
 

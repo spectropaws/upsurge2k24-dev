@@ -130,7 +130,24 @@ const EventCards = () => {
             isPosterLeft: true,
             registerLink: 'https://konfhub.com/data-science-seminar-eee1269a',
         },
-
+        {
+            poster: '/images/events/dataEngineering.png',
+            title: 'Data Engineering Seminar',
+            id: "dataEngineering",
+            description: "Elevate your data skills by joining our upcoming Data Engineering seminar on 24th August, led by the renowned international expert, Mr. Ashutosh Shukla. With extensive experience in the field, Mr. Shukla currently works at Unilode Aviation Solutions, USA, where he has been instrumental in shaping cutting-edge data strategies. This seminar offers a unique opportunity to gain valuable insights into the world of data engineering, from understanding the fundamentals to exploring advanced techniques. Whether you're an aspiring data engineer or a seasoned professional, this session is designed to enhance your knowledge and expertise. Don’t miss this chance to learn from one of the best in the industry!",
+            pokemon: '/images/events/char12.png',
+            isPosterLeft: true,
+            registerLink: 'https://forms.gle/sFHR7fnsZFo9qLC69',
+        },
+        {
+            poster: '/images/events/android.png',
+            title: 'Android Development Workshop',
+            id: "android",
+            description: "Join us for an exciting and immersive hands-on Android development workshop, led by the experienced developer Dildarkhan Pathan, on 24th August. This workshop is designed to provide you with practical skills and deep insights into the latest Android development techniques. Whether you're a beginner looking to start your journey in app development or an experienced coder seeking to sharpen your skills, this session is perfect for you. The seminar will kick off at 11 AM, so be ready to dive into coding, creating, and innovating. Bring your app ideas to life, and learn how to turn concepts into reality. Code. Create. Innovate!",
+            pokemon: '/images/events/char11.png',
+            isPosterLeft: false,
+            registerLink: 'https://forms.gle/zn8eSBkEbHnqPDgy9',
+        },
     ];
 
     return (

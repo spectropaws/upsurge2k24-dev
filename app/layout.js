@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/toaster"
 import Head from "next/head";
 import Script from "next/script";
 
@@ -54,7 +55,10 @@ export default function RootLayout({ children }) {
                         gtag('config', 'G-SCQ6TF2C4E');
                     `,
             }} />
-            <body className={`${inter.className} ${ps2p.variable} ${dotGothic.variable}`}>{children}</body>
+            <body className={`${inter.className} ${ps2p.variable} ${dotGothic.variable}`}>
+                <main>{children}</main>
+                <Toaster />
+            </body>
         </html>
     );
 }

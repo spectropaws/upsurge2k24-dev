@@ -3,8 +3,31 @@ import Link from "next/link";
 import styles from "./components/hero.module.css";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { easeIn, easeInOut, motion } from "framer-motion";
+import { useToast } from "@/components/ui/use-toast"
+import { useRef } from "react"
 
 export default function HeroSection() {
+    const { toast, dismiss } = useToast()
+  const toastIdRef = useRef(null)
+
+  const showToast = () => {
+    const { id } = toast({
+      variant: "destructive",
+      title: "Offline Registrations Closed!",
+      description: "You can only opt for accomodation and dinner coupon.",
+    })
+
+    toastIdRef.current = id;
+
+    // Automatically dismiss the toast after 5 seconds
+    setTimeout(() => {
+        console.log(toastIdRef.current)
+      if (toastIdRef.current) {
+        dismiss(toastIdRef.current)
+      }
+    }, 10000)
+  }
+
     return (
         <>
             <div className=" relative h-[160vh] lg:h-[100vh]">
@@ -131,6 +154,7 @@ export default function HeroSection() {
                             >
                                 <Dialog>
                                     <DialogTrigger
+                                        onClick={() => showToast()}
                                         className={`${styles.button} flex text-xs justify-center md:text-lg`}
                                     >
                                         <p className={`${styles.box} py-2 px-2`}>R</p>

@@ -142,16 +142,7 @@ export default function HeroSection() {
                     <p className={`${styles.box} py-2 px-3`}>R</p>
                   </DialogTrigger>
                   <DialogContent className="w-[100%] max-w-3xl h-[90%] px-6 py-14">
-                    <iframe
-                      src="https://konfhub.com/widget/smackathon-2024?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Nunito&borderRadius=5"
-                      id="konfhub-widget"
-                      title="Register for Smackathon 2024"
-                      className="w-full"
-                      style={{
-                        transform: "translateZ(0)",
-                        backfaceVisibility: "hidden",
-                      }}
-                    ></iframe>
+                    <div className="w-full h-full flex justify-center items-center"><h3 className="text-4xl">Registrations Closed</h3></div>
                   </DialogContent>
                 </Dialog>
               </motion.div>

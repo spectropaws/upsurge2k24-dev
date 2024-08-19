@@ -182,7 +182,7 @@ export default function HeroSection() {
 
                                 {/* ONLINE REGISTRATION */}
                                     <Link
-                                        href="https://unstop.com/p/smackathon-2k24-yeshwantrao-chavan-college-of-engineering-ycce-nagpur-1126426"
+                                        href="https://konfhub.com/smackathon-2024-online"
                                         target="_blank"
                                         className={`${styles.button} flex text-xs justify-center md:text-lg`}
                                     >
